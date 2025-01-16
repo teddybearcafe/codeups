@@ -1,0 +1,34 @@
+@use "global" as *;
+
+
+.return_top {
+    color: $green;
+    text-decoration: none;
+    position: fixed;
+    right: rem(15);
+    bottom: 120px;
+    width: rem(48);
+    height: rem(48);
+    border: solid thin;
+    border-radius: 50%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    transform: rotate(-90deg);
+    transition: opacity 0.4s, visibility 0.4s;
+    /*普段は隠しておく*/
+    opacity: 0;
+    visibility: hidden;
+
+    @include mq("md") {
+        width: rem(80);
+        height: rem(80);
+        right: rem(20);
+    }
+}
+.return_top.is-active {
+    /*activeが付いたら表示*/
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s, visibility 0.4s;
+}

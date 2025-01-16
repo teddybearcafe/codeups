@@ -1,0 +1,79 @@
+@use "global" as *;
+
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: rem(14) rem(16);
+  max-width: rem(208);
+  width: 100%;
+  background-color: $green;
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid $green;
+}
+
+.button__front {
+  font-family: $english-font-family;
+  size: rem(14);
+  line-height: 1.57;
+  color: $white;
+  position: relative;
+  display: block;
+  height: inherit;
+}
+
+.button__arrow {
+  position: relative;
+  display: block;
+  margin-left: rem(7);
+  vertical-align: text-top;
+}
+
+.button__arrow svg {
+  stroke: $white;
+  height: rem(8);
+  width: rem(42);
+}
+
+.button::after {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border: 1px solid $green;
+  transform: translate3d(0.25rem, 0.25rem, 0);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+
+.button:hover .button__arrow svg path {
+  stroke: $green;
+}
+
+.button:hover .button__front {
+  color: $green;
+}
+
+.button::before {
+  background: $white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.button:hover::before {
+  transform: scale(1, 1);
+}

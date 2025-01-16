@@ -1,0 +1,71 @@
+@use "global" as *;
+
+.price__body {
+    margin-top: rem(24);
+
+    @include mq("md") {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: rem(40);
+    }
+}
+
+.price__header-image,
+.price__lists-wrapper {
+    @include mq("md") {
+        width: 50%;
+    }
+}
+
+.price__lists-wrapper {
+    display: column;
+}
+
+.price__lists + .price__lists {
+    margin-top: rem(40);
+}
+
+.price__header-image {
+    @include mq("md") {
+        margin-left: rem(46);
+    }
+}
+
+.price__button {
+    margin-top: rem(40);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 50;
+
+    @include mq("md") {
+        margin-top: rem(80);
+    }
+}
+
+.price__inner {
+    @include mq("md") {
+        position: relative;
+    }
+}
+
+.price__background-fish {
+    position: absolute;
+    display: block;
+    left: rem(-30);
+    bottom: 0;
+}
+
+.price__background-fish svg {
+    max-width: rem(437);
+    width: 100%;
+    height: auto;
+}
+
+.price__lists {
+    margin-top: rem(40);
+
+    @include mq("md") {
+        margin-top: 0;
+    }
+}

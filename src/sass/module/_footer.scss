@@ -1,0 +1,167 @@
+@use "global" as *;
+
+footer {
+    background: $green;
+    color: $white;
+    padding: 3rem 0 3.5rem 0;
+  }
+
+
+
+.footer-heading__logo svg {
+    width: 7.5rem;
+    height: 2.8rem;
+}
+
+.footer-heading__sns-wrapper {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.footer-heading__sns svg {
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+.footer-heading__sns svg path {
+    fill: $white;
+}
+
+.footer-heading__sns + .footer-heading__sns {
+    margin-left: 1.1rem;
+}
+
+@include mq(md) {
+    footer {
+        padding: 5rem 0;
+      }    
+
+    .footer-heading {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .footer-heading__logo svg {
+        width: 12.5rem;
+        height: 4.6875rem;
+    } 
+
+    .footer-heading__sns svg {
+        margin-bottom: 0.5rem;
+        width: 1.625rem;
+        height: 1.625rem;
+    }
+    .footer-heading__sns {
+        margin-left: 2.6rem;
+    }
+}
+
+
+.cont {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    grid-template-areas: 
+    "a b"
+    "c d";
+    padding-top: 2rem;
+}
+
+.item1{
+    grid-area: a;
+}
+.item2{
+    grid-area: c;
+    margin-top: 1rem;
+}
+.item3{
+    grid-area: b;
+    padding-left: 1.4rem;
+}
+.item4{
+    grid-area: d;
+    padding-left: 1.3rem;
+    margin-top: 1rem;
+}
+
+@include mq(md) {
+    .item2,
+    .item4 {
+        margin-top: 0;
+    }
+}
+
+  footer .ttl {
+    display: flex;
+  }
+
+  footer .ttl:not(:first-child){
+    margin-top: 2rem;
+  }    
+
+  @include mq(md) {
+    footer .ttl:not(:first-child){
+        margin-top: 2.5rem;
+      }    
+  }
+
+  footer .ttl img {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+
+  footer .ttl span {
+    font-size: 1rem;
+    font-weight: $bold;
+    line-height: 1rem;
+  }
+
+  @include mq(md) {
+    footer .ttl span {
+        line-height: 1.125;
+      }    
+  }
+
+  footer ul {
+    margin-left: 1rem;
+  }
+
+footer li {
+    font-size: 1rem;
+    line-height: 1.125;
+    font-weight: $regular;
+    margin-top: 1.5rem;
+}
+
+
+
+@include mq(md) {
+    .cont {
+        display: flex;
+        padding-top: 1.3rem;
+      }
+      
+      .cont-item {
+        display: block;
+        width: calc(100% / 4);
+      }    
+}
+  
+.copyright {
+    display: inline-block;
+    font-family: $numbers-font-family;
+    font-weight: $regular;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 2.5rem;
+    width: 100%;
+}
+
+@include mq(md) {
+    .copyright {
+        font-size: 0.875rem;
+        margin-top: 4rem;
+        line-height: 1.29;
+    }
+}

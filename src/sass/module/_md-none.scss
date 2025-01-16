@@ -1,0 +1,7 @@
+@use "global" as *;
+
+@include mq("md") {
+    .md-none {
+        display: none;
+    }
+}

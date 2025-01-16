@@ -1,0 +1,173 @@
+@use "global" as *;
+
+.shop-info {
+    width: 100%;
+    margin-top: 5rem;
+    margin-bottom: 6.25rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+@include mq(md) {
+    .shop-info {
+        margin-top: 8.75rem;
+        margin-bottom: 10rem;
+    }
+}
+
+.shop-info__contents {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+@include mq(md) {
+    .shop-info__contents {
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 5rem;
+        box-shadow: 0.25rem 0.25rem 0.25rem rgba(13, 41, 54, 0.5);
+    }
+}
+
+@include mq(md) {
+    .shop-info__body,
+    .shop-info__contact {
+        width: 47%;
+    }
+}
+
+.shop-info__body {
+    margin-top: 3.375rem;
+}
+
+.shop-info__logo {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.shop-info__logo::after {
+    display: block;
+    content: "";
+    border-bottom: solid 0.025rem $green;
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0.25rem 0.25rem rgba(13, 41, 54, 0.5);
+}
+.shop-info__logo svg {
+    width: 10.9rem;
+    height: 4.06rem;
+}
+
+.shop-info__logo svg path {
+    fill: $green;
+    filter: drop-shadow(0px 3px 4px rgba(13, 41, 54, 0.5));
+}
+
+.shop-info__background {
+    width: 6.8rem;
+    height: 3.13rem;
+    background-image: url("../images/contact-fish.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 1.25rem;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+@include mq(md) {
+    .shop-info__background {
+        width: 19rem;
+        height: 8.6rem;
+        right: -6rem;
+    }
+}
+
+.shop-info__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: $regular;
+    text-shadow: 0.1rem 0.1rem 0.2rem rgba(13, 41, 54, 0.5);
+}
+
+@include mq(md) {
+    .shop-info__text {
+        text-shadow: none;
+    }
+}
+
+.shop-info__text span:not(:first-child){
+    margin-top: 0.25rem;
+}
+
+.shop-info__map {
+    aspect-ratio: 295 / 160;
+    max-width: rem(273);
+    width: 100%;
+    margin-top: 1rem;
+}
+
+@include mq(md) {
+    .shop-info__address {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .shop-info__contact::before {
+        display: block;
+        content: "";
+        width: 0.0625rem;
+        height: 100%;
+        background-color: $green;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.shop-info__contact {
+    margin-top: 2.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.shop-info__contact-text {
+    padding-top: 0.5rem;
+    font-size: 0.875rem;
+    color: $green;
+    text-shadow: 0.1rem 0.1rem 0.2rem rgba(13, 41, 54, 0.5);
+
+    @include mq("md") {
+        text-shadow: none;        
+    }
+}
+
+.shop-info__button {
+    padding-top: 2.4rem;
+    width: 100%;
+}
+
+.shop-info__button a {
+    margin: 0 auto;
+}
+
+.shop-info__address {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+
+    @include mq("md") {
+        flex-direction: row;
+    }
+}

@@ -1,0 +1,150 @@
+@use "global" as *;
+
+.nav-menu {
+    background: $green;
+    padding: 3rem 0 3.5rem 0;
+}
+
+.nav-heading__logo svg {
+    width: 7.5rem;
+    height: 2.8rem;
+}
+
+.sns-wrapper {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.sns-logo svg {
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+.sns-logo svg path {
+    fill: $white;
+}
+
+.sns-logo + .sns-logo {
+    margin-left: 1.1rem;
+}
+
+@include mq(md) {
+    .nav-menu {
+        padding: 5rem 0;
+    }
+
+    .nav-heading {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .nav-heading__logo svg {
+        width: 12.5rem;
+        height: 4.6875rem;
+    }
+
+    .sns-logo svg {
+        margin-bottom: 0.5rem;
+        width: 1.625rem;
+        height: 1.625rem;
+    }
+
+    .sns-logo {
+        margin-left: 2.6rem;
+    }
+}
+
+.nav-main__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    grid-template-areas:
+        "a b"
+        "c d";
+    padding-top: 2rem;
+    color: $white;
+}
+
+.item1 {
+    grid-area: a;
+}
+
+.item2 {
+    grid-area: c;
+    margin-top: 1rem;
+}
+
+.item3 {
+    grid-area: b;
+    padding-left: 1.4rem;
+}
+
+.item4 {
+    grid-area: d;
+    padding-left: 1.3rem;
+    margin-top: 1rem;
+}
+
+@include mq(md) {
+
+    .item2,
+    .item4 {
+        margin-top: 0;
+    }
+}
+
+.nav-item__title {
+    display: flex;
+}
+
+.nav-item__title:not(:first-child) {
+    margin-top: 2rem;
+}
+
+@include mq(md) {
+    .nav-item__title:not(:first-child) {
+        margin-top: 2.5rem;
+    }
+}
+
+.nav-item__title img {
+    width: 1.125rem;
+    height: 1.125rem;
+}
+
+.nav-item__title span {
+    font-size: 1rem;
+    font-weight: $bold;
+    line-height: 1rem;
+}
+
+@include mq(md) {
+    .nav-item__title span {
+        line-height: 1.125;
+    }
+}
+
+.nav-items ul {
+    margin-left: 1rem;
+}
+
+.nav-items li {
+    font-size: 1rem;
+    line-height: 1.125;
+    font-weight: $regular;
+    margin-top: 1.5rem;
+}
+
+
+
+@include mq(md) {
+    .nav-main__content {
+        display: flex;
+        padding-top: 1.3rem;
+    }
+
+    .nav-items__wrapper {
+        display: block;
+        width: calc(100% / 4);
+    }
+}

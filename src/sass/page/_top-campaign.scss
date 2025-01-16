@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.campaign {
+    padding-top: 5rem;
+    // overflow: hidden;
+}
+
+@include mq("md") {
+    .campaign {
+        padding-top: 7.5rem;
+    }
+}

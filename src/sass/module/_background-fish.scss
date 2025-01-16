@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.background-fish {
+    background-image: url("../images/contact-fish.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: auto;
+    width: auto;
+}

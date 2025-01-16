@@ -1,0 +1,112 @@
+@use "global" as *;
+
+// header nav
+.header {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 5rem;
+    width: 100%;
+    background-color: rgba(13, 41, 54, 0.68);
+    @include mq("md") {
+        height: 5.625rem;
+    }
+}
+
+.header__inner {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 0.94rem;
+    padding-right: 0.94rem;
+    @include mq("md") {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+}
+
+.header__name {
+    margin-right: auto;
+}
+
+.header__logo svg {
+    height: 2.375rem;
+    width: 6.375rem;
+}
+
+@include mq(md) {
+    .header__logo svg {
+        width: 8.625rem;
+        height: 3.125rem;
+    }
+
+
+    .header__nav {
+        height: inherit;
+    }
+    
+    .header__items {
+        display: flex;
+        align-items: center;
+        height: inherit;
+        padding-left: 10px;
+    }
+    
+    .header__item {
+        height: inherit;
+    }
+    
+    // .header__item:not(:first-child) {
+    //     margin-left: 36px;
+    // }
+    .header__item + .header__item {
+        padding-left: 2.5rem;
+    }
+
+    .header__link {
+        align-items: center;
+        justify-content: center;
+        height: inherit;
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .header__link::after {
+            position: absolute;
+            left: 0;
+            bottom: 4rem;
+            content: '';
+            width: 100%;
+            height: 0.125rem;
+            background: $white;
+            bottom: 1rem;             /*アンダーラインがaタグの下端から現れる*/
+            transform: scale(0, 1);     /*アンダーラインの縮尺比率。ホバー前はx方向に0*/
+            transform-origin: center top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の左端*/
+            transition: transform 0.3s;
+    }
+
+    .header__link:hover::after {
+        transform: scale(1, 1);
+    }
+
+    .header__link span:first-child {
+        font-family: $english-font-family;
+        font-size: 1.125rem;
+        font-weight: $regular;
+    }
+    .header__link span:nth-child(2) {
+        font-size: 0.625rem;
+        font-weight: $regular;
+        line-height: 1.5rem;
+    }
+}
+
+// .header__logo {
+//     @include mq("lg") {
+//         width: 132px;
+//     }
+// }

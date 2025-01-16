@@ -1,0 +1,69 @@
+@use "global" as *;
+
+.campaign__cards {
+    margin-top: 1.5rem;
+}
+
+.swiper-slide + .swiper-slide {
+    margin-left: 1.5rem;
+}
+
+.campaign__button {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    @include mq("md") {
+        margin-top: rem(80);
+    }
+}
+
+.campaign .swiper-controller {
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+    justify-content: flex-end;
+    // margin-top: 3.2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: fit-content;
+    height: auto;
+    flex-direction: row-reverse;
+  }
+
+.campaign .swiper-pagination {
+    margin-right: auto;
+  }
+
+// .campaign .swiper {
+//     overflow: visible;
+// }
+
+.campaign__inner {
+    position: relative;
+}
+
+.campaign .swiper-button-prev,
+.campaign .swiper-button-next {
+    height: rem(80);
+    width: rem(80);
+    position: static;
+}
+
+.campaign .swiper-button-prev:after,
+.campaign .swiper-button-next:after {
+    content: "";
+    height: rem(80);
+    margin: auto;
+    width: rem(80);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.campaign .swiper-button-prev:after {
+    background-image: url("../images/swiper-prev.png");
+}
+
+.campaign .swiper-button-next:after {
+    background-image: url("../images/swiper-next.png");
+}

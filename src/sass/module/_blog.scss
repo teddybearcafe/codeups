@@ -1,0 +1,84 @@
+@use "global" as *;
+
+.blog__inner {
+  @include mq("md") {
+    position: relative;
+  }
+}
+
+.blog__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  justify-items: center;
+  gap: 2.5rem;
+  margin-top: 1.5rem;
+
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}
+
+.blog__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+}
+
+.blog__background-img {
+  object-fit: cover;
+}
+
+.blog__background-fish svg {
+  @include mq("md") {
+    width: rem(437);
+    height: rem(201);
+    position: absolute;
+    top: rem(-100);
+    left: rem(-50);
+  }
+}
+
+.blog__background-fish svg path {
+  @include mq("md") {
+    fill: $aqua;
+  }
+}
+
+//   .blog__background-fish {
+//     width: 6.8rem;
+//     height: 3.13rem;
+//     background-image: url("../images/contact-fish.svg");
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     display: block;
+//     position: absolute;
+//     top: 0;
+//     right: 1.25rem;
+//     transform: translateY(-50%);
+//     z-index: -1;
+// }
+
+// @include mq(md) {
+//     .shop-info__background {
+//         width: 19rem;
+//         height: 8.6rem;
+//         right: -6rem;
+//     }
+// }
+
+
+
+
+
+.blog__button {
+  width: 100%;
+  margin-top: rem(40);
+  display: flex;
+  justify-content: center;
+
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}

@@ -1,0 +1,52 @@
+@use "global" as *;
+
+.price-card {
+    text-align: center;
+}
+
+.price-card__description p {
+    font-size: 0.875rem;
+    line-height: 1.71;
+    color: $font-color;
+    font-family: $base-font-family;
+    font-weight: $regular;
+}
+
+.price-card__prices {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1rem;
+    font-family: $numbers-font-family;
+    font-weight: $bold;
+    padding-top: 0.5rem;
+}
+
+.price-card__cancell-price {
+    text-decoration: line-through;
+    text-decoration-color: #C94800;
+    text-decoration-thickness: 0.19rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    color: $font-color;
+}
+
+.price-card__price {
+    font-size: 2rem;
+    color: $green;
+    line-height: 1;
+}
+
+@include mq(md) {
+    .price-card__description p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+    .price-card__cancell-price {
+        font-size: 1.5rem;
+    }
+
+    .price-card__price {
+        font-size: 2.5rem;
+    }
+}

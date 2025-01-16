@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.md-show {
+    display: none;
+    }
+
+@include mq("md") {
+    .md-show {
+        display: block;
+    }
+}

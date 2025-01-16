@@ -1,0 +1,30 @@
+@use "global" as *;
+
+
+.header-label__gender {
+    font-size: 0.75rem;
+    font-weight: $regular;
+    line-height: 1.5;
+}
+
+.header-label__category span {
+    color: $green;
+    font-size: 0.75rem;
+    font-weight: $regular;
+    line-height: 1.83;
+    border: 0.0625rem solid $green;
+    color: $green;
+    padding: 0.35rem 0.7rem;
+}
+
+@include mq(md) {
+    .header-label {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .header-label__category span {
+        padding: 0.6rem 1rem;
+    }
+
+}

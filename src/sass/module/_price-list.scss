@@ -1,0 +1,39 @@
+@use "global" as *;
+
+.price-list__title {
+    line-height: 1.5;
+    font-weight: $bold;
+}
+
+.price-list__title::after {
+    display: block;
+    content: "";
+    height: rem(1);
+    width: 100%;
+    background-color: $green;
+    margin-top: rem(4);
+}
+
+.price-list__definition {
+    margin-top: rem(8);
+}
+
+.price-list__definition-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-list__definition-item + .price-list__definition-item {
+    margin-top: rem(8);
+}
+
+.price-list__definition-title,
+.price-liset__definition-description {
+    font-size: rem(14);
+    line-height: 1.7;
+
+    @include mq("md") {
+        font-size: rem(16);
+        line-height: 1.5;
+    }
+}

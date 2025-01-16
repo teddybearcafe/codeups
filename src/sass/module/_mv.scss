@@ -1,0 +1,63 @@
+@use "global" as *;
+
+.mv {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.swiper-mv,
+.swiper-wrapper {
+    height: inherit;
+    width: 100%;
+}
+
+.swiper-slide img {
+    height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    aspect-ratio: 375 / 667;
+    object-fit: cover;
+}
+
+@include mq(md) {
+    .swiper-slide .mv__picture img {
+        aspect-ratio: 1440 / 768;
+    }
+}
+
+.mv__body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 50;
+    text-align: center;
+}
+
+.mv__title {
+    font-family: $numbers-font-family;
+    font-size: 2.5rem;
+    font-weight: $regular;
+    line-height: 1.2;
+    letter-spacing: 1.35rem;
+    text-transform: uppercase;
+    color: $white;
+}
+
+@include mq(md) {
+    .mv__title {
+        font-size: 5rem;
+        line-height: 1.25;
+        letter-spacing: 2.7rem;
+    }
+}
+
+.mv__subtitle {
+    font-family: $english-font-family;
+    color: $white;
+    font-size: 1.25rem;
+    line-height: 1.65;
+}
