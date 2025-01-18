@@ -1,15 +1,25 @@
 @use "global" as *;
 
 .campaign__cards {
-    margin-top: 1.5rem;
+    margin-top: rem(24);
+    padding: rem(10) 0;
 }
 
-.swiper-slide + .swiper-slide {
-    margin-left: 1.5rem;
+.campaign__slide {
+    width: vw(375, 280);
+ 
+    @include mq("md"){
+        max-width: calc( ($inner - 5rem) / 3);
+        width: 100%;
+    }
+}
+
+.campaign__slide + .campaign__slide {
+    margin-left: rem(24);
 }
 
 .campaign__button {
-    margin-top: 2.5rem;
+    margin-top: rem(32);
     display: flex;
     justify-content: center;
     @include mq("md") {
@@ -17,41 +27,36 @@
     }
 }
 
-.campaign .swiper-controller {
-    display: flex;
-    gap: 1.6rem;
-    align-items: center;
-    justify-content: flex-end;
-    // margin-top: 3.2rem;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: fit-content;
-    height: auto;
-    flex-direction: row-reverse;
-  }
+.campaign__swiper-controller {
+    display: none;
 
-.campaign .swiper-pagination {
-    margin-right: auto;
+    @include mq("md") {
+        display: flex;
+        gap: 1.6rem;
+        align-items: center;
+        justify-content: flex-end;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: fit-content;
+        height: auto;
+    }
   }
-
-// .campaign .swiper {
-//     overflow: visible;
-// }
 
 .campaign__inner {
     position: relative;
 }
 
-.campaign .swiper-button-prev,
-.campaign .swiper-button-next {
+.campaign__swiper-button-prev,
+.campaign__swiper-button-next {
     height: rem(80);
     width: rem(80);
     position: static;
 }
 
-.campaign .swiper-button-prev:after,
-.campaign .swiper-button-next:after {
+.campaign__swiper-button-prev:after,
+.campaign__swiper-button-next:after {
+    display: block;
     content: "";
     height: rem(80);
     margin: auto;
@@ -60,10 +65,10 @@
     background-size: contain;
 }
 
-.campaign .swiper-button-prev:after {
+.campaign__swiper-button-prev:after {
     background-image: url("../images/swiper-prev.png");
 }
 
-.campaign .swiper-button-next:after {
+.campaign__swiper-button-next:after {
     background-image: url("../images/swiper-next.png");
 }

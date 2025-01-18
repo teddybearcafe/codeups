@@ -4,12 +4,17 @@
     text-align: center;
 }
 
-.price-card__description p {
+.price-card__description {
     font-size: 0.875rem;
     line-height: 1.71;
     color: $font-color;
     font-family: $base-font-family;
     font-weight: $regular;
+
+    @include mq("md") {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
 }
 
 .price-card__prices {
@@ -26,27 +31,21 @@
     text-decoration: line-through;
     text-decoration-color: #C94800;
     text-decoration-thickness: 0.19rem;
-    font-size: 1.25rem;
+    font-size: rem(20);
     line-height: 1;
     color: $font-color;
+
+    @include mq("md") {
+        font-size: rem(24);
+    }
 }
 
 .price-card__price {
-    font-size: 2rem;
+    font-size: rem(32);
     color: $green;
     line-height: 1;
-}
 
-@include mq(md) {
-    .price-card__description p {
-        font-size: 1rem;
-        line-height: 1.5;
-    }
-    .price-card__cancell-price {
-        font-size: 1.5rem;
-    }
-
-    .price-card__price {
-        font-size: 2.5rem;
+    @include mq("md") {
+        font-size: rem(40);
     }
 }

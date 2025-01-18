@@ -1,7 +1,7 @@
 @use "global" as *;
 
 
-.return_top {
+.return-top {
     color: $green;
     text-decoration: none;
     position: fixed;
@@ -14,7 +14,6 @@
     display: grid;
     justify-content: center;
     align-content: center;
-    transform: rotate(-90deg);
     transition: opacity 0.4s, visibility 0.4s;
     /*普段は隠しておく*/
     opacity: 0;
@@ -26,9 +25,20 @@
         right: rem(20);
     }
 }
-.return_top.is-active {
+.return-top.is-active {
     /*activeが付いたら表示*/
     opacity: 1;
     visibility: visible;
     transition: opacity 0.4s, visibility 0.4s;
+}
+
+.return-top__image {
+    transform: translateX(-25%);
+    height: 90%;
+    width: 80%;
+
+    @include mq("md") {
+        width: 95%;
+        height: 95%;    
+    }
 }

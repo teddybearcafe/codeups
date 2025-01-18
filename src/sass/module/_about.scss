@@ -53,6 +53,7 @@
         display: flex;
         max-width: rem(880);
         margin-top: 0;
+        overflow: hidden;
     }
 }
 
@@ -103,11 +104,14 @@
 }
 
 .about__background-sango {
-    width: rem(194);
-    height: rem(181);
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: 500;
-    transform: translate(50% , 50%);
+    @include mq("md") {
+        width: rem(194);
+        height: rem(181);
+        position: absolute;
+        right: calc( rem(-90) + ( rem(1440) - 100vw ) / 3);
+        bottom: 0;
+        z-index: 500;
+        transition: right 0.5s ease;
+        transform: translateY(50%);    
+    }
 }

@@ -68,26 +68,26 @@
 }
 
 .shop-info__background {
-    width: 6.8rem;
-    height: 3.13rem;
-    background-image: url("../images/contact-fish.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    // width: rem(109);
+    // height: rem(50);
+    max-width: rem(301);
+    width: vw( 375, 109);
+    height: auto;
+    aspect-ratio: 109 / 50 ;
     display: block;
     position: absolute;
     top: 0;
-    right: 1.25rem;
+    right: 0;
     transform: translateY(-50%);
     z-index: -1;
+
+    @include mq(md) {
+            width: rem(301);
+            height: rem(138);
+            right: calc( rem(-90) + ( rem(1440) - 100vw ) / 3);
+    }    
 }
 
-@include mq(md) {
-    .shop-info__background {
-        width: 19rem;
-        height: 8.6rem;
-        right: -6rem;
-    }
-}
 
 .shop-info__text {
     display: flex;

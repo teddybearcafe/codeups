@@ -4,17 +4,25 @@
     position: relative;
 }
 
-.voice__cards {
-    margin-top: rem(40);
-    @include mq("md") {
-        display: flex;
-    }
-}
+// .voice__cards {
+//     margin-top: rem(40);
+//     @include mq("md") {
+//         display: flex;
+//     }
+// }
 
-.voice__cards-item + .voice__cards-item {
-    margin-top: rem(40);
-    margin-left: rem(40);
-}
+.voice__cards {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax( rem(520), 1fr));
+    justify-items: center;
+    gap: rem(40);
+    margin-top: 1.5rem;
+  
+    @include mq("md") {
+      margin-top: rem(80);
+    }
+  }
 
 .voice__button {
     position: relative;

@@ -51,8 +51,8 @@ const mySwiper = new Swiper('.mv .swiper', {
 
     // Navigation arrows
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.campaign__swiper-button-next',
+      prevEl: '.campaign__swiper-button-prev',
     },
   });
 
@@ -118,21 +118,7 @@ box.each(function(){
         $(".js-top").removeClass("is-active");
       }
     });
-  
-//     // タブ切り替え
-//     $('.tab_box .tab_btn').each(function (index) {
-//       $(this).on('click', function () {
-//         // すべてのボタンとパネルから 'active' クラスを削除
-//         $('.tab_box .tab_btn, .tab_box .tab_panel').removeClass('active');
-  
-//         // クリックされたボタンに 'active' クラスを追加
-//         $(this).addClass('active');
-  
-//         // クリックされたボタンに対応するパネルに 'active' クラスを追加
-//         $('.tab_box .tab_panel').eq(index).addClass('active');
-//       });
-//     });
-  
+    
 //     // モーダル
 //     const trigger = $('.modal__trigger');
 //     const wrapper = $('.modal__wrapper');

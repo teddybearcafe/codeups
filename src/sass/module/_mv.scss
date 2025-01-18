@@ -39,10 +39,10 @@
 
 .mv__title {
     font-family: $numbers-font-family;
-    font-size: 2.5rem;
+    font-size: rem(40);
     font-weight: $regular;
     line-height: 1.2;
-    letter-spacing: 1.35rem;
+    letter-spacing: rem(20);
     text-transform: uppercase;
     color: $white;
 }
@@ -58,6 +58,6 @@
 .mv__subtitle {
     font-family: $english-font-family;
     color: $white;
-    font-size: 1.25rem;
+    font-size: rem(20);
     line-height: 1.65;
 }
