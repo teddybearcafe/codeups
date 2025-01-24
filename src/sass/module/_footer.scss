@@ -23,7 +23,7 @@
     color: $white;
 
     @include mq("md") {
-        padding-top: rem(50);
+        padding-top: rem(20);
     }
 }
 
@@ -45,6 +45,10 @@
 
 .footer__sns {
     margin-top: rem(16);
+
+    @include mq("md") {
+        margin-bottom: rem(10);
+    }
 }
 
 .footer__copyright {

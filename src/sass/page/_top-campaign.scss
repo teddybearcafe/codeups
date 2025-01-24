@@ -3,10 +3,7 @@
 .campaign {
     padding-top: rem(40);
     // overflow: hidden;
-}
-
-@include mq("md") {
-    .campaign {
-        padding-top: 7.5rem;
+    @include mq("md") {
+        padding-top: rem(120);
     }
 }
