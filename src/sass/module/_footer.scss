@@ -1,167 +1,66 @@
 @use "global" as *;
 
-footer {
-    background: $green;
-    color: $white;
-    padding: 3rem 0 3.5rem 0;
-  }
 
-
-
-.footer-heading__logo svg {
-    width: 7.5rem;
-    height: 2.8rem;
-}
-
-.footer-heading__sns-wrapper {
-    display: flex;
-    margin-top: 1rem;
-}
-
-.footer-heading__sns svg {
-    width: 1.3rem;
-    height: 1.3rem;
-}
-
-.footer-heading__sns svg path {
-    fill: $white;
-}
-
-.footer-heading__sns + .footer-heading__sns {
-    margin-left: 1.1rem;
-}
-
-@include mq(md) {
-    footer {
-        padding: 5rem 0;
-      }    
-
-    .footer-heading {
+.footer__head {
+    @include mq("md") {
         display: flex;
         align-items: flex-end;
     }
+}
 
-    .footer-heading__logo svg {
-        width: 12.5rem;
-        height: 4.6875rem;
-    } 
+.footer__logo {
+    width: rem(120);
+    height: rem(45);
 
-    .footer-heading__sns svg {
-        margin-bottom: 0.5rem;
-        width: 1.625rem;
-        height: 1.625rem;
-    }
-    .footer-heading__sns {
-        margin-left: 2.6rem;
+    @include mq("md") {
+        width: rem(200);
+        height: auto;
     }
 }
 
+.footer__nav {
+    padding-top: rem(40);
+    color: $white;
 
-.cont {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0;
-    grid-template-areas: 
-    "a b"
-    "c d";
-    padding-top: 2rem;
-}
-
-.item1{
-    grid-area: a;
-}
-.item2{
-    grid-area: c;
-    margin-top: 1rem;
-}
-.item3{
-    grid-area: b;
-    padding-left: 1.4rem;
-}
-.item4{
-    grid-area: d;
-    padding-left: 1.3rem;
-    margin-top: 1rem;
-}
-
-@include mq(md) {
-    .item2,
-    .item4 {
-        margin-top: 0;
+    @include mq("md") {
+        padding-top: rem(50);
     }
 }
 
-  footer .ttl {
-    display: flex;
-  }
+// .nav-main__content {
+//     display: grid;
+//     grid-template-columns: repeat(2, 1fr);
+//     gap: 0;
+//     grid-template-areas:
+//         "a b"
+//         "c d";
+//     padding-top: rem(40);
+//     color: $white;
 
-  footer .ttl:not(:first-child){
-    margin-top: 2rem;
-  }    
+//     @include mq("md") {
+//         display: flex;
+//         padding-top: rem(19);
+//     }
+// }
 
-  @include mq(md) {
-    footer .ttl:not(:first-child){
-        margin-top: 2.5rem;
-      }    
-  }
-
-  footer .ttl img {
-    width: 1.125rem;
-    height: 1.125rem;
-  }
-
-  footer .ttl span {
-    font-size: 1rem;
-    font-weight: $bold;
-    line-height: 1rem;
-  }
-
-  @include mq(md) {
-    footer .ttl span {
-        line-height: 1.125;
-      }    
-  }
-
-  footer ul {
-    margin-left: 1rem;
-  }
-
-footer li {
-    font-size: 1rem;
-    line-height: 1.125;
-    font-weight: $regular;
-    margin-top: 1.5rem;
+.footer__sns {
+    margin-top: rem(16);
 }
 
-
-
-@include mq(md) {
-    .cont {
-        display: flex;
-        padding-top: 1.3rem;
-      }
-      
-      .cont-item {
-        display: block;
-        width: calc(100% / 4);
-      }    
-}
-  
-.copyright {
+.footer__copyright {
     display: inline-block;
-    font-family: $numbers-font-family;
+    font-family: $english-font-family;
     font-weight: $regular;
-    font-size: 0.75rem;
+    font-size: rem(12);
     line-height: 1.5;
     text-align: center;
     margin-top: 2.5rem;
     width: 100%;
-}
+    letter-spacing: rem(-0.1);
 
-@include mq(md) {
-    .copyright {
-        font-size: 0.875rem;
-        margin-top: 4rem;
+    @include mq("md") {
+        font-size: rem(14);
+        margin-top: rem(80);
         line-height: 1.29;
     }
 }

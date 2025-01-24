@@ -2,19 +2,24 @@
 
 
 .header-label__gender {
-    font-size: 0.75rem;
+    font-size: rem(12);
     font-weight: $regular;
     line-height: 1.5;
 }
 
-.header-label__category span {
-    color: $green;
-    font-size: 0.75rem;
+.header-label__category {
+    font-size: rem(12);
     font-weight: $regular;
     line-height: 1.83;
     border: 0.0625rem solid $green;
     color: $green;
-    padding: 0.35rem 0.7rem;
+    padding: rem(3) rem(11);
+    width: fit-content;
+
+    @include mq("md") {
+        padding: rem(5) rem(14);
+        padding-bottom: rem(5);
+    }
 }
 
 @include mq(md) {
@@ -22,9 +27,6 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: flex-end;
     }
-    .header-label__category span {
-        padding: 0.6rem 1rem;
-    }
-
 }

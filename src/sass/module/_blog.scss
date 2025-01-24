@@ -30,15 +30,16 @@
   object-fit: cover;
 }
 
-.blog__background-fish svg {
+.blog__background-fish {
   @include mq("md") {
     width: rem(437);
     height: rem(201);
     position: absolute;
-    top: rem(-100);
+    top: rem(-75);
     left: rem(-50);
   }
 }
+
 
 .blog__background-fish svg path {
   @include mq("md") {
@@ -75,6 +76,7 @@
 .blog__button {
   width: 100%;
   margin-top: rem(40);
+  margin-bottom: rem(5);
   display: flex;
   justify-content: center;
 

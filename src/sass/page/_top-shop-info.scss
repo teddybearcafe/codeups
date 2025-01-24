@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.shop-info {
+    width: 100%;
+    margin-top: rem(80);
+    margin-bottom: rem(106);
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mq(md) {
+            margin-top: rem(145);
+            margin-bottom: rem(160);
+    }    
+}

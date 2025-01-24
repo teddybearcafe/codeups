@@ -4,6 +4,11 @@
     display: flex;
     justify-content: center;
     padding-top: rem(50);
+    margin-bottom: rem(5);
+
+    @include mq("md") {
+        padding-top: rem(40);
+    }
 }
 
 .about__images {
@@ -46,14 +51,14 @@
 
     @include mq("md") {
         position: absolute;
-        top: 50%;
+        top: rem(120);
         right: 0;
-        transform: translateY(-50%);
+        // transform: translateY(-50%);
         z-index: 100;
         display: flex;
         max-width: rem(880);
         margin-top: 0;
-        overflow: hidden;
+        // overflow: hidden;
     }
 }
 
@@ -79,7 +84,7 @@
 
 .about__body-contents {
     @include mq("md") {
-        margin: 0 rem(40);
+        margin: rem(-16) rem(40);
     }
 }
 

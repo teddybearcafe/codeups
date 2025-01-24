@@ -1,0 +1,52 @@
+@use "global" as *;
+
+.sns {
+    display: flex;
+}
+
+.sns__item {
+    width: rem(20);
+    height: rem(20);
+    fill: $white;
+
+    @include mq("md") {
+        margin-left: rem(42);
+        width: rem(26);
+        height: rem(26);
+    }
+}
+
+.sns__item + .sns__item {
+    margin-left: rem(20);
+}
+
+// 以下旧来
+.sns__wrapper {
+    display: flex;
+    margin-top: rem(12);
+}
+
+.sns__logo svg {
+    width: rem(20);
+    height: rem(20);
+
+    @include mq("md") {
+        margin-bottom: 0.5rem;
+        width: 1.625rem;
+        height: 1.625rem;
+    }
+}
+
+.sns__logo svg path {
+    fill: $white;
+}
+
+.sns__logo + .sns__logo {
+    margin-left: rem(20);
+}
+
+@include mq(md) {
+    .sns__logo {
+        margin-left: 2.6rem;
+    }
+}

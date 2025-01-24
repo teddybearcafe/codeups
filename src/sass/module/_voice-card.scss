@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .voice-card {
-    padding: 0.94rem 1rem 1.5rem 1rem;
+    padding: rem(16) rem(16) rem(24) rem(16);
     box-shadow: rem(2) rem(2) rem(10) rgba($black, 0.25);
     max-width: 345px;
     width: 100%;
@@ -18,24 +18,28 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+
+    @include mq("md") {
+        align-items: normal;
+    }
 }
 
-.voice-card__header,
+
 .voice-card__figure {
     width: 48%;
-}
 
-@include mq(md) {
-    .voice-card__header {
-        width: 60%;
-    }
-    .voice-card__figure {
+    @include mq("md") {
         width: 40%;
-    }    
+    }
 }
 
-.voice-card__title {
-    margin-top: 0.4rem;
+.voice-card__header{
+    width: 48%;
+
+    @include mq("md") {
+            width: 60%;
+            padding-top: rem(20);
+    }    
 }
 
 .voice-card__title::after {
@@ -44,21 +48,22 @@
     height: rem(1);
     width: 100%;
     background-color: $green;
+    margin-top: rem(4);
 }
 
-.voice-card__title span {
-    font-size: 1rem;
+.voice-card__title {
+    font-size: rem(16);
     font-weight: $medium;
-    line-height: 1.438;
-}
+    line-height: 1.43;
+    margin-top: rem(4);
 
-@include mq(md) {
-    .voice-card__title span {
+    @include mq("md"){
         font-size: 1.5rem;
         line-height: 1.458;
+        margin-top: rem(10);
     }
-}
 
+}
 
 .voice-card__text {
     padding-top: 1rem;
@@ -80,8 +85,6 @@
 
 div.voice-card__figure {
     position: relative;
-    // width: 80%;
-    // margin: 30px auto 30px;
 
     @include mq("md") {
         margin: 0px 0px 0px rem(16);

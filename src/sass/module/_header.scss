@@ -31,17 +31,18 @@
     margin-right: auto;
 }
 
-.header__logo svg {
-    height: 2.375rem;
-    width: 6.375rem;
-}
+.header__logo {
+    height: rem(38);
+    width: rem(102);
 
-@include mq(md) {
-    .header__logo svg {
+    @include mq("md") {
         width: 8.625rem;
         height: 3.125rem;
     }
+}
 
+
+@include mq(md) {
 
     .header__nav {
         height: inherit;
