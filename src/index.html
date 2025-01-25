@@ -5,20 +5,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no" />
-  <meta name=”robots” content=”noindex”>
+  <meta name=”robots” content=”noindex,nofollow”>
   <!-- meta情報 -->
   <title>CodeUps</title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
   <!-- ogp -->
-  <meta property="og:title" content="" />
-  <meta property="og:type" content="" />
+  <meta property="og:title" content="CodeUps" />
+  <meta property="og:type" content="website" />
   <meta property="og:url" content="" />
   <meta property="og:image" content="" />
-  <meta property="og:site_name" content="" />
+  <meta property="og:site_name" content="CodeUps" />
   <meta property="og:description" content="" />
+  <meta name="twitter:card" content="summary" />
   <!-- ファビコン -->
-  <link rel="”icon”" href="" />
+  <link rel="icon" href="./assets/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="./asetts/images/apple-touch-icon.png" sizes="180x180" />
   <!-- フォント -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +29,7 @@
     rel="stylesheet">
   <!-- css -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" type="text/css" href="./assets/css/style.css?ver=20250125.1020" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css?ver=20250125.1900" />
   <!-- JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
@@ -100,17 +102,18 @@
       <span></span>
     </div>
 
-<!-- ドロアーメニュー -->
- <div class="drawer js-drawer">
-  <div class="drawer__inner inner">
-      <!-- ヘッダー部分 -->
-      <div class="drawer__head">
+    <!-- ドロアーメニュー -->
+     <div class="drawer js-drawer">
+      <div class="drawer__inner inner">
+
+    <!-- ヘッダー部分 -->
+     <div class="drawer__head">
         <div class="drawer__logo">
           <img src="./assets/images/CodeUps.svg" alt="CodeUpsのロゴ">
         </div>
-      </div><!-- ヘッダー部分 -->
+     </div><!-- ヘッダー部分 -->
 
-      <!-- 共通ナビゲーション部分 -->
+    <!-- 共通ナビゲーション部分 -->
     <nav class="drawer__nav global-nav">
       <div class="global-nav__content">
         <div class="global-nav__grid">
@@ -227,14 +230,12 @@
             </div>
           </div>
         </div><!-- カラム4 -->
-
+        </div>
       </div>
      </nav><!-- 共通ナビゲーション部分 -->
-
-    </nav>
-  </div>
- </div>
-
+      </div>
+  </div><!-- ドロアーメニュー -->
+ 
   </header>
 
   <main>
@@ -729,7 +730,7 @@
             </div>
 
             <div class="price__lists price-list">
-              <div class="price-list__title">体験ダイビング</div>
+              <div class="price-list__title">ファンダイビング</div>
               <dl class="price-list__definition">
                 <div class="price-list__definition-item">
                   <dt class="price-list__definition-title">ビーチダイビング(2ダイブ)</dt>
@@ -801,8 +802,8 @@
               <div class="shop-info__map">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12963.312118305756!2d139.7671248!3d35.6812362!3m2!1i1024!2i768!4f5!3m3!1m2!1s0x0%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1673104195684!5m2!1sja!2sjp"
-                  width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade" class="shop-info__iframe"></iframe>
               </div>
             </div>
           </div>
@@ -814,7 +815,7 @@
             <div class="shop-info__contact-text">
               <span>ご予約・お問い合わせはコチラ</span>
             </div>
-            <div class="shop-info__button"">
+            <div class="shop-info__button">
               <a href=" ./contact.html" class=" button">
               <span class="button__front">Contact us</span>
               <span class="button__arrow">
@@ -871,6 +872,7 @@
           <div class="global-nav__grid">
             <!-- カラム1 -->
             <div class="global-nav__column global-nav__item1">
+               <!-- カラム1 1つ目のブロック -->
               <div class="global-nav__block">
                 <div class="global-nav__heading">
                   <img src="./assets/images/hitode-icon.png" alt="ヒトデのアイコン" class="global-nav__icon">
@@ -887,15 +889,15 @@
                     <a href="#" class="global-nav__link">ナイトダイビング</a>
                   </li>
                 </ul>
-              </div>
-            <!-- カラム1 2つ目のブロック -->
-            <div class="global-nav__block">
+              </div> <!-- カラム1 1つ目のブロック -->
+              <!-- カラム1 2つ目のブロック -->
+              <div class="global-nav__block">
               <div class="global-nav__heading">
                 <img src="./assets/images/hitode-icon.png" alt="ヒトデのアイコン" class="global-nav__icon">
                 <a href="#about" class="global-nav__title">私たちについて</a>
               </div>
-            </div><!-- カラム１ 2つ目のブロック -->
-          </div><!-- カラム1 -->
+              </div><!-- カラム１ 2つ目のブロック -->
+            </div><!-- カラム1 -->
 
           <!-- カラム2 -->
           <div class="global-nav__column global-nav__item2">
@@ -983,7 +985,7 @@
             </div>
           </div><!-- カラム4 -->
 
-
+          </div>
         </div>
        </nav><!-- 共通ナビゲーション部分 -->
 
