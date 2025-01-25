@@ -27,7 +27,7 @@
 }
 
 @include mq("md") {
-    .section-header__title,
+    .contact-header__title,
     .contact-header__subtitle {
         text-shadow: none;
     }
