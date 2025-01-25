@@ -44,15 +44,16 @@
     letter-spacing: rem(20);
     text-transform: uppercase;
     color: $white;
+    margin-left: rem(16);
+
+    @include mq(md) {
+            font-size: 5rem;
+            line-height: 1.25;
+            letter-spacing: 2.7rem;
+            margin-left: rem(48);
+        }
 }
 
-@include mq(md) {
-    .mv__title {
-        font-size: 5rem;
-        line-height: 1.25;
-        letter-spacing: 2.7rem;
-    }
-}
 
 .mv__subtitle {
     font-family: $english-font-family;

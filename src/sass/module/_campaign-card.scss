@@ -9,14 +9,6 @@
     aspect-ratio: 280 / 188;
     width: 100%;
     height: auto;
-    // width: vw( 375, 280);
-    // max-width: rem(280);
-
-    // @include mq("md") {
-    //     aspect-ratio: 333 / 223;
-    //     width: 100%;
-    //     // max-width: rem(333);    
-    // }
 }
 
 .campaign-card__header {
@@ -39,7 +31,6 @@
 }
 
 .campaign-card__title{
-    // margin-top: rem(1);
 
     @include mq("md") {
         margin-top: rem(4);

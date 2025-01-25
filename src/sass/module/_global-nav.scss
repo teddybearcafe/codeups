@@ -15,7 +15,6 @@
     @include mq("md") {
         display: flex;
         gap: rem(20);
-        // padding-top: rem(19);
     }
 }
 
@@ -25,33 +24,15 @@
 
 .global-nav__item2 {
     grid-area: c;
-    // margin-top: rem(40);
-
-    // @include mq("md") {
-    //     margin-top: 0;
-    //     padding-left: rem(12);
-    // }
 }
 
 .global-nav__item3 {
     grid-area: b;
-    // padding-left: rem(12);
 }
 
 .global-nav__item4 {
     grid-area: d;
-    // padding-left: rem(12);
-    // margin-top: rem(40);
-
-    // @include mq(md) {
-    //         margin-top: 0;
-    // }
 }
-
-
-
-
-
 
 .global-nav__heading {
     display: flex;

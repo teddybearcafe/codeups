@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .price__body {
-    margin-top: rem(24);
+    margin-top: rem(27);
 
     @include mq("md") {
         display: flex;
@@ -18,7 +18,8 @@
 }
 
 .price__lists-wrapper {
-    display: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .price__lists + .price__lists {

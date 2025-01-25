@@ -5,7 +5,6 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         $(".js-hamburger").toggleClass("is-active");
         $(".js-drawer").fadeToggle();
       });
-    
 });
 
 const mySwiper = new Swiper('.mv .swiper', {
@@ -17,21 +16,6 @@ const mySwiper = new Swiper('.mv .swiper', {
     effect: 'fade',
     speed: 600,
    
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
-   
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-   
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
   });
 
 
@@ -82,32 +66,6 @@ box.each(function(){
           }
      });
 });
-
-// $(function () {
-//     // ハンバーガーメニュー
-//     $(".js-hamburger,.js-drawer").click(function () {
-//       $(".js-hamburger").toggleClass("is-active");
-//       $(".js-drawer").fadeToggle();
-//     });
-  
-//     // スライダー
-//     const swiper = new Swiper(".swiper", {
-//       loop: true,
-//       effect: "fade",
-//       speed: 3000,
-//       allowTouchMove: false,
-//       autoplay: {
-//         delay: 3000,
-//       },
-//       pagination: {
-//         el: ".swiper-pagination",
-//         clickable: true,
-//       },
-//       navigation: {
-//         nextEl: ".swiper-button-next",
-//         prevEl: ".swiper-button-prev",
-//       },
-//     });
   
     // スクロールするとロゴの色変更
     $(window).on("scroll", function () {
@@ -119,29 +77,3 @@ box.each(function(){
       }
     });
     
-//     // モーダル
-//     const trigger = $('.modal__trigger');
-//     const wrapper = $('.modal__wrapper');
-//     const layer = $('.modal__layer');
-//     const container = $('.modal__container');
-//     const close = $('.modal__close');
-  
-//     // モーダルを開くボタンをクリックしたら、モーダル本体を表示
-//     trigger.each(function (index) {
-//       $(this).on('click', function () {
-//         wrapper.eq(index).css({
-//           display: 'block',
-//           opacity: 0,
-//           transition: 'opacity 0.4s ease-in-out'
-//         }).animate({ opacity: 1 });
-  
-//         container.scrollTop(0);
-  
-//         $('body').css('overflow', 'hidden');
-//         $('html').css('overflow', 'hidden');
-//         $('body').css('background-color', 'rgba(0, 0, 0, 0.5)');
-//       });
-//     });
-  
-//     // 背景とモーダルを閉じるボタンをクリックしたら、モーダル本体を非表示
-//      layer.on('click', function () { wrapper.animate({ opacity: 0 }, 400, function () { $(this).css('display', 'none'); $('body').css('overflow', 'auto'); $('html').css('overflow', 'auto'); }); }); close.on('click', function () { wrapper.animate({ opacity: 0 }, 400, function () { $(this).css('display', 'none'); $('body').css('overflow', 'auto'); $('html').css('overflow', 'auto'); }); }); });

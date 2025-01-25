@@ -100,8 +100,6 @@
 .shop-info__map {
     aspect-ratio: 295 / 160;
     width: vw(375, 295);
-    // max-width: rem(273);
-    // width: 100%;
     margin-top: 1rem;
     box-shadow: rem(5) rem(5) rem(5) rgba(13, 41, 54, 0.5);
 
@@ -109,6 +107,11 @@
         aspect-ratio: 273 / 148;
         width: vw(1440, 273);
     }
+}
+
+.shop-info__iframe {
+    width: 100%;
+    height: 100%;
 }
 
 @include mq(md) {

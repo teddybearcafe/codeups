@@ -35,7 +35,7 @@
     width: rem(437);
     height: rem(201);
     position: absolute;
-    top: rem(-75);
+    top: rem(-90);
     left: rem(-50);
   }
 }
@@ -46,32 +46,6 @@
     fill: $aqua;
   }
 }
-
-//   .blog__background-fish {
-//     width: 6.8rem;
-//     height: 3.13rem;
-//     background-image: url("../images/contact-fish.svg");
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     display: block;
-//     position: absolute;
-//     top: 0;
-//     right: 1.25rem;
-//     transform: translateY(-50%);
-//     z-index: -1;
-// }
-
-// @include mq(md) {
-//     .shop-info__background {
-//         width: 19rem;
-//         height: 8.6rem;
-//         right: -6rem;
-//     }
-// }
-
-
-
-
 
 .blog__button {
   width: 100%;

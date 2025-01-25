@@ -59,9 +59,6 @@
         height: inherit;
     }
     
-    // .header__item:not(:first-child) {
-    //     margin-left: 36px;
-    // }
     .header__item + .header__item {
         padding-left: 2.5rem;
     }
@@ -105,9 +102,3 @@
         line-height: 1.5rem;
     }
 }
-
-// .header__logo {
-//     @include mq("lg") {
-//         width: 132px;
-//     }
-// }
