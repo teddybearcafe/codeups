@@ -68,6 +68,7 @@
 .global-nav__title {
     font-weight: $bold;
     line-height: 1;
+    position: relative;
 
     @include mq("md") {
         line-height: 1.125;
@@ -82,8 +83,43 @@
     line-height: 1.3;
     margin-top: rem(21);
     transition: opacity 0.3s;
+    position: relative;
     cursor: pointer;
   }
+
+.global-nav__title::after {
+    position: absolute;
+    left: 0;
+    bottom: rem(-8);
+    content: '';
+    width: 100%;
+    height: 0.125rem;
+    background: $white;
+    transform: scale(0, 1);     /*アンダーラインの縮尺比率。ホバー前はx方向に0*/
+    transform-origin: center top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の左端*/
+    transition: transform 0.3s;
+}
+
+.global-nav__link::after {
+    position: absolute;
+    left: rem(16);
+    bottom: rem(-8);
+    content: '';
+    width: 90%;
+    height: 0.125rem;
+    background: $white;
+    transform: scale(0, 1);     /*アンダーラインの縮尺比率。ホバー前はx方向に0*/
+    transform-origin: center top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の左端*/
+    transition: transform 0.3s;
+}
+
+.global-nav__link:hover::after,
+.global-nav__title:hover::after {
+transform: scale(1, 1);
+}
+
+
+
 
   .global-nav__block:not(:first-child) {
     margin-top: rem(40);

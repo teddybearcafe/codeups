@@ -46,6 +46,13 @@
     }
 }
 
+.about__image-left img,
+.about__image-right img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
 .about__body {
     margin-top: rem(40);
 

@@ -9,6 +9,7 @@
     aspect-ratio: 280 / 188;
     width: 100%;
     height: auto;
+    object-fit: cover;
 }
 
 .campaign-card__header {
@@ -31,6 +32,9 @@
 }
 
 .campaign-card__title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
     @include mq("md") {
         margin-top: rem(4);

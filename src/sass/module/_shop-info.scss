@@ -9,11 +9,25 @@
     @include mq("md") {
         display: flex;
         justify-content: space-around;
+        align-items: center;
         padding-bottom: rem(80);
-        box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem rgba(13, 41, 54, 0.5);
+        box-shadow: rem(4) rem(4) rem(10) rgba(0, 0, 0, 0.25);
     }
 }
 
+.shop-info__container::after {
+    @include mq("md") {
+        display: block;
+        content: "";
+        width: rem(1);
+        height: 65%;
+        background-color: $green;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%);
+    }
+}
 
 .shop-info__body {
     margin-top: rem(54);
@@ -21,7 +35,7 @@
     @include mq(md) {
         margin-top: rem(75);
         width: 45%;
-    }    
+    }
 }
 
 .shop-info__header {
@@ -45,7 +59,7 @@
     @include mq("md") {
         bottom: rem(-8);
         box-shadow: none;
-    } 
+    }
 }
 
 .shop-info__logo {
@@ -62,9 +76,9 @@
 
 .shop-info__background {
     max-width: rem(301);
-    width: vw( 375, 109);
+    width: vw(375, 109);
     height: auto;
-    aspect-ratio: 109 / 50 ;
+    aspect-ratio: 109 / 50;
     display: block;
     position: absolute;
     top: 0;
@@ -72,12 +86,12 @@
     transform: translateY(-50%);
     z-index: -1;
 
-    @include mq(md) {
-            width: rem(301);
-            height: rem(138);
-            top: rem(20);
-            right: calc( rem(-130) + ( rem(1440) - 100vw ) / 3);
-    }    
+    @include mq("md") {
+        width: rem(301);
+        height: rem(138);
+        top: rem(20);
+        right: calc(rem(-130) + (rem(1440) - 100vw) / 3);
+    }
 }
 
 .shop-info__text {
@@ -90,12 +104,12 @@
     font-weight: $regular;
     text-shadow: 0.1rem 0.1rem 0.2rem rgba(13, 41, 54, 0.5);
 
-    @include mq("md"){
+    @include mq("md") {
         text-shadow: none;
     }
 }
 
-.shop-info__text span:not(:first-child){
+.shop-info__text span:not(:first-child) {
     margin-top: 0.25rem;
 }
 
@@ -118,45 +132,44 @@
     height: 100%;
 }
 
-@include mq(md) {
-
-    .shop-info__contact::before {
-        display: block;
-        content: "";
-        width: 0.0625rem;
-        height: 100%;
-        background-color: $green;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-}
+// .shop-info__contact::before {
+//     @include mq("md") {
+//         display: block;
+//         content: "";
+//         width: 0.0625rem;
+//         height: 100%;
+//         background-color: $green;
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//     }
+// }
 
 .shop-info__contact {
     margin-top: rem(32);
     text-align: center;
     position: relative;
 
-    @include mq(md) {
-        margin-top: rem(85);
+    @include mq("md") {
+        margin-top: rem(40);
         width: 45%;
     }
 }
 
 .shop-info__contact-text {
-    padding-top: rem(6);
+    padding-top: rem(8);
     font-size: rem(14);
     color: $green;
     text-shadow: 0.1rem 0.1rem 0.2rem rgba(13, 41, 54, 0.5);
 
     @include mq("md") {
-        text-shadow: none;        
+        text-shadow: none;
     }
 }
 
 .shop-info__button {
-    padding-top: 2.4rem;
-    margin-bottom: rem(5);
+    padding-top: rem(40);
+    margin-bottom: rem(4);
     width: 100%;
     display: flex;
     justify-content: center;

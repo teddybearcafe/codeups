@@ -1,25 +1,49 @@
 @use "global" as *;
 
+// .campaign {
+//     @include mq("md") {
+//         overflow: hidden;
+//     }
+// }
+
+.campaign .swiper {
+    // overflow: visible;
+    width: 100vw;
+    margin-right: calc(50% - 50vw);
+}
+
 .campaign__cards {
     margin-top: rem(26);
     padding-bottom: rem(10);
 
     @include mq("md") {
         margin-top: rem(40);
+        overflow: visible;
+        width: 100%;
+        padding-right: calc(50% - 50vw);
     }
 }
+
+.campaign__wrapper {
+    width: 100%;
+    // display: flex;
+    // flex-wrap: nowrap;
+}
+
+.campaign .swiper-wrapper {
+    transition-timing-function: linear;
+}
+
 
 .campaign__slide {
     width: vw(375, 280);
+    max-width: rem(600);
  
     @include mq("md"){
-        max-width: calc( ($inner - 5rem) / 3);
+        // max-width: rem(333);
+        max-width: calc(($inner - 5rem) / 3);
         width: 100%;
     }
-}
-
-.campaign__slide + .campaign__slide {
-    margin-left: rem(24);
 }
 
 .campaign__button {
@@ -56,24 +80,25 @@
 .campaign__swiper-button-next {
     height: rem(80);
     width: rem(80);
-    position: static;
+    cursor: pointer;
 }
 
-.campaign__swiper-button-prev:after,
-.campaign__swiper-button-next:after {
+.campaign__swiper-button-prev::after,
+.campaign__swiper-button-next::after {
     display: block;
     content: "";
-    height: rem(80);
-    margin: auto;
-    width: rem(80);
+    height: 100%;
+    // margin: auto;
+    width: 100%;
     background-repeat: no-repeat;
+    background-position: center;
     background-size: contain;
 }
 
-.campaign__swiper-button-prev:after {
+.campaign__swiper-button-prev::after {
     background-image: url("../images/swiper-prev.png");
 }
 
-.campaign__swiper-button-next:after {
+.campaign__swiper-button-next::after {
     background-image: url("../images/swiper-next.png");
 }

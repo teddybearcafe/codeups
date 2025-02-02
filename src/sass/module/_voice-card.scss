@@ -3,14 +3,14 @@
 .voice-card {
     padding: rem(16) rem(16) rem(24) rem(16);
     box-shadow: rem(2) rem(2) rem(10) rgba($black, 0.25);
-    max-width: 345px;
+    // max-width: 345px;
     width: 100%;
-}
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 
-@include mq(md) {
-    .voice-card {
+    @include mq("md") {
         padding: 1.5rem;
-        max-width: calc(($inner - 2.5rem) / 2 );
     }
 }
 
@@ -21,15 +21,6 @@
 
     @include mq("md") {
         align-items: normal;
-    }
-}
-
-
-.voice-card__figure {
-    width: 48%;
-
-    @include mq("md") {
-        width: 40%;
     }
 }
 
@@ -62,18 +53,15 @@
         line-height: 1.458;
         margin-top: rem(10);
     }
-
 }
 
 .voice-card__text {
     padding-top: 1rem;
     width: 100%;
-}
 
-@include mq(md) {
-    .voice-card__text {
-        padding-top: 2.5rem;
-    }
+    @include mq("md") {
+            padding-top: 2.5rem;
+        }    
 }
 
 .voice-card__text p {
@@ -82,17 +70,21 @@
     line-height: 1.5;
 }
 
-
-div.voice-card__figure {
+.voice-card__figure {
+    width: 48%;
+    aspect-ratio: 151 / 117;
     position: relative;
+    object-fit: cover;
 
     @include mq("md") {
+        width: 40%;
+        aspect-ratio: 180 / 140;
         margin: 0px 0px 0px rem(16);
         max-width: rem(180);
     }
 }
 
-div.voice-card__figure div.color{
+.voice-card__figure .color{
     position: absolute;
     top: 0;
     right: 0;
@@ -102,15 +94,8 @@ div.voice-card__figure div.color{
     background-color: #408F95;
 }
 
-div.voice-card__figure img {
-    aspect-ratio: 151 / 117;
-    height: auto;
-    display: block;
+.voice-card__figure img {
+    height: 100%;
     width: 100%;
-
-    @include mq("md") {
-        aspect-ratio: 180 / 140;
-        max-width: 180px;
-        width: 100%;
-    }
+    object-fit: cover;
 }

@@ -6,18 +6,6 @@
   }
 }
 
-.blog__cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  justify-items: center;
-  gap: 2.5rem;
-  margin-top: 1.5rem;
-
-  @include mq("md") {
-    margin-top: rem(80);
-  }
-}
-
 .blog__background {
   position: absolute;
   top: 0;
@@ -28,6 +16,7 @@
 
 .blog__background-img {
   object-fit: cover;
+  max-height: rem(500);
 }
 
 .blog__background-fish {
@@ -55,6 +44,6 @@
   justify-content: center;
 
   @include mq("md") {
-    margin-top: rem(80);
+    margin-top: rem(90);
   }
 }
