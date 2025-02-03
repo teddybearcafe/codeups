@@ -1,15 +1,21 @@
 @use "global" as *;
 
-// .campaign {
-//     @include mq("md") {
-//         overflow: hidden;
-//     }
-// }
+.campaign {
+    @include mq("md") {
+        overflow: hidden;
+    }
+}
+
+.campaign__inner {
+    position: relative;
+}
 
 .campaign .swiper {
-    // overflow: visible;
-    width: 100vw;
-    margin-right: calc(50% - 50vw);
+    overflow: visible;
+    position: relative;
+    // width: 100vw;
+    // padding-right: 10vw;
+    // margin-right: calc(50% - 50vw);
 }
 
 .campaign__cards {
@@ -19,21 +25,17 @@
     @include mq("md") {
         margin-top: rem(40);
         overflow: visible;
-        width: 100%;
+        // width: 100%;
         padding-right: calc(50% - 50vw);
     }
 }
 
-.campaign__wrapper {
-    width: 100%;
-    // display: flex;
-    // flex-wrap: nowrap;
-}
 
 .campaign .swiper-wrapper {
     transition-timing-function: linear;
+    // overflow: hidden;
+    // padding-right: calc(50% - 50vw);
 }
-
 
 .campaign__slide {
     width: vw(375, 280);
@@ -42,7 +44,7 @@
     @include mq("md"){
         // max-width: rem(333);
         max-width: calc(($inner - 5rem) / 3);
-        width: 100%;
+        // width: 100%;
     }
 }
 
@@ -56,49 +58,68 @@
     }
 }
 
-.campaign__swiper-controller {
-    display: none;
+// .campaign__swiper-controller {
+//     display: none;
 
-    @include mq("md") {
-        display: flex;
-        gap: rem(80);
-        align-items: center;
-        justify-content: flex-end;
-        position: absolute;
-        top: 0;
-        right: rem(24);
-        width: fit-content;
-        height: auto;
-    }
-  }
+//     @include mq("md") {
+//         display: flex;
+//         // gap: rem(80);
+//         align-items: center;
+//         justify-content: flex-end;
+//         position: absolute;
+//         top: rem(20);
+//         right: rem(24);
+//         width: fit-content;
+//         height: auto;
+//     }
+//   }
 
 .campaign__inner {
     position: relative;
 }
 
-.campaign__swiper-button-prev,
-.campaign__swiper-button-next {
-    height: rem(80);
-    width: rem(80);
-    cursor: pointer;
+.campaign .swiper-button-prev::after,
+.campaign .swiper-button-next::after {
+        display: none; // デフォルトのアイコンを非表示
 }
 
-.campaign__swiper-button-prev::after,
-.campaign__swiper-button-next::after {
+.campaign .swiper-button-prev,
+.campaign .swiper-button-next {
+    display: none;
+
+    @include mq("md") {
+        position: absolute;
+        top: rem(20);
+        height: rem(80);
+        width: rem(80);
+        cursor: pointer;
+        display: block;    
+    }
+}
+
+.campaign .swiper-button-prev{
+    left: unset;
+    right: rem(190);
+}
+
+.campaign .swiper-button-next{
+    right: rem(20);
+}
+
+.campaign .swiper-button-prev::after {
     display: block;
-    content: "";
+    content: '';
     height: 100%;
-    // margin: auto;
     width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    background: url("../images/swiper-prev.png") no-repeat center / contain;
 }
 
-.campaign__swiper-button-prev::after {
-    background-image: url("../images/swiper-prev.png");
+.campaign .swiper-button-next::after {
+    display: block;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: url("../images/swiper-next.png") no-repeat center / contain;
 }
 
-.campaign__swiper-button-next::after {
-    background-image: url("../images/swiper-next.png");
-}
+

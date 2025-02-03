@@ -37,34 +37,33 @@ const mvSwiper = new Swiper('.mv .swiper', {
  
 });
 
-const campaignSwiper = new Swiper('.campaign .swiper', {
-    slidesPerView: 'auto',
+const campaignSwiper = new Swiper(".campaign .swiper", {
     spaceBetween: 24, 
     conteredSlides: true,
   
     // Optional parameters
     loop: true,
-    // loopAdditionalslides: 1,
+    loopAdditionalslides: 1,
     // loopslides: 3,
     autoplay: {
-        delay: 0,
+        delay: 2000,
     },
-    speed: 5000,
+    // speed: 5000,
 
     // Navigation arrows
     navigation: {
-      nextEl: '.campaign__swiper-button-next',
-      prevEl: '.campaign__swiper-button-prev',
+      prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-button-next",
     },
-
+  // スライドの表示枚数
+  slidesPerView: 'auto',
     breakpoints: {
-
+          // スライドの表示枚数：768px以上の場合
       768: {
-        slidesPerView: 'auto',
         spaceBetween: 40,
-      }  
-    }
-  })
+      },
+    },
+  });
 
 //要素の取得とスピードの設定
 var box = $('.voice-card__figure , .information__image , .price__header-image'),
