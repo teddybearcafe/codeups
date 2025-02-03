@@ -61,6 +61,7 @@ const campaignSwiper = new Swiper(".campaign .swiper", {
           // スライドの表示枚数：768px以上の場合
       768: {
         spaceBetween: 40,
+        slidesPerView: 'auto',
       },
     },
   });
