@@ -106,6 +106,7 @@
 
     @include mq("md") {
         text-shadow: none;
+        align-items: flex-start;
     }
 }
 
@@ -122,6 +123,7 @@
     @include mq("md") {
         aspect-ratio: 273 / 148;
         width: vw(1440, 273);
+        max-width: rem(273);
         box-shadow: none;
         border: rem(1) solid $green;
     }
@@ -171,8 +173,7 @@
     padding-top: rem(40);
     margin-bottom: rem(4);
     width: 100%;
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 .shop-info__address {

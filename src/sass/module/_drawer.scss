@@ -1,15 +1,23 @@
 @use "global" as *;
 
 .drawer {
-    position: absolute;
-    z-index: 5000;
-    top: 0;
-    left: 0;
+    z-index: 4000;
     display: none;
     width: 100%;
     height: 100vh;
     background-color: $green;
     overflow-y: scroll;
+}
+
+.drawer::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100vw - rem(80));
+    background-color: $green;
+    z-index: -1;
 }
 
 .drawer__inner {
@@ -24,6 +32,7 @@
     height: auto;
 }
 
-.drawer__nav {
-    margin-top: rem(45);
-}
+// .drawer__nav {
+//     margin-top: rem(45);
+//     // z-index: 4500;
+// }

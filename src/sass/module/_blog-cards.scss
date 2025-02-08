@@ -2,13 +2,14 @@
   
   .blog-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(333px, 1fr));
+    // grid-template-columns: repeat(auto-fill, minmax(333px, 1fr));
     justify-items: center;
     gap: rem(40);
     margin-top: 1.5rem;
   
     @include mq("md") {
       margin-top: rem(85);
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 

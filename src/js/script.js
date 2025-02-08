@@ -2,14 +2,16 @@
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
     // ハンバーガーメニュー
     $(".js-hamburger,.js-drawer").click(function () {
-        $(".js-hamburger").toggleClass("is-active");
+        $(".js-hamburger").toggleClass("is-drawer-active");
+        $("body").toggleClass("is-drawer-active");
         $(".js-drawer").fadeToggle();
     });
 
     // ウィンドウ幅が768px以上になったらドロアーを閉じる
     $(window).resize(function() {
         if ($(window).width() >= 768) {
-            $(".js-hamburger").removeClass("is-active");
+            $(".js-hamburger").removeClass("is-drawer-active");
+            $("body").removeClass("is-drawer-active");
             $(".js-drawer").fadeOut();
         }
     });
@@ -18,9 +20,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $(window).on("scroll", function () {
         const sliderHeight = $(".mv").height();
         if (sliderHeight - 30 < $(this).scrollTop()) {
-          $(".js-top").addClass("is-active");
+          $(".js-top").addClass("is-return-button-active");
         } else {
-          $(".js-top").removeClass("is-active");
+          $(".js-top").removeClass("is-return-button-active");
         }
       });
 });
