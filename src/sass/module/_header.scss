@@ -14,10 +14,6 @@
     }
 }
 
-.header .is-drawer-active {
-    background-color: transparent;
-}
-
 .header__inner {
     height: inherit;
     display: flex;
@@ -33,6 +29,7 @@
 
 .header__logo {
     margin: 0;
+    z-index: 6000;
 }
 
 .header__logo-link {

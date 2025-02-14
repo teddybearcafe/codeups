@@ -1,12 +1,12 @@
 @use "global" as *;
 
 .about__button {
-    padding-top: rem(50);
+    margin-top: rem(50);
     margin-bottom: rem(5);
     text-align: center;
 
     @include mq("md") {
-        padding-top: rem(40);
+        margin-top: rem(40);
     }
 }
 

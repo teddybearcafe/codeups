@@ -5,11 +5,15 @@
     display: none;
     width: 100%;
     height: 100vh;
+    // height: calc(100vw - rem(80));
     background-color: $green;
     overflow-y: scroll;
+    // position: relative;
+    // top: 0;
+    // left: 0;
 }
 
-.drawer::after {
+.drawer::before {
     content: "";
     position: fixed;
     top: 0;

@@ -29,7 +29,7 @@
 
     @include mq("md") {
             width: 60%;
-            padding-top: rem(20);
+            margin-top: rem(20);
     }    
 }
 
@@ -56,12 +56,12 @@
 }
 
 .voice-card__text {
-    padding-top: 1rem;
+    margin-top: 1rem;
     width: 100%;
 
     @include mq("md") {
-            padding-top: 2.5rem;
-        }    
+            margin-top: 2.5rem;
+    }    
 }
 
 .voice-card__text p {
