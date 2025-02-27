@@ -67,8 +67,9 @@
     position: relative;
 
     @include mq("md") {
-        width: vw( 1440, 540);
+        // width: vw( 1440, 540);
         aspect-ratio: 540 / 356;
+        width: 50%;
     }
 }
 

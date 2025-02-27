@@ -52,13 +52,14 @@
   z-index: -1;
 }
 
-
+@media (any-hover: hover) {
 .button:hover .button__arrow svg path {
   stroke: $green;
 }
 
 .button:hover .button__front {
   color: $green;
+}
 }
 
 .button::before {
@@ -74,6 +75,8 @@
   transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
 }
 
+@media (any-hover: hover) {
 .button:hover::before {
   transform: scale(1, 1);
+}
 }

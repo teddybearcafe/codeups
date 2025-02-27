@@ -1,6 +1,5 @@
 @use "global" as *;
 
-
 .footer__head {
     @include mq("md") {
         display: flex;
@@ -19,7 +18,7 @@
 }
 
 .footer__nav {
-    padding-top: rem(40);
+    padding-top: rem(44);
     color: $white;
 
     @include mq("md") {

@@ -1,10 +1,14 @@
 @use "global" as *;
 
 .price {
-    padding: rem(80) 0;
+    margin-top: rem(86);
+    padding-top: rem(80);
+    padding-bottom: rem(84);
+    // padding: rem(80) 0;
     background-color: $aqua;
 
     @include mq("md") {
-        padding: rem(104) 0;
+        padding-top: rem(100);
+        padding-bottom: rem(104);
     }
 }

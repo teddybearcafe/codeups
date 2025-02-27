@@ -2,7 +2,7 @@
 
 .about__button {
     margin-top: rem(50);
-    margin-bottom: rem(5);
+    // margin-bottom: rem(5);
     text-align: center;
 
     @include mq("md") {
@@ -14,7 +14,7 @@
     position: relative;
     display: flex;
     justify-content: flex-end;
-    margin-top: rem(50);
+    margin-top: rem(56);
 
     @include mq("md") {
         margin-top: rem(120);
@@ -119,7 +119,10 @@
         width: rem(194);
         height: rem(181);
         position: absolute;
-        right: calc( rem(-90) + ( rem(1440) - 100vw ) / 3);
+        // right: 50vw;
+        right: calc( 50% - min(45vw,rem(645)));
+        // right: calc( rem(-90) + ( rem(1440) - 100vw ) / 3);
+        // right: min(90%,1350px);
         bottom: 0;
         z-index: 500;
         transition: right 0.5s ease;

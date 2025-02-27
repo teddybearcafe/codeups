@@ -17,7 +17,7 @@
     }
 }
 
-.section-header__title span {
+.section-header::first-letter {
     color: $green;
     text-transform: uppercase;
 }
@@ -26,7 +26,11 @@
     color: $green;
     font-weight: $regular;
     font-size: rem(12);
-    margin-top: rem(6);
+    margin-top: rem(4);
+
+    @include mq("md") {
+        margin-top: rem(8);
+    }
     // line-height: 1.5;
 }
 

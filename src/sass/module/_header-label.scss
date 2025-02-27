@@ -10,15 +10,15 @@
 .header-label__category {
     font-size: rem(12);
     font-weight: $regular;
-    line-height: 1.83;
-    border: 0.0625rem solid $green;
+    // line-height: 1.83;
+    border: rem(1) solid $green;
     color: $green;
-    padding: rem(3) rem(11);
+    padding: rem(5) rem(11);
     width: fit-content;
 
     @include mq("md") {
-        padding: rem(5) rem(14);
-        padding-bottom: rem(5);
+        padding: rem(5) rem(15);
+        // padding-bottom: rem(4);
     }
 }
 

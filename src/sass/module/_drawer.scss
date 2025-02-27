@@ -11,6 +11,13 @@
     // position: relative;
     // top: 0;
     // left: 0;
+    overflow: auto;
+
+    // iOSのための100vh問題対策
+    height: 100dvh;
+
+    // スクロールを滑らかに
+    -webkit-overflow-scrolling: touch;
 }
 
 .drawer::before {
@@ -26,9 +33,11 @@
 
 .drawer__inner {
     width: 100%;
-    height: inherit;
+    // height: inherit;
     padding-top: 1.25rem;
     color: $white;
+    padding: rem(20) rem(15);
+    padding-bottom: rem(100);
 }
 
 .drawer__logo {
@@ -40,3 +49,10 @@
 //     margin-top: rem(45);
 //     // z-index: 4500;
 // }
+
+.global-nav {
+    height: 100%;
+    // ... 既存のコード ...
+    // 必要に応じて max-height を削除または調整
+    // max-height: 100vh; // これを削除または調整
+}

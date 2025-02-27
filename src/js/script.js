@@ -48,7 +48,7 @@ const campaignSwiper = new Swiper(".campaign .swiper", {
     loopAdditionalslides: 1,
     // loopslides: 3,
     autoplay: {
-        delay: 2000,
+        delay: 5000,
     },
     // speed: 5000,
 

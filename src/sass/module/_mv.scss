@@ -22,7 +22,7 @@
     object-fit: cover;
 }
 
-@include mq(md) {
+@include mq("md") {
     .swiper-slide .mv__picture img {
         aspect-ratio: 1440 / 768;
     }
@@ -41,16 +41,14 @@
     font-family: $numbers-font-family;
     font-size: rem(40);
     line-height: 1.2;
-    letter-spacing: rem(20);
+    letter-spacing: 0.54em;
     text-transform: uppercase;
     color: $white;
-    margin-left: rem(16);
+    text-indent: 0.54em;
 
-    @include mq(md) {
+    @include mq("md") {
             font-size: 5rem;
             line-height: 1.25;
-            letter-spacing: 2.7rem;
-            margin-left: rem(48);
         }
 }
 

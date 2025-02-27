@@ -9,7 +9,7 @@
     z-index: 50;
     text-align: center;
     margin-top: rem(40);
-    margin-bottom: rem(5);
+    // margin-bottom: rem(5);
 
     @include mq("md") {
         margin-top: rem(80);
@@ -20,7 +20,7 @@
     @include mq("md"){
         position: absolute;
         top: rem(-120);
-        left: rem(-50);
+        left: calc( 50% - min( 48vw, rem(634)));
         width: rem(301);
         height: rem(138);    
     }
