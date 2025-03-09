@@ -22,14 +22,16 @@
         top: rem(-120);
         left: calc( 50% - min( 48vw, rem(634)));
         width: rem(301);
-        height: rem(138);    
+        height: rem(138);   
+        background-image: url("../images/fish-R.svg");
+        background-size: cover;
     }
 }
 
-.voice__background-tatsu svg {
-    width: rem(71);
-    height: rem(162);
-}
+// .voice__background-tatsu svg {
+//     width: rem(71);
+//     height: rem(162);
+// }
 
 .voice__background-tatsu {
     @include mq("md") {
@@ -38,6 +40,8 @@
         right: 0;
         transform: translate( -40%, 45%);
         width: rem(71);
-        height: rem(162);    
+        height: rem(162);   
+        background-image: url("../images/tatsu.svg");
+        background-size: cover; 
     }
 }

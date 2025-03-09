@@ -79,6 +79,7 @@
 .shop-info__background {
     max-width: rem(301);
     width: vw(375, 109);
+    width: 100%;
     height: auto;
     aspect-ratio: 109 / 50;
     display: block;
@@ -87,6 +88,9 @@
     right: 0;
     transform: translateY(-50%);
     z-index: -1;
+    background-image: url("../images/fish-L-green.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
 
     @include mq("md") {
         width: rem(301);

@@ -25,6 +25,9 @@
     font-family: $numbers-font-family;
     font-weight: $bold;
     padding-top: 0.5rem;
+    @include mq("md") {
+        padding-top: 0.4rem;
+    }
 }
 
 .price-card__cancell-price {

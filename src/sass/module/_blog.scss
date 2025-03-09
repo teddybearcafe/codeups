@@ -27,6 +27,8 @@
     top: rem(-100);
     // left: rem(-50);
     left: calc( 50% - min( 48vw, rem(634)));
+    background-image: url("../images/fish-L.svg");
+    background-size: cover;
   }
 }
 

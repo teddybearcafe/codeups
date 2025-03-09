@@ -90,7 +90,8 @@
 
 .about__body-contents {
     @include mq("md") {
-        margin: rem(-16) rem(40);
+        margin-right: rem(40);
+        margin-left: rem(40);
     }
 }
 
@@ -105,6 +106,7 @@
 
     @include mq("md") {
         color: $white;
+        margin-top: 0;
     }
 }
 
@@ -126,6 +128,7 @@
         bottom: 0;
         z-index: 500;
         transition: right 0.5s ease;
-        transform: translateY(50%);    
+        transform: translateY(50%);
+        background-image: url("../images/sango.svg");
     }
 }

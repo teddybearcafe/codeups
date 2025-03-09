@@ -40,7 +40,9 @@
     }
 }
 
-.section-header__title--white span {
+
+
+.section-header__title--white::first-letter {
     @include mq("md") {
         color: $white;
     }
