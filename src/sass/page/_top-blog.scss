@@ -10,3 +10,34 @@
         position: relative;
     }
 }
+
+.blog::after {
+    @include mq("md") {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background-image: url("../images/blog-bg.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        // background-position: top left;
+        max-height: rem(500);
+    }
+}
+.blog::before {
+    @include mq("md") {
+        display: block;
+        content: "";
+        width: rem(437);
+        height: rem(201);
+        position: absolute;
+        top: 0;
+        left: calc( 50% - min( 48vw, rem(618)));
+        background-image: url("../images/fish-L.svg");
+        background-size: cover;    
+    }
+}

@@ -6,39 +6,6 @@
   }
 }
 
-.blog__background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-}
-
-.blog__background-img {
-  object-fit: cover;
-  max-height: rem(500);
-}
-
-.blog__background-fish {
-  @include mq("md") {
-    width: rem(437);
-    height: rem(201);
-    position: absolute;
-    top: rem(-100);
-    // left: rem(-50);
-    left: calc( 50% - min( 48vw, rem(634)));
-    background-image: url("../images/fish-L.svg");
-    background-size: cover;
-  }
-}
-
-
-.blog__background-fish svg path {
-  @include mq("md") {
-    fill: $aqua;
-  }
-}
-
 .blog__button {
   width: 100%;
   margin-top: rem(40);

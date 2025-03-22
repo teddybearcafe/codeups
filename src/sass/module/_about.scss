@@ -132,3 +132,26 @@
         background-image: url("../images/sango.svg");
     }
 }
+
+.about__inner {
+    position: relative;
+}
+
+.about__inner::after {
+    @include mq("md") {
+        display: block;
+        content: "";
+        width: rem(194);
+        height: rem(181);
+        position: absolute;
+        // right: 50vw;
+        right: calc( 50% - min(45vw,rem(645)));
+        // right: calc( rem(-90) + ( rem(1440) - 100vw ) / 3);
+        // right: min(90%,1350px);
+        bottom: 0;
+        z-index: 500;
+        transition: right 0.5s ease;
+        transform: translateY(50%);
+        background-image: url("../images/sango.svg");
+    }
+}

@@ -76,16 +76,20 @@
     }
 }
 
-.shop-info__background {
+.shop-info__inner {
+    position: relative;
+}
+.shop-info__inner::before {
     max-width: rem(301);
     width: vw(375, 109);
-    width: 100%;
+    // width: 100%;
     height: auto;
     aspect-ratio: 109 / 50;
     display: block;
+    content: "";
     position: absolute;
     top: 0;
-    right: 0;
+    right: rem(16);
     transform: translateY(-50%);
     z-index: -1;
     background-image: url("../images/fish-L-green.svg");
@@ -96,7 +100,7 @@
         width: rem(301);
         height: rem(138);
         top: rem(28);
-        right: calc(rem(-130) + (rem(1440) - 100vw) / 3);
+        right: calc(rem(-100) + (rem(1440) - 100vw) / 3);
     }
 }
 

@@ -43,6 +43,8 @@
 
 
 .section-header__title--white::first-letter {
+    text-transform: uppercase;
+
     @include mq("md") {
         color: $white;
     }

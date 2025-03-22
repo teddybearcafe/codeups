@@ -7,5 +7,20 @@
     @include mq("md") {
         margin-top: rem(120);
         margin-bottom: rem(144);
+        position: relative;
+    }
+}
+
+.voice::before {
+    @include mq("md") {
+        display: block;
+        content: "";
+        position: absolute;
+        top: rem(-120);
+        left: calc( 50% - min( 48vw, rem(634)));
+        width: rem(301);
+        height: rem(138);   
+        background-image: url("../images/fish-R.svg");
+        background-size: cover;
     }
 }

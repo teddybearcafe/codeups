@@ -77,10 +77,11 @@
     }
 }
 
-.price__background-fish {
+.price__inner::before {
     @include mq("md"){
-        position: absolute;
         display: block;
+        content: "";
+        position: absolute;
         left: calc( 50% - min( 50vw, rem(634)));
         bottom: rem(-56);
         max-width: rem(437);
