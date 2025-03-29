@@ -43,6 +43,46 @@
     margin-top: rem(4);
 }
 
+.voice-card__header-label-gender {
+    font-size: rem(12);
+    font-weight: $regular;
+    line-height: 1.5;
+}
+
+.voice-card__header-label-category {
+    font-size: rem(12);
+    font-weight: $regular;
+    // line-height: 1.83;
+    border: rem(1) solid $green;
+    color: $green;
+    padding: rem(5) rem(11);
+    width: fit-content;
+
+    @include mq("md") {
+        padding: rem(5) rem(15);
+        // padding-bottom: rem(4);
+    }
+}
+
+@include mq(md) {
+    .voice-card__header-label {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 .voice-card__title {
     font-size: rem(16);
     font-weight: $medium;
