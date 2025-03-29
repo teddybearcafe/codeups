@@ -5,10 +5,8 @@
     // grid-template-columns: repeat(auto-fill, minmax(333px, 1fr));
     justify-items: center;
     gap: rem(36);
-    margin-top: rem(24);
   
     @include mq("md") {
-      margin-top: rem(80);
       grid-template-columns: repeat(3, 1fr);
     }
   }
