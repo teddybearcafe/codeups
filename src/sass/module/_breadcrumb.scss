@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.breadcrumb__lists {
+    display: flex;
+    font-size: rem(14);
+}
+
+.breadcrumb__list-item:not(:first-child) {
+    margin-left: rem(8);
+}
+
+.breadcrumb__separator {
+    margin-left: rem(8);
+}

@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.thanks__text {
+    text-align: center;
+    line-height: 1.125;
+}
+
+.thanks__text:not(:first-child) {
+    margin-top: rem(40);
+    line-height: 1.1875;
+}

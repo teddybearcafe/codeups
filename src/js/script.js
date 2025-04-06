@@ -28,7 +28,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 });
 
 // mySwiperが2回宣言されているので、変数名を変更
-const mvSwiper = new Swiper('.mv .swiper', {
+const mvSwiper = new Swiper('.js-mv', {
   // Optional parameters
   loop: true,
   autoplay: {
@@ -39,7 +39,7 @@ const mvSwiper = new Swiper('.mv .swiper', {
  
 });
 
-const campaignSwiper = new Swiper(".campaign .swiper", {
+const campaignSwiper = new Swiper(".js-campaign", {
     spaceBetween: 24, 
     conteredSlides: true,
   

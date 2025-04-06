@@ -1,0 +1,47 @@
+@use "global" as *;
+
+.mv-individual {
+    position: relative;
+}
+
+.mv-individual__img img {
+    aspect-ratio: 375 / 460;
+    height: auto;
+    max-height: rem(548);
+    width: 100%;
+    object-fit: cover;
+@include mq("md") {
+        aspect-ratio: 1440 / 548;
+    }
+}
+
+.mv-individual__body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 50;
+    text-align: center;
+    @include mq("md") {
+        transform: translateX(-50%);
+    }
+}
+
+.mv-individual__title {
+    font-family: $numbers-font-family;
+    font-size: rem(40);
+    line-height: 1.2;
+    // letter-spacing: 0.54em;
+    // text-transform: uppercase;
+    color: $white;
+    // text-indent: 0.54em;
+
+    @include mq("md") {
+            font-size: 5rem;
+            line-height: 1.25;
+        }
+}
+
+.mv-individual__title::first-letter {
+    text-transform: uppercase;
+}
