@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.category-tag-item {
+    font-size: rem(14);
+    line-height: 1.57;
+    color: $green;
+    border: rem(1) solid $green;
+    padding-top: rem(6);
+    padding-bottom: rem(6);
+    text-align: center;
+    width: rem(162);
+    height: rem(34);
+}
+
+.category-tag-item--active {
+    background-color: $green;
+    color: $white;
+}

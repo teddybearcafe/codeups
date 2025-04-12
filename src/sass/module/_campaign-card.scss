@@ -36,6 +36,17 @@
     }
 }
 
+.campaign-card__figure--large {
+    aspect-ratio: 280 / 188;
+ 
+    // max-height: rem(520);
+
+    @include mq("md") {
+        aspect-ratio: 520 / 347;
+        max-height: rem(347);
+    }
+}
+
 .campaign-card__header {
     // margin-top: rem(16);
     // padding: rem(0) rem(8);
@@ -95,6 +106,11 @@
     color: $font-color;
 }
 
+.campaign-card__title--large span {
+    font-size: rem(24);
+    line-height: 1.2;
+}
+
 .campaign-card__price {
     display: flex;
     flex-direction: column;
@@ -109,6 +125,12 @@
 
     @include mq("md") {
         margin-top: rem(20);
+    }
+}
+
+.campaign-card__price--subpage-campaign {
+    @include mq("md") {
+        margin-top: rem(24);
     }
 }
 
@@ -133,12 +155,19 @@
     gap: 1rem;
     font-family: $numbers-font-family;
     font-weight: $bold;
-    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+
     @include mq("md") {
-        padding-top: 0.4rem;
+        margin-top: 0.4rem;
     }
 }
 
+.campaign-card__prices--subpage-campaign {
+    @include mq("md") {
+        margin-top: rem(8);
+        gap: rem(40);
+    }
+}
 .campaign-card__cancell-price {
     text-decoration: line-through;
     text-decoration-color: #C94800;
@@ -160,4 +189,52 @@
     @include mq("md") {
         font-size: rem(40);
     }
+}
+
+.campaign-card__content-wrapper {
+    display: none;
+
+    @include mq("md") {
+        display: block;
+    }
+}
+
+.campaign-card__contact-note {
+    @include mq("md") {
+        text-align: center;
+        color: $green;
+    }
+}
+
+.campaign-card__contact-date {
+    font-family: $numbers-font-family;
+    font-size: rem(16);
+    line-height: 1.125;
+    font-weight: $bold;
+}
+
+.campaign-card__contact-text {
+    font-size: rem(14);
+    line-height: 1.129;
+    margin-top: rem(8);
+}
+
+.campaign-card__text {
+    @include mq("md") {
+        margin-top: rem(24);
+        line-height: 1.5;
+    }
+}
+
+.campaign-card__contact-section {
+    margin-top: rem(32);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.campaign-card__contact-button {
+    width: 100%;
+    text-align: center;
+    margin-top: rem(16);
 }
