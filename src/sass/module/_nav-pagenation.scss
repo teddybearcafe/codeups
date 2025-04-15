@@ -1,0 +1,49 @@
+@use "global" as *;
+
+.nav-pagenation__inner {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-pagenation__items {
+    display: flex;
+
+    // justify-content: center;
+    @include mq("md") {
+        max-width: rem(444);
+    }
+}
+
+.nav-pagenation__item {
+    font-family: $numbers-font-family;
+    font-weight: $bold;
+    line-height: 1.125;
+    height: rem(38);
+    width: rem(38);
+    border: solid rem(1) $green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $green;
+}
+
+.nav-pagenation__item+.nav-pagenation__item {
+    margin-left: rem(12);
+}
+
+.nav-pagenation__item:nth-child(2),
+.nav-pagenation__item:last-child {
+    margin-left: rem(40);
+}
+
+.nav-pagenation__item--active {
+    color: $white;
+    background-color: $green;
+}
+
+.nav-pagenation__item--md {
+    display: none;
+    @include mq("md") {
+        display: flex;
+    }
+}

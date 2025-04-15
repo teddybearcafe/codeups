@@ -128,7 +128,7 @@
     }
 }
 
-.campaign-card__price--subpage-campaign {
+.campaign-card__price--subpage {
     @include mq("md") {
         margin-top: rem(24);
     }
@@ -162,7 +162,7 @@
     }
 }
 
-.campaign-card__prices--subpage-campaign {
+.campaign-card__prices--subpage {
     @include mq("md") {
         margin-top: rem(8);
         gap: rem(40);
@@ -237,4 +237,7 @@
     width: 100%;
     text-align: center;
     margin-top: rem(16);
+    @include mq("md") {
+        margin-top: rem(20);
+    }
 }

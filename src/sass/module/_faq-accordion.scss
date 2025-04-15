@@ -1,0 +1,64 @@
+@use "global" as *;
+
+.faq-accordion {
+    max-width: 500px;
+    background-color: #f2f2f2;
+}
+
+.faq-accordion:not([open]) {
+    margin-bottom: 7px;
+}
+
+.faq-accordion summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 1em 2em;
+    background-color: $green;
+    color: #fff;
+    cursor: pointer;
+    line-height: 1.1875;
+}
+
+.faq-accordion summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-accordion summary::before,
+.faq-accordion summary::after {
+    width: 3px;
+    height: .9em;
+    border-radius: 5px;
+    background-color: #fff;
+    content: '';
+}
+
+.faq-accordion summary::before {
+    position: absolute;
+    right: 2em;
+    rotate: 90deg;
+}
+
+.faq-accordion summary::after {
+    transition: rotate .3s;
+}
+
+.faq-accordion[open] summary::after {
+    rotate: 90deg;
+}
+
+.faq-accordion p {
+    transform: translateY(-10px);
+    opacity: 0;
+    margin: 0;
+    padding: rem(24) rem(16);
+    color: #333333;
+    transition: transform .5s, opacity .5s;
+    line-height: 1.1875;
+}
+
+.faq-accordion[open] p {
+    transform: none;
+    opacity: 1;
+}

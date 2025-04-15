@@ -1,0 +1,60 @@
+@use "global" as *;
+
+.subpage-faq__breadcrumb {
+    margin-top: rem(8);
+}
+
+.subpage-faq__content-inner {
+    margin-top: rem(52);
+    position: relative;
+    @include mq("md") {
+        margin-top: rem(150);
+    }
+}
+
+.subpage-faq__content-inner::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: rem(-24);
+    left: calc(50% - min(45vw, rem(624)));
+    width: rem(120);
+    height: rem(55);
+    background-image: url("../images/fish-R.svg");
+    background-size: cover;
+
+    @include mq("md") {
+        top: rem(-72);
+        left: calc(50% - min(48vw, rem(624)));
+        width: rem(301);
+        height: rem(138);
+    }
+}
+
+.subpage-faq__item:not(:first-child) {
+    margin-top: rem(40);
+}
+
+
+
+
+
+
+
+
+
+
+
+.subpage-price__price-tables {
+    @include mq("md") {
+        max-width: rem(700);
+        margin: 0 auto;
+    }
+}
+
+.subpage-price__price-tables:not(:first-child){
+    margin-top: rem(40);
+    @include mq("md") {
+        margin-top: rem(80);
+    }
+}
