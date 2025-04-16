@@ -1,8 +1,9 @@
 @use "global" as *;
 
 .faq-accordion {
-    max-width: 500px;
-    background-color: #f2f2f2;
+    max-width: rem(700);
+    // background-color: #f2f2f2;
+    // border: solid rem(1) $green;
 }
 
 .faq-accordion:not([open]) {
@@ -14,11 +15,17 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    padding: 1em 2em;
+    // padding: 1em 2em;
+    padding: rem(16);
     background-color: $green;
     color: #fff;
     cursor: pointer;
     line-height: 1.1875;
+    @include mq("md") {
+        font-size: rem(20);
+        line-height: 1.2;
+        padding: rem(24) rem(40);
+    }
 }
 
 .faq-accordion summary::-webkit-details-marker {
@@ -27,8 +34,10 @@
 
 .faq-accordion summary::before,
 .faq-accordion summary::after {
-    width: 3px;
-    height: .9em;
+    // width: 3px;
+    width: rem(1);
+    // height: .9em;
+    height: rem(28);
     border-radius: 5px;
     background-color: #fff;
     content: '';
@@ -42,6 +51,11 @@
 
 .faq-accordion summary::after {
     transition: rotate .3s;
+    right: rem(14);
+    position: relative;
+    @include mq("md") {
+        right: 0;
+    }
 }
 
 .faq-accordion[open] summary::after {
@@ -55,7 +69,13 @@
     padding: rem(24) rem(16);
     color: #333333;
     transition: transform .5s, opacity .5s;
-    line-height: 1.1875;
+    // line-height: 1.1875;
+    border: solid rem(1) $green;
+    // font-family: $base-font-family;
+    @include mq("md") {
+        margin-top: rem(16);
+        padding: rem(38);
+    }
 }
 
 .faq-accordion[open] p {

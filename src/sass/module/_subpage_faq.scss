@@ -31,6 +31,19 @@
     }
 }
 
+.subpage-faq__items {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 0 auto;
+width: 100%;
+max-width: rem(700);
+}
+
+.subpage-faq__item {
+    width: 100%;
+}
+
 .subpage-faq__item:not(:first-child) {
     margin-top: rem(40);
 }
