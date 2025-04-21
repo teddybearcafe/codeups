@@ -11,19 +11,19 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        transform: translate( -40%, 45%);
+        transform: translate(-40%, 45%);
         width: rem(71);
-        height: rem(162);   
+        height: rem(162);
         background-image: url("../images/tatsu.svg");
-        background-size: cover; 
+        background-size: cover;
     }
 }
 
 .voice__body {
     margin-top: rem(40);
-  
+
     @include mq("md") {
-      margin-top: rem(32);
+        margin-top: rem(32);
     }
 }
 

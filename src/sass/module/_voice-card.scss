@@ -14,6 +14,11 @@
     }
 }
 
+.voice-card--subpage-voice {
+    padding-top: rem(15);
+    padding-bottom: rem(20);
+}
+
 .voice-card__wrapper {
     display: flex;
     align-items: flex-end;
@@ -24,14 +29,18 @@
     }
 }
 
-.voice-card__header{
+.voice-card__header {
     margin-top: rem(4);
     width: 48%;
 
     @include mq("md") {
-            width: 60%;
-            margin-top: rem(24);
-    }    
+        width: 60%;
+        margin-top: rem(24);
+    }
+}
+
+.voice-card__header--subpage-voice {
+    margin-top: 0;
 }
 
 .voice-card__title::after {
@@ -89,7 +98,7 @@
     line-height: 1.43;
     margin-top: rem(4);
 
-    @include mq("md"){
+    @include mq("md") {
         font-size: rem(24);
         line-height: 1.4;
         margin-top: rem(12);
@@ -101,8 +110,8 @@
     width: 100%;
 
     @include mq("md") {
-            margin-top: rem(40);
-    }    
+        margin-top: rem(40);
+    }
 }
 
 .voice-card__text p {
@@ -125,7 +134,7 @@
     }
 }
 
-.voice-card__figure .color{
+.voice-card__figure .color {
     position: absolute;
     top: 0;
     right: 0;
