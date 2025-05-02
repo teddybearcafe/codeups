@@ -1,0 +1,370 @@
+@use "global" as *;
+
+.contact-form__unit {
+    position: relative;
+
+    @include mq("md") {
+        display: flex;
+        align-items: flex-start;
+        // position: relative;
+    }
+}
+
+.contact-form__unit:not(:first-child) {
+    margin-top: rem(48);
+
+    @include mq("md") {
+        margin-top: rem(24);
+    }
+}
+
+/* 追加: 共通のボーダーライン */
+.contact-form__unit:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    bottom: rem(-24);
+    left: 0;
+    width: 100%;
+    border-bottom: dashed rem(1) $green;
+
+    @include mq("md") {
+        bottom: 0;
+    }
+}
+
+.contact-form__unit-head {
+    font-size: rem(16);
+    font-weight: $bold;
+    line-height: 1.1875;
+    display: flex;
+    align-items: flex-start;
+
+    @include mq("md") {
+        padding-top: rem(16);
+        width: 30%;
+        padding-bottom: rem(40);
+    }
+}
+
+.contact-form__required {
+    font-size: rem(12);
+    color: $white;
+    line-height: 1.17;
+    letter-spacing: 0.4rem;
+    font-weight: $regular;
+    background-color: $warning;
+    padding: rem(1) rem(12);
+    margin-left: rem(8);
+    display: inline-block;
+}
+
+.contact-form__unit-contents {
+    padding-top: rem(20);
+    display: flex;
+    align-items: flex-start;
+
+    @include mq("md") {
+        width: 70%;
+        padding-top: rem(16);
+        padding-bottom: rem(40);
+        padding-left: rem(12);
+        margin: 0 auto;
+    }
+}
+
+.contact-form__unit-contents--checkbox {
+    padding-top: rem(12);
+}
+
+/* 擬似要素によるフォーム下の罫線
+---------------------------------*/
+// .contact-form__unit-contents::after {
+//     display: block;
+//     content: "";
+//     height: rem(1);
+//     width: 100%;
+//     border: rem(1) dashed $green;
+//     // top: rem(12);
+//     bottom: 0;
+//     left: 0;
+//     margin-top: rem(24);
+// }
+
+// .contact-form__unit-contents--textarea::after {
+//     margin-top: rem(24);
+// }
+
+.contact-form__input {
+    border: solid rem(1) $green;
+    width: 100%;
+    padding: rem(3) rem(16);
+}
+
+.contact-form__input::placeholder {
+    font-size: rem(16);
+    line-height: 1.1875;
+    color: $aqua;
+}
+
+/* チェックボックス
+---------------------------------------------*/
+
+.contact-form__form-checkbox {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    // appearance: none;
+    // display: inline-block;
+    // position: relative;
+    // width: 20px;
+    // height: 20px;
+    // border: 1px solid #06b6d4;
+    // border-radius: 2px;
+    // cursor: pointer;
+}
+
+/* labelでカスタムデザイン */
+.contact-form__form-label {
+    position: relative;
+    padding-left: rem(20);
+    /* チェックボックス分の余白 */
+    cursor: pointer;
+    line-height: 0.8;
+    display: inline-block;
+    user-select: none;
+}
+
+/* labelのbeforeでボックスを作る */
+.contact-form__form-label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: rem(14);
+    height: rem(14);
+    border: rem(1) solid $green;
+    // border-radius: 4px;
+    background: #fff;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+/* チェック状態の時のデザイン */
+.contact-form__form-checkbox:checked+.contact-form__form-label::after {
+    content: "";
+    position: absolute;
+    // left: 6px;
+    // top: 10px;
+    // width: 10px;
+    // height: 5px;
+    // border-left: 3px solid #4caf50;
+    // border-bottom: 3px solid #4caf50;
+    // transform: rotate(-45deg);
+    top: -4px;
+    left: 6px;
+    transform: rotate(50deg);
+    width: 8px;
+    height: 16px;
+    border-right: 2px solid $warning;
+    border-bottom: 2px solid $warning;
+}
+
+.contact-form__checkbox-item {
+    height: rem(28);
+}
+
+/* セレクトボックス
+---------------------------------------------*/
+.contact-form__form-select {
+    appearance: none;
+    width: 100%;
+    /*セレクトボックスの横幅*/
+    // padding: 15px;
+    padding: rem(8) 0 rem(8) rem(8);
+    color: #333;
+    /*テキストの色*/
+    border: 1px solid #5cc0b5;
+    /*枠線の太さ・形状・色*/
+    border-radius: 3px;
+    /*枠線の角丸*/
+    background-color: #fff;
+    /*背景色*/
+    cursor: pointer;
+    /*マウスカーソルをポインターに*/
+    font-size: rem(12);
+
+    @include mq("md") {
+        /*セレクトボックスの横幅*/
+        // padding: 15px;
+        padding: rem(4) 0 rem(4) rem(8);
+    }
+}
+
+.contact-form__form-select:focus {
+    outline: none;
+    /*focus時の枠線を消去*/
+}
+
+.contact-form__unit-contents--select {
+    position: relative;
+
+    // width: 300px;
+    /*親要素の横幅*/
+    @include mq("md") {
+        padding-top: rem(8);
+    }
+}
+
+.contact-form__unit-contents--select::before {
+    position: absolute;
+    top: rem(32);
+    /*矢印の上からの位置*/
+    right: rem(8);
+    /*矢印の右からの位置*/
+    content: '';
+    width: 15px;
+    /*矢印の横幅*/
+    height: 10px;
+    /*矢印の縦幅*/
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    /*逆三角形の描画*/
+    background-color: #5cc0b5;
+    /*矢印の色*/
+    pointer-events: none;
+    /*矢印部分をクリックできるようにする*/
+
+    @include mq("md") {
+        top: rem(20);
+    }
+}
+
+/* Style for the text area
+---------------------------------------------*/
+
+.contact-form__textarea {
+    width: 100%;
+    /* Set the width */
+    // padding: rem(8);
+    /* Set padding */
+    border: rem(1) solid $green;
+    /* Set border */
+    border-radius: 4px;
+    /* Optional: for rounded corners */
+    font-size: 16px;
+    /* Set font size */
+    resize: vertical;
+    /* Allow vertical resize */
+    outline: none;
+    /* Remove outline */
+    box-sizing: border-box;
+    /* Include border and padding in the element's dimensions */
+    // margin-bottom: 20px;
+}
+
+/* チェックボックス　confirm　section
+---------------------------------------------*/
+.contact-form__unit-contents--confirm::after {
+    display: none;
+}
+
+.contact-form__checkbox-item--confirm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form__form-label--confirm {
+    padding-left: rem(30);
+}
+
+/* label--confirmのbeforeでボックスを作る */
+.contact-form__form-label--confirm::before {
+    // content: "";
+    // position: absolute;
+    // left: 0;
+    // top: 0;
+    width: rem(21);
+    height: rem(21);
+    // border: rem(1) solid $green;
+    // // border-radius: 4px;
+    // background: #fff;
+    // box-sizing: border-box;
+    // transition: border-color 0.2s;
+}
+
+/* チェック状態の時のデザイン */
+.contact-form__form-checkbox--confirm:checked+.contact-form__form-label::after {
+    // top: -4px;
+    left: 10px;
+    // width: 8px;
+    height: 20px;
+}
+
+
+/* チェックをしないとsendボタンを押せない
+---------------------------------------------*/
+.contact-form__form-checkbox#consent1 {
+    text-align: left;
+    margin: 0;
+}
+
+.contact-form__form-checkbox#consent1+.contact-form__form-label {
+    text-align: left;
+    // width: 600px;
+    width: 82%;
+    font-size: rem(14);
+    line-height: 1.57;
+    @include mq("md"){
+        width: auto;
+    }
+}
+
+#interlock {
+    pointer-events: none;
+    /*クリックをキャンセル*/
+}
+
+#consent1:checked~#interlock {
+    pointer-events: auto;
+    /*キャンセルを解除*/
+}
+
+@media screen and (max-width:767px) {
+    input#consent1+label {
+        width: 100%;
+    }
+}
+
+/* SP END */
+
+
+// .contact-form__form-checkbox:checked::after {
+//     content: "";
+//     position: absolute;
+//     top: 5px;
+//     left: 3px;
+//     width: 12px;
+//     height: 6px;
+//     border-bottom: 2px solid #06b6d4;
+//     border-left: 2px solid #06b6d4;
+//     transform: rotate(-45deg);
+// }
+
+.contact-form__confirm-area {
+    margin-top: rem(64);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mq("md") {
+        margin-top: rem(80);
+    }
+}
+
+.button--confirm {
+    margin-top: rem(24);
+    @include mq("md"){
+        margin-top: rem(40);
+    }
+}

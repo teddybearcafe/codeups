@@ -1,0 +1,47 @@
+@use "global" as *;
+
+.tab-panel {
+    display: none;
+    width: 100%;
+}
+
+.tab-panel--active {
+    display: block;
+    border: solid rem(1) $green;
+    padding: rem(20) rem(24) rem(24) rem(24);
+    @include mq("md") {
+        width: 100%;
+        display: flex;
+    }
+}
+
+.tab-panel__title::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: rem(1);
+    background-color: $green;
+}
+
+.tab-panel__text {
+    margin-top: rem(8);
+}
+
+.tab-panel__image {
+    margin-top: rem(8);
+    @include mq("md"){
+        margin-left: rem(48);
+        aspect-ratio: 492 / 313;
+        height: auto;
+        width: 50%;
+    }
+}
+
+.tab-panel__body {
+    @include mq("md"){
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}

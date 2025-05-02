@@ -1,0 +1,55 @@
+@use "global" as *;
+
+.terms__content-inner {
+    @include mq("md"){
+        max-width: rem(850);
+    }
+}
+
+.terms__breadcrumb {
+    margin-top: rem(8);
+}
+
+.terms__content {
+    line-height: 2.0;
+    position: relative;
+    font-weight: $regular;
+    margin-top: rem(44);
+    @include mq("md"){
+        margin-top: rem(136);
+    }
+}
+
+.terms__content-h2 {
+    @include mq("md"){
+        font-size: rem(32);
+        // font-weight: $midum;
+    }
+}
+
+.terms__lists {
+    padding-left: rem(20);
+}
+
+.terms-list {
+    list-style-type: decimal;
+}
+
+.terms__content::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: rem(-16);
+    left: calc( 50% - min( 45vw, rem(624)));
+    width: rem(120);
+    height: rem(55);   
+    background-image: url("../images/fish-R.svg");
+    background-size: cover;
+
+    @include mq("md") {
+        top: rem(-58);
+        left: calc( 50% - min( 48vw, rem(624)));
+        width: rem(301);
+        height: rem(138);   
+    }
+}

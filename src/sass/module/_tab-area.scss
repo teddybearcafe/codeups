@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.tab-area {
+    display: grid;
+    max-height: rem(60);
+    height: 100%;
+    gap: rem(19);
+    grid-template-columns: repeat( 3, 1fr);
+    @include mq("md") {
+        gap: rem(90);
+    }
+}

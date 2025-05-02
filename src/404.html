@@ -37,7 +37,7 @@
   <script defer src="./assets/js/script.js"></script>
 </head>
 
-<body>
+<body class="subpage-404__body  siteWrapeer">
   <header class="header js-header">
     <div class="header__inner">
       <h1 class="header__logo">
@@ -234,37 +234,41 @@
 
   </header>
 
-  <main>
-    <div class="mv-individual">
-      <picture class="mv-individual__img">
-        <source srcset="./assets/images/contact-mv.jpg" media="(min-width: 767px)">
-        <img src="./assets/images/contact-mv-sp.jpg" alt="砂浜に波が寄せる様子">
-      </picture>      
-      <div class="mv-individual__body">
-        <div class="mv-individual__title">contact</div>
-      </div>
-    </div>
+  <main class="siteWrapeer__main">
 
     <!-- breadcrumb -->
-    <div class="breadcrumb">
+    <div class="subpage-404__breadcrumb breadcrumb breadcrumb--white">
       <div class="breadcrunb__inner inner">
         <ul class="breadcrumb__lists">
           <li class="breadcrumb__list-item"><a href="index.html">TOP</a></li>
           <li class="breadcrumb__separator">&gt;</li>
-          <li class="breadcrumb__list-item"><a href="contact.html">お問い合わせ</a></li>
-          <li class="breadcrumb__separator">&gt;</li>
-          <li class="breadcrumb__list-item">送信完了</li>
+          <li class="breadcrumb__list-item">404</a></li>
         </ul>
       </div>
     </div><!-- breadcrumb -->
-    <section class="thanks">
-      <div class="thanks__inner inner">
-        <p class="thanks__text">お問い合わせ内容を送信完了しました。</p>
-        <p class="thanks__text">
-          このたびは、お問い合わせ頂き<br class="md-none">誠にありがとうございます。<br>
-          お送り頂きました内容を確認の上、<br class="md-none">3営業日以内に折り返しご連絡させて頂きます。<br>
-          また、ご記入頂いたメールアドレスへ、<br class="md-none">自動返信の確認メールをお送りしております。
-        </p>
+
+    <section class="subpage-404">
+      <div class="subpage-404__inner inner">
+        <img class="subpage-404__image" src="./assets/images/page-404error-bg.svg" alt="">
+        <div class="subpage-404__contents-wrapper">
+          <div class="subpage-404__massage">404</div>
+          <div class="subpage-404__sub-text">
+            申し訳ありません。<br>
+            お探しのページが見つかりません。
+          </div>
+          <div class="subpage-404__button">
+            <div class="campaign-card__contact-button">
+              <a href=" ./contact.html" class=" button">
+                <span class="button__front">Contact us</span>
+                <span class="button__arrow">
+                  <svg viewBox="0 0 42 8" fill="none">
+                    <path d="M1 7H41L34 1" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
 
       </div>
     </section>
@@ -324,7 +328,7 @@
 
   </main>
 
-  <footer class="footer footer--thanks">
+  <footer class="footer">
     <div class="footer__inner inner">
       <!-- ヘッダー部分 -->
       <div class="footer__head">

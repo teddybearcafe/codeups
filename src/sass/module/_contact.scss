@@ -1,0 +1,45 @@
+@use "global" as *;
+
+
+.contact__content-inner {
+    @include mq("md") {
+        max-width: rem(850);
+    }
+}
+
+.contact__breadcrumb {
+    margin-top: rem(8);
+}
+
+.contact__content {
+    line-height: 2.0;
+    position: relative;
+    font-weight: $regular;
+    max-width: rem(600);
+    margin: 0 auto;
+
+    @include mq("md") {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: rem(700);
+    }
+}
+
+.contact__content::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: rem(-24);
+    left: calc(50% - min(45vw, rem(624)));
+    width: rem(120);
+    height: rem(55);
+    background-image: url("../images/fish-R.svg");
+    background-size: cover;
+
+    @include mq("md") {
+        top: rem(-54);
+        left: calc(50% - min(48vw, rem(624)));
+        width: rem(301);
+        height: rem(138);
+    }
+}
