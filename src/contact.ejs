@@ -1,0 +1,64 @@
+<div class="contact-form__unit">
+    <dt class="contact-form__unit-head"><label for="name">お名前<span class="contact-form__required">必須</span></label></dt>
+    <dd class="contact-form__unit-contents">
+        <input id="name" name="name" type="text" placeholder="沖縄　太郎" class="contact-form__input">
+    </dd>
+</div>
+<div class="contact-form__unit">
+    <dt class="contact-form__unit-head"><label for="mail">メールアドレス<span class="contact-form__required">必須</span></label>
+    </dt>
+    <dd class="contact-form__unit-contents">
+        <input id="mail" name="email" type="text" placeholder="aaa000@ggmail.com" class="contact-form__input">
+    </dd>
+</div>
+<div class="contact-form__unit">
+    <dt class="contact-form__unit-head"><label for="phone">電話番号<span class="contact-form__required">必須</span></label>
+    </dt>
+    <dd class="contact-form__unit-contents">
+        <input id="phone" name="phone" type="text" placeholder="000-0000-0000" class="contact-form__input">
+    </dd>
+</div>
+<!-- チェックボックス -->
+<div class="contact-form__unit contact-form__unit--checkbox">
+    <dt class="contact-form__unit-head">お問合せ項目<span class="contact-form__required">必須</span></dt>
+    <dd class="contact-form__unit-contents contact-form__unit-contents--checkbox">
+        <ul class="contact-form__checkbox-list">
+            <li class="contact-form__checkbox-item">
+                <input type="checkbox" name="contact_type[]" id="diving-course" class="contact-form__form-checkbox"
+                    value="ダイビング講習について">
+                <label for="diving-course" class="contact-form__form-label">ダイビング講習について</label>
+            </li>
+            <li class="contact-form__checkbox-item">
+                <input type="checkbox" name="contact_type[]" id="fundiving" class="contact-form__form-checkbox"
+                    value="ファンダイビングについて">
+                <label for="fundiving" class="contact-form__form-label">ファンダイビングについて</label>
+            </li>
+            <li class="contact-form__checkbox-item">
+                <input type="checkbox" name="contact_type[]" id="trial" class="contact-form__form-checkbox"
+                    value="体験ダイビングについて">
+                <label for="trial" class="contact-form__form-label">体験ダイビングについて</label>
+            </li>
+        </ul>
+    </dd>
+</div>
+<!-- セレクトボックス -->
+<div class="contact-form__unit contact-form__unit--selectbox">
+    <dt class="contact-form__unit-head">キャンペーン<span class="contact-form__required">必須</span></dt>
+    <dd class="contact-form__unit-contents contact-form__unit-contents--select">
+        <select name="campaign" id="campaign" class="contact-form__form-select" required>
+            <option value="" hidden>キャンペーン内容を選択</option>
+            <option value="ライセンス取得">ライセンス取得</option>
+            <option value="貸切体験ダイビング">貸切体験ダイビング</option>
+            <option value="ナイトダイビング">ナイトダイビング</option>
+            <option value="貸切ファンダイビング">貸切ファンダイビング</option>
+        </select>
+        <div class="anser-note">キャンペーンを選択してください</div>
+    </dd>
+</div>
+
+<div class="contact-form__unit contact-form__unit--textarea">
+    <dt class="contact-form__unit-head">お問合せ内容<span class="contact-form__required">必須</span></dt>
+    <dd class="contact-form__unit-contents contact-form__unit-contents--textarea">
+        <textarea name="message" rows="6" cols="30" class="contact-form__textarea"></textarea>
+    </dd>
+</div>

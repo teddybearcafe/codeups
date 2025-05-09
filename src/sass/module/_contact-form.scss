@@ -106,6 +106,20 @@
     color: $aqua;
 }
 
+.contact-form__input--red {
+    border: solid rem(1) $warning;
+    width: 100%;
+    padding: rem(3) rem(16);
+    background-color: rgba(201, 72, 0, 0.2);
+}
+
+.contact-form__input--red::placeholder {
+    font-size: rem(16);
+    line-height: 1.1875;
+    color: $aqua;
+}
+
+
 /* チェックボックス
 ---------------------------------------------*/
 
@@ -148,6 +162,11 @@
     background: #fff;
     box-sizing: border-box;
     transition: border-color 0.2s;
+}
+
+.contact-form__form-label--red::before {
+    border: rem(1) solid $warning;
+    background-color: rgba(201, 72, 0, 0.2);
 }
 
 /* チェック状態の時のデザイン */
@@ -262,24 +281,29 @@
     // margin-bottom: 20px;
 }
 
-/* チェックボックス　confirm　section
+.contact-form__textarea--red {
+    border: rem(1) solid $warning;
+    background-color: rgba(201, 72, 0, 0.2);
+}
+
+/* チェックボックス　consent area
 ---------------------------------------------*/
-.contact-form__unit-contents--confirm::after {
+.contact-form__unit-contents--consent::after {
     display: none;
 }
 
-.contact-form__checkbox-item--confirm {
+.contact-form__checkbox-item--consent {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.contact-form__form-label--confirm {
+.contact-form__form-label--consent {
     padding-left: rem(30);
 }
 
 /* label--confirmのbeforeでボックスを作る */
-.contact-form__form-label--confirm::before {
+.contact-form__form-label--consent::before {
     // content: "";
     // position: absolute;
     // left: 0;
@@ -293,8 +317,13 @@
     // transition: border-color 0.2s;
 }
 
+.contact-form__form-label--consent-red::before {
+    border: rem(1) solid $warning;
+    background-color: rgba(201, 72, 0, 0.2);
+}
+
 /* チェック状態の時のデザイン */
-.contact-form__form-checkbox--confirm:checked+.contact-form__form-label::after {
+.contact-form__form-checkbox--consent:checked+.contact-form__form-label::after {
     // top: -4px;
     left: 10px;
     // width: 8px;
@@ -315,19 +344,10 @@
     width: 82%;
     font-size: rem(14);
     line-height: 1.57;
-    @include mq("md"){
+
+    @include mq("md") {
         width: auto;
     }
-}
-
-#interlock {
-    pointer-events: none;
-    /*クリックをキャンセル*/
-}
-
-#consent1:checked~#interlock {
-    pointer-events: auto;
-    /*キャンセルを解除*/
 }
 
 @media screen and (max-width:767px) {
@@ -362,9 +382,23 @@
     }
 }
 
-.button--confirm {
-    margin-top: rem(24);
-    @include mq("md"){
-        margin-top: rem(40);
+.contact-form__answer {
+    font-size: 16px;
+    color: #F45F5F;
+    // padding-bottom: 10px;
+    display: none;
+    // margin: 0 auto;
+    // display: flex;
+    justify-content: center;
+    // width: 100%;
+    margin-left: rem(16);
+    text-indent: rem(-16);
+}
+
+.contact-form__md-none {
+    display: block;
+
+    @include mq("md") {
+        display: none;
     }
 }

@@ -14,6 +14,15 @@
   border: 1px solid $green;
 }
 
+// contactページのconsentボタン
+.button--consent {
+  margin-top: rem(24);
+  pointer-events: none;
+  @include mq("md"){
+      margin-top: rem(40);
+  }
+}
+
 .button__front {
   font-family: $english-font-family;
   font-size: rem(14);
@@ -53,13 +62,13 @@
 }
 
 @media (any-hover: hover) {
-.button:hover .button__arrow svg path {
-  stroke: $green;
-}
+  .button:hover .button__arrow svg path {
+    stroke: $green;
+  }
 
-.button:hover .button__front {
-  color: $green;
-}
+  .button:hover .button__front {
+    color: $green;
+  }
 }
 
 .button::before {
@@ -76,7 +85,7 @@
 }
 
 @media (any-hover: hover) {
-.button:hover::before {
-  transform: scale(1, 1);
-}
+  .button:hover::before {
+    transform: scale(1, 1);
+  }
 }
