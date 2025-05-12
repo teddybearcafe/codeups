@@ -237,11 +237,11 @@
   <main>
     <div class="mv-individual">
       <picture class="mv-individual__img">
-        <source srcset="./assets/images/voice-mv.jpg" media="(min-width: 767px)">
-        <img src="./assets/images/voice-mv-sp.jpg" alt="青い海のなか蝶々魚が泳ぐ様子">
+        <source srcset="./assets/images/blog-mv.jpg" media="(min-width: 767px)">
+        <img src="./assets/images/blog-mv-sp.jpg" alt="青い海のなか蝶々魚が泳ぐ様子">
       </picture>
       <div class="mv-individual__body">
-        <div class="mv-individual__title">voice</div>
+        <div class="mv-individual__title">blog</div>
       </div>
     </div>
 
@@ -251,195 +251,202 @@
         <ul class="breadcrumb__lists">
           <li class="breadcrumb__list-item"><a href="index.html">TOP</a></li>
           <li class="breadcrumb__separator">&gt;</li>
-          <li class="breadcrumb__list-item">お客様の声</li>
+          <li class="breadcrumb__list-item">ブログ一覧</li>
         </ul>
       </div>
     </div><!-- breadcrumb -->
 
-    <!-- category-tag -->
-    <div class="subpage-voice__category category-tag">
-      <div class="category-tag__inner inner">
-        <ul class="category-tag__lists">
-          <li class="category-tag__list-item category-tag-item category-tag-item--active"><a href="">ALL</a></li>
-          <li class="category-tag__list-item category-tag-item"><a href="">ライセンス講習</a></li>
-          <li class="category-tag__list-item category-tag-item"><a href="">ファンダイビング</a></li>
-          <li class="category-tag__list-item category-tag-item"><a href="">体験ダイビング</a></li>
-        </ul>
+    <div class="subpage-blog__contents-wrapper">
+      <div class="subpage-blog__contents-inner inner">
+        <div class="subpage-blog__article">
+          <!-- pagenation -->
+          <div class="subpage-voice__pagenation nav-pagenation">
+            <div class="nav-pagenation__inner inner">
+              <ul class="nav-pagenation__items">
+                <li class="nav-pagenation__item nav-pagenation__item--lt"><a href=""><img
+                      src="./assets/images/pagenation-lt.svg" alt="前のページに戻る"></a></li>
+                <li class="nav-pagenation__item nav-pagenation__item--active"><a href="">1</a></li>
+                <li class="nav-pagenation__item"><a href="">2</a></li>
+                <li class="nav-pagenation__item"><a href="">3</a></li>
+                <li class="nav-pagenation__item"><a href="">4</a></li>
+                <li class="nav-pagenation__item nav-pagenation__item--md"><a href="">5</a></li>
+                <li class="nav-pagenation__item nav-pagenation__item--md"><a href="">6</a></li>
+                <li class="nav-pagenation__item nav-pagenation__item--gt"><a href=""><img
+                      src="./assets/images/pagenation-gt.svg" alt="次のページに進む"></a></li>
+              </ul>
+            </div>
+          </div><!-- pagenation -->
+        </div>
+
+        <!-- サイドコンテンツ -->
+        <div class="subpage-blog__aside aside">
+          <!-- 人気記事 -->
+          <div class="aside__contents-title aside-title">
+            <img src="./assets/images/aside-title-icon01.svg" alt="人気記事" class="aside-title__icon">
+            <h2 class="aside-title__title">人気記事</h2>
+          </div>
+
+          <ul class="aside__articles">
+            <li class="aside__articles-item aside-article">
+              <a href="#" class="aside-article__link">
+                <img src="./assets/images/aside-article-01.jpg" alt="ライセンス取得" class="aside-article__image">
+                <div class="aside-article__body">
+                  <time datetime="2023-11-17" class="aside-article__date">2023.11/17</time>
+                  <h3 class="aside-article__title">ライセンス取得</h3>
+                </div>
+              </a>
+            </li>
+            <li class="aside__articles-item aside-article">
+              <a href="#" class="aside-article__link">
+                <img src="./assets/images/aside-article-02.jpg" alt="ウミガメ" class="aside-article__image">
+                <div class="aside-article__body">
+                  <time datetime="2023-11-17" class="aside-article__date">2023.11/17</time>
+                  <h3 class="aside-article__title">ウミガメと泳ぐ</h3>
+                </div>
+              </a>
+            </li>
+            <li class="aside__articles-item aside-article">
+              <a href="#" class="aside-article__link">
+                <img src="./assets/images/aside-article-03.jpg" alt="カクレクマノミ" class="aside-article__image">
+                <div class="aside-article__body">
+                  <time datetime="2023-11-17" class="aside-article__date">2023.11/17</time>
+                  <h3 class="aside-article__title">カクレクマノミ</h3>
+                </div>
+              </a>
+            </li>
+          </ul>
+
+          <!-- 口コミ -->
+          <div class="aside__contents-title aside-title">
+            <img src="./assets/images/aside-title-icon01.svg" alt="口コミ" class="aside-title__icon">
+            <h2 class="aside-title__title">口コミ</h2>
+          </div>
+
+          <div class="aside__voice-contents">
+            <img src="./assets/images/aside-voice-img.jpg" alt="口コミを寄せてくれた男女のカップル" class="aside__voice-image">
+            <div class="aside__voice-body">
+              <div class="aside__voice-caption">30代(カップル)</div>
+              <div class="aside__voice-title">ここにタイトルが入ります。ここにタイトル</div>
+            </div>
+            <div class="aside__voice-button">
+              <a href="./voice.html" class="button button--aside-voice">
+                <span class="button__front">View more</span>
+                <span class="button__arrow">
+                  <svg viewBox="0 0 42 8" fill="none">
+                    <path d="M1 7H41L34 1" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <!-- キャンペーン -->
+          <div class="aside__contents-title aside-title">
+            <img src="./assets/images/aside-title-icon01.svg" alt="キャンペーン" class="aside-title__icon">
+            <h2 class="aside-title__title">キャンペーン</h2>
+          </div>
+
+          <ul class="aside__campaigns">
+            <li class="aside__campaigns-item">
+              <a href="" class="aside__campaigns-link">
+                <div class="campaign-card">
+                  <figure class="campaign-card__figure">
+                    <img src="./assets/images/campaign1.jpg" alt="青い海のなかで様々な熱帯魚が泳ぐ様子">
+                  </figure>
+                  <div class="campaign-card__body campaign-card__body--aside">
+                    <div class="campaign-card__header">
+                      <div class="campaign-card__title campaign-card__title--aside">
+                        <span>ライセンス講習</span>
+                      </div>
+                    </div>
+                    <div class="campaign-card__price campaign-card__price--aside">
+                      <div class="campaign-card__price-description campaign-card__price-description--aside">全部コミコミ(お一人様)
+                      </div>
+                      <div class="campaign-card__prices">
+                        <div class="campaign-card__cancell-price">&yen;56,000</div>
+                        <div class="campaign-card__selling-price campaign-card__selling-price--aside">&yen;46,000</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="aside__campaigns-item">
+              <a href="#" class="aside-campaigns__link">
+                <div class="campaign-card">
+                  <figure class="campaign-card__figure">
+                    <img src="./assets/images/campaign2.jpg" alt="プライベートビーチを彷彿とさせる白い砂浜とエメラルドグリーンの海に浮かぶダイビングボート">
+                  </figure>
+                  <div class="campaign-card__body campaign-card__body--aside">
+                    <div class="campaign-card__header">
+                      <div class="campaign-card__title campaign-card__title--aside">
+                        <span>貸切体験ダイビング</span>
+                      </div>
+                    </div>
+                    <div class="campaign-card__price campaign-card__price--aside">
+                      <div class="campaign-card__price-description campaign-card__price-description--aside">全部コミコミ(お一人様)
+                      </div>
+                      <div class="campaign-card__prices">
+                        <div class="campaign-card__cancell-price">&yen;24,000</div>
+                        <div class="campaign-card__selling-price campaign-card__selling-price--aside">&yen;18,000</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+
+          <div class="aside__campaign-button">
+            <a href="./campaign.html" class="button button--aside-campaign">
+              <span class="button__front">View more</span>
+              <span class="button__arrow">
+                <svg viewBox="0 0 42 8" fill="none">
+                  <path d="M1 7H41L34 1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+            </a>
+          </div>
+
+
+          <!-- アーカイブ -->
+          <div class="aside__contents-title aside-title">
+            <img src="./assets/images/aside-title-icon01.svg" alt="アーカイブ" class="aside-title__icon">
+            <h2 class="aside-title__title">アーカイブ</h2>
+          </div>
+
+
+          <nav class="aside__article-archive article-archive">
+            <div class="article-archive__item">
+              <div class="article-archive__item-btn">
+                <span class="article-archive__toggle-icon"></span>
+                2023
+              </div>
+              <ul class="article-archive__list">
+                <li class="article-archive__list-item">3月</li>
+                <li class="article-archive__list-item">2月</li>
+                <li class="article-archive__list-item">1月</li>
+              </ul>
+            </div>
+
+            <div class="article-archive__item">
+              <div class="article-archive__item-btn">
+                <span class="article-archive__toggle-icon"></span>2022
+              </div>
+              <ul class="article-archive__list">
+                <li class="article-archive__list-item">12月</li>
+                <li class="article-archive__list-item">11月</li>
+                <li class="article-archive__list-item">10月</li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="aside__contents">
+          </div>
+
+        </div>
       </div>
-    </div><!-- category-tag -->
-
-    <div class="subpage-voice__contents-inner inner">
-      <ul class="subpage-voice__content voice-cards voice-cards--subpage-voice">
-        <li class="voice-cards__item">
-          <div class="voice-card voice-card--subpage-voice">
-            <div class="voice-card__wrapper">
-              <div class="voice-card__header voice-card__header--subpage-voice">
-                <div class="voice-card__header-label">
-                  <div class="voice-card__header-label-gender">20代(女性)</div>
-                  <div class="voice-card__header-label-category">ライセンス取得</div>
-                </div>
-                <div class="voice-card__title">
-                  <span>ここにタイトルが入ります。ここにタイトル</span>
-                </div>
-              </div>
-
-              <div class="voice-card__figure">
-                <img src="./assets/images/voice1.jpg" alt="麦わら帽子を被ったTシャツ姿の20代の女性">
-              </div>
-            </div>
-            <div class="voice-card__text">
-              <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                ここにテキストが入ります。ここにテキストが入ります。</p>
-            </div>
-          </div>
-        </li>
-        <li class="voice-cards__item">
-          <div class="voice-card voice-card--subpage-voice">
-            <div class="voice-card__wrapper">
-              <div class="voice-card__header voice-card__header--subpage-voice">
-                <div class="voice-card__header-label">
-                  <div class="voice-card__header-label-gender">20代(男性)</div>
-                  <div class="voice-card__header-label-category">ファンダイビング</div>
-                </div>
-                <div class="voice-card__title">
-                  <span>ここにタイトルが入ります。ここにタイトル</span>
-                </div>
-              </div>
-
-              <div class="voice-card__figure">
-                <img src="./assets/images/voice2.jpg" alt="ファンダイビングを体験した20代の男性">
-              </div>
-            </div>
-            <div class="voice-card__text">
-              <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                ここにテキストが入ります。ここにテキストが入ります。</p>
-            </div>
-          </div>
-
-        </li>
-        <li class="voice-cards__item">
-          <div class="voice-card voice-card--subpage-voice">
-            <div class="voice-card__wrapper">
-              <div class="voice-card__header voice-card__header--subpage-voice">
-                <div class="voice-card__header-label">
-                  <div class="voice-card__header-label-gender">30代(女性)</div>
-                  <div class="voice-card__header-label-category">体験ダイビング</div>
-                </div>
-                <div class="voice-card__title">
-                  <span>ここにタイトルが入ります。ここにタイトル</span>
-                </div>
-              </div>
-
-              <div class="voice-card__figure">
-                <img src="./assets/images/voice-card-img3.jpg" alt="女性二人が笑顔で喜びを伝える様子">
-              </div>
-            </div>
-            <div class="voice-card__text">
-              <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                ここにテキストが入ります。ここにテキストが入ります。</p>
-            </div>
-          </div>
-        </li>
-        <li class="voice-cards__item">
-          <div class="voice-card voice-card--subpage-voice">
-            <div class="voice-card__wrapper">
-              <div class="voice-card__header voice-card__header--subpage-voice">
-                <div class="voice-card__header-label">
-                  <div class="voice-card__header-label-gender">20代(女性)</div>
-                  <div class="voice-card__header-label-category">体験ダイビング</div>
-                </div>
-                <div class="voice-card__title">
-                  <span>ここにタイトルが入ります。ここにタイトル</span>
-                </div>
-              </div>
-
-              <div class="voice-card__figure">
-                <img src="./assets/images/voice-card-img4.jpg" alt="体験ダイビングを経験した20代女性">
-              </div>
-            </div>
-            <div class="voice-card__text">
-              <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                ここにテキストが入ります。ここにテキストが入ります。</p>
-            </div>
-          </div>
-
-        </li>
-        <li class="voice-cards__item">
-          <div class="voice-card voice-card--subpage-voice">
-            <div class="voice-card__wrapper">
-              <div class="voice-card__header voice-card__header--subpage-voice">
-                <div class="voice-card__header-label">
-                  <div class="voice-card__header-label-gender">30代(カップル)</div>
-                  <div class="voice-card__header-label-category">ファンダイビング</div>
-                </div>
-                <div class="voice-card__title">
-                  <span>ここにタイトルが入ります。ここにタイトル</span>
-                </div>
-              </div>
-
-              <div class="voice-card__figure">
-                <img src="./assets/images/voice-card-img5.jpg" alt="ファンダイビングを体験した30代の男女カップル">
-              </div>
-            </div>
-            <div class="voice-card__text">
-              <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                ここにテキストが入ります。ここにテキストが入ります。</p>
-            </div>
-          </div>
-        </li>
-        <li class="voice-cards__item">
-          <div class="voice-card voice-card--subpage-voice">
-            <div class="voice-card__wrapper">
-              <div class="voice-card__header voice-card__header--subpage-voice">
-                <div class="voice-card__header-label">
-                  <div class="voice-card__header-label-gender">20代(女性)</div>
-                  <div class="voice-card__header-label-category">ライセンス講習</div>
-                </div>
-                <div class="voice-card__title">
-                  <span>ここにタイトルが入ります。ここにタイトル</span>
-                </div>
-              </div>
-
-              <div class="voice-card__figure">
-                <img src="./assets/images/voice-card-img6.jpg" alt="ライセンス講習を終えた20代の女性">
-              </div>
-            </div>
-            <div class="voice-card__text">
-              <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                ここにテキストが入ります。ここにテキストが入ります。</p>
-            </div>
-          </div>
-
-        </li>
-
-      </ul>
     </div>
-    
-
-    <!-- pagenation -->
-    <div class="subpage-voice__pagenation nav-pagenation">
-      <div class="nav-pagenation__inner inner">
-        <ul class="nav-pagenation__items">
-          <li class="nav-pagenation__item nav-pagenation__item--lt"><a href=""><img
-                src="./assets/images/pagenation-lt.svg" alt="前のページに戻る"></a></li>
-          <li class="nav-pagenation__item nav-pagenation__item--active"><a href="">1</a></li>
-          <li class="nav-pagenation__item"><a href="">2</a></li>
-          <li class="nav-pagenation__item"><a href="">3</a></li>
-          <li class="nav-pagenation__item"><a href="">4</a></li>
-          <li class="nav-pagenation__item nav-pagenation__item--md"><a href="">5</a></li>
-          <li class="nav-pagenation__item nav-pagenation__item--md"><a href="">6</a></li>
-          <li class="nav-pagenation__item nav-pagenation__item--gt"><a href=""><img
-                src="./assets/images/pagenation-gt.svg" alt="次のページに進む"></a></li>
-        </ul>
-      </div>
-    </div><!-- pagenation -->
-
 
     <!-- Shop-information Section -->
     <div class="shop-info">

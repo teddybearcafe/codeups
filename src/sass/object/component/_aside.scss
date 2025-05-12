@@ -1,0 +1,28 @@
+.aside-article {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+
+    &__img {
+        width: 121px;
+        height: 90px;
+        object-fit: cover;
+    }
+
+    &__body {
+        flex: 1;
+    }
+
+    &__date {
+        font-size: 12px;
+        line-height: 1;
+        margin-bottom: 4px;
+    }
+
+    &__title {
+        font-size: 14px;
+        line-height: 1.4;
+        font-weight: 500;
+    }
+}

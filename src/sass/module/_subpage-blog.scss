@@ -1,0 +1,44 @@
+@use "global" as *;
+
+.subpage-blog__breadcrumb {
+    margin-top: rem(8);
+}
+
+.subpage-blog__contents-wrapper {
+    margin-top: rem(36);
+    @include mq("md"){
+        margin-top: rem(150);
+    }
+}
+
+.subpage-blog__contents-inner {
+    margin-top: rem(40);
+
+    @include mq("md") {
+        margin-top: rem(38);
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.subpage-blog__pagenation {
+    margin-top: rem(80);
+}
+
+.subpage-blog__article {
+    @include mq("md") {
+        // width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.subpage-blog__aside {
+    width: 100%;
+    margin: 0 auto;
+    max-width: rem(294);
+    margin-top: rem(80);
+
+    @include mq("md") {
+        width: rem(294);
+    }
+}

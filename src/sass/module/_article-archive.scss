@@ -1,0 +1,94 @@
+@use "global" as *;
+
+
+// .article-archive {
+//     width: 100%;
+//     border-bottom: 1px solid #000;
+//     .article-archive__item {
+//       .article-archive__item-btn {
+//         height: 60px;
+//         border-top: 1px solid #000;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         background-color: palegoldenrod;
+//         cursor: pointer;
+//       }
+
+//       ul {
+//         display: none;
+//         li {
+//           height: 60px;
+//           border-top: 1px solid #000;
+//           display: flex;
+//           align-items: center;
+//           justify-content: center;
+//           background-color: beige;
+//         }
+//       }
+//     }
+//   }
+
+
+
+/* アーカイブアイテム */
+.article-archive__item {
+    margin-top: 10px;
+}
+
+.article-archive__item:not(:first-child) {
+    margin-top: rem(4);
+}
+
+/* 年のボタン */
+.article-archive__item-btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: rem(24);
+    color: $green;
+    font-weight: $regular;
+}
+
+/* トグルアイコン */
+.article-archive__toggle-icon {
+    width: rem(24);
+    height: rem(24);
+    background-image: url('../images/sankaku.svg');
+    /* SVG画像のパスを指定 */
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: rem(8);
+    transition: transform 0.3s ease;
+    /* 回転のアニメーション */
+}
+
+/* 月のリスト */
+.article-archive__list {
+    display: none;
+    margin-left: 20px;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+/* 月のアイテム */
+.article-archive__list-item {
+    list-style-image: url('../images/sankaku.svg');
+    font-size: rem(24);
+    color: $green;
+    font-weight: $regular;
+    cursor: pointer;
+    margin-top: rem(4);
+    margin-left: rem(28);
+    padding-left: rem(8); // リストアイコンとテキストの間に8pxのスペースを追加
+}
+
+
+/* アニメーション付きでトグルアイコンが回転 */
+.article-archive__item--open .article-archive__toggle-icon {
+    transform: rotate(90deg);
+}
+
+.article-archive__item--open .article-archive__list {
+    display: block;
+}
