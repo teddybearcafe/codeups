@@ -1,0 +1,6 @@
+@use "global" as *;
+
+.article-list__item {
+    max-width: rem(600);
+    margin: 0 auto;
+}

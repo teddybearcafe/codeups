@@ -27,9 +27,12 @@
     color: $green;
 }
 
+
+
 .nav-pagenation__item+.nav-pagenation__item {
     margin-left: rem(12);
 }
+
 
 .nav-pagenation__item:nth-child(2),
 .nav-pagenation__item:last-child {
@@ -43,7 +46,12 @@
 
 .nav-pagenation__item--md {
     display: none;
+
     @include mq("md") {
         display: flex;
     }
+}
+
+.nav-pagenation__item--gt-single:last-child {
+    margin-left: rem(80);
 }

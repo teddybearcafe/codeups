@@ -1,10 +1,12 @@
 @use "global" as *;
 
-.subpage-blog__contents-inner{
+/* ページ構成（いずれpageフォルダが適当）
+-------------------------*/
+.subpage-single__contents-inner {
     position: relative;
 }
 
-.subpage-blog__contents-inner::after {
+.subpage-single__contents-inner::after {
     display: block;
     content: "";
     position: absolute;
@@ -24,11 +26,11 @@
     }
 }
 
-.subpage-blog__breadcrumb {
+.subpage-single__breadcrumb {
     margin-top: rem(8);
 }
 
-.subpage-blog__contents-wrapper {
+.subpage-single__contents-wrapper {
     margin-top: rem(36);
 
     @include mq("md") {
@@ -36,7 +38,7 @@
     }
 }
 
-.subpage-blog__contents-inner {
+.subpage-single__contents-inner {
     margin-top: rem(40);
 
     @include mq("md") {
@@ -47,17 +49,13 @@
     }
 }
 
-.subpage-blog__pagenation {
-    margin-top: rem(80);
-}
-
-.subpage-blog__article {
+.subpage-single__article {
     @include mq("md") {
         width: rem(706);
     }
 }
 
-.subpage-blog__aside {
+.subpage-single__aside {
     width: 100%;
 
     @include mq("md") {
@@ -66,18 +64,3 @@
 }
 
 
-/* メインコンテンツ部分
------------------------*/
-/* Gridに関連するプロパティのみ抜粋 */
-.subpage-blog__article-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: rem(40);
-
-    @include mq("md") {
-        // grid-template-columns: repeat(2, 1fr);
-        grid-template-columns: repeat(auto-fit, minmax(333px, 1fr));
-        gap: rem(80) rem(40);
-    }
-
-}
