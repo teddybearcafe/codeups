@@ -1,44 +1,132 @@
 @use "global" as *;
 
 
-.return-top {
-    color: $green;
-    text-decoration: none;
-    position: fixed;
-    right: rem(15);
-    bottom: 120px;
+// .return-top {
+//     color: $green;
+//     text-decoration: none;
+//     position: fixed;
+//     right: rem(15);
+//     bottom: 120px;
+//     width: rem(48);
+//     height: rem(48);
+//     border: solid thin;
+//     border-radius: 50%;
+//     display: grid;
+//     justify-content: center;
+//     align-content: center;
+//     transition: opacity 0.4s, visibility 0.4s;
+//     /*普段は隠しておく*/
+//     opacity: 0;
+//     visibility: hidden;
+
+//     @include mq("md") {
+//         width: rem(80);
+//         height: rem(80);
+//         right: rem(20);
+//     }
+// }
+// .return-top.is-return-button-active {
+//     /*activeが付いたら表示*/
+//     opacity: 1;
+//     visibility: visible;
+//     transition: opacity 0.4s, visibility 0.4s;
+// }
+
+// .return-top__image {
+//     transform: translateX(-25%);
+//     height: 90%;
+//     width: 80%;
+
+//     @include mq("md") {
+//         width: 95%;
+//         height: 95%;    
+//     }
+// }
+/*========= ページトップのためのCSS ===============*/
+/*リンクの形状*/
+#page-top  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background: #942D2F;
+    // border-radius: 5px;
+    // width: 60px;
+    // height: 60px;
+    // color: #fff;
     width: rem(48);
     height: rem(48);
-    border: solid thin;
+    border: solid rem(1) $green;
     border-radius: 50%;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    transition: opacity 0.4s, visibility 0.4s;
-    /*普段は隠しておく*/
-    opacity: 0;
-    visibility: hidden;
-
-    @include mq("md") {
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    // font-size: 0.6rem;
+    transition: all 0.3s;
+    @include mq("md"){
         width: rem(80);
         height: rem(80);
-        right: rem(20);
     }
 }
-.return-top.is-return-button-active {
-    /*activeが付いたら表示*/
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.4s, visibility 0.4s;
+
+#page-top:hover {
+    background: #bcb9b9;
 }
 
 .return-top__image {
     transform: translateX(-25%);
-    height: 90%;
-    width: 80%;
+    height: 80%;
+    width: 20%;
 
     @include mq("md") {
-        width: 95%;
-        height: 95%;    
+        width: 20%;
+        height: 70%;    
+    }
+}
+
+
+/*リンクを右下に固定*/
+#page-top {
+    position: fixed;
+    right: rem(20);
+    z-index: 2;
+    /*はじめは非表示*/
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+
+/*　上に上がる動き　*/
+
+#page-top.UpMove {
+    animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*　下に下がる動き　*/
+
+#page-top.DownMove {
+    animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(100px);
     }
 }

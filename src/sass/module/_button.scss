@@ -18,10 +18,12 @@
 .button--consent {
   margin-top: rem(24);
   pointer-events: none;
-  @include mq("md"){
-      margin-top: rem(40);
+
+  @include mq("md") {
+    margin-top: rem(40);
   }
 }
+
 
 .button__front {
   font-family: $english-font-family;
@@ -33,6 +35,7 @@
   height: inherit;
   font-weight: $regular;
 }
+
 
 .button__arrow {
   position: relative;
@@ -61,6 +64,7 @@
   z-index: -1;
 }
 
+
 @media (any-hover: hover) {
   .button:hover .button__arrow svg path {
     stroke: $green;
@@ -86,6 +90,49 @@
 
 @media (any-hover: hover) {
   .button:hover::before {
+    transform: scale(1, 1);
+  }
+}
+
+
+/* button--white(404ページ)
+----------------------------------*/
+.button--white {
+  background-color: $white;
+}
+
+.button__front--white {
+  color: $green;
+}
+
+.button__arrow--white svg {
+  stroke: $green;
+}
+
+.button--white::after {
+  border: 1px solid $white;
+}
+
+.button__front--white {
+  color: $green;
+}
+
+@media (any-hover: hover) {
+  .button:hover .button__arrow svg path {
+    stroke: $white;
+  }
+
+  .button--white:hover .button__front--white {
+    color: $white;
+  }
+}
+
+.button--white::before {
+  background: $green;
+}
+
+@media (any-hover: hover) {
+  .button--white:hover::before {
     transform: scale(1, 1);
   }
 }

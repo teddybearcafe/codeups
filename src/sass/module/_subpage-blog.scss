@@ -58,7 +58,8 @@
 }
 
 .subpage-blog__aside {
-    width: 100%;
+    width: 85%;
+    margin: 0 auto;
 
     @include mq("md") {
         width: rem(294);

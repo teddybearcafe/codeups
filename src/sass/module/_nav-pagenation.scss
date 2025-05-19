@@ -55,3 +55,23 @@
 .nav-pagenation__item--gt-single:last-child {
     margin-left: rem(80);
 }
+
+.nav-pagenation__item--gt-single:hover,
+.nav-pagenation__item--lt-single:hover {
+    @include mq("md") {
+        color: $white;
+        background-color: $green;
+    }
+}
+
+.nav-pagenation__item--gt-single:hover .nav-pagenation__gt-icon {
+    @include mq("md") {
+        stroke: $white;
+    }
+}
+
+.nav-pagenation__item--lt-single:hover .nav-pagenation__lt-icon {
+    @include mq("md") {
+        stroke: $white;
+    }
+}
