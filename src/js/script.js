@@ -139,8 +139,10 @@ $(window).on("load", function () {
 });
 
 // 最初のアーカイブアイテムを開いた状態にする
-$(document).ready(function() {
-  $(".article-archive__item:first-child").addClass("article-archive__item--open");
+$(document).ready(function () {
+  $(".article-archive__item:first-child").addClass(
+    "article-archive__item--open"
+  );
   $(".article-archive__item:first-child .article-archive__list").show();
 });
 
@@ -154,28 +156,32 @@ $(".article-archive__item-btn").click(function () {
   parentItem.toggleClass("article-archive__item--open");
 });
 
-
 //スクロールした際の動きを関数でまとめる
 function PageTopAnime() {
   const scroll = $(window).scrollTop(); //スクロール値を取得
-  if (scroll >= 200) { //200pxスクロールしたら
-    $('#page-top').removeClass('DownMove'); // DownMoveというクラス名を除去して
-    $('#page-top').addClass('UpMove'); // UpMoveというクラス名を追加して出現
-  } else { //それ以外は
-    if ($('#page-top').hasClass('UpMove')) { //UpMoveというクラス名が既に付与されていたら
-      $('#page-top').removeClass('UpMove'); //  UpMoveというクラス名を除去し
-      $('#page-top').addClass('DownMove'); // DownMoveというクラス名を追加して非表示
+  if (scroll >= 200) {
+    //200pxスクロールしたら
+    $("#page-top").removeClass("DownMove"); // DownMoveというクラス名を除去して
+    $("#page-top").addClass("UpMove"); // UpMoveというクラス名を追加して出現
+  } else {
+    //それ以外は
+    if ($("#page-top").hasClass("UpMove")) {
+      //UpMoveというクラス名が既に付与されていたら
+      $("#page-top").removeClass("UpMove"); //  UpMoveというクラス名を除去し
+      $("#page-top").addClass("DownMove"); // DownMoveというクラス名を追加して非表示
     }
   }
-  
+
   const wH = window.innerHeight; //画面の高さを取得
-  const footerPos = $('#footer').offset().top; //footerの位置を取得
-  if (scroll + wH >= (footerPos + 10)) {
-    const pos = (scroll + wH) - footerPos + 40; //スクロールの値＋画面の高さからfooterの位置＋40pxを引いた場所を取得し
-    $('#page-top').css('bottom', pos); //#page-topに上記の値をCSSのbottomに直接指定してフッター手前で止まるようにする
-  } else { //それ以外は
-    if ($('#page-top').hasClass('UpMove')) { //UpMoveというクラス名がついていたら
-      $('#page-top').css('bottom', '10px'); // 下から10pxの位置にページリンクを指定
+  const footerPos = $("#footer").offset().top; //footerの位置を取得
+  if (scroll + wH >= footerPos + 10) {
+    const pos = scroll + wH - footerPos + 40; //スクロールの値＋画面の高さからfooterの位置＋40pxを引いた場所を取得し
+    $("#page-top").css("bottom", pos); //#page-topに上記の値をCSSのbottomに直接指定してフッター手前で止まるようにする
+  } else {
+    //それ以外は
+    if ($("#page-top").hasClass("UpMove")) {
+      //UpMoveというクラス名がついていたら
+      $("#page-top").css("bottom", "10px"); // 下から10pxの位置にページリンクを指定
     }
   }
 }
@@ -186,14 +192,38 @@ $(window).scroll(function () {
 });
 
 // ページが読み込まれたらすぐに動かしたい場合の記述
-$(window).on('load', function () {
+$(window).on("load", function () {
   PageTopAnime(); //スクロールした際の動きの関数を呼ぶ
 });
 
 // #page-topをクリックした際の設定
-$('#page-top').click(function () {
-  $('body,html').animate({
-    scrollTop: 0 //ページトップまでスクロール
-  }, 500); //ページトップスクロールの速さ。数字が大きいほど遅くなる
+$("#page-top").click(function () {
+  $("body,html").animate(
+    {
+      scrollTop: 0, //ページトップまでスクロール
+    },
+    500
+  ); //ページトップスクロールの速さ。数字が大きいほど遅くなる
   return false; //リンク自体の無効化
 });
+
+// ローディングアニメーション
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.querySelector('.loader').style.display = 'none';
+    document.querySelector('.mv').style.display = 'block';
+  }, 7000); // アニメーション終了タイミングに合わせて調整
+});
+
+// window.addEventListener('load', () => {
+//   setTimeout(() => {
+//     const loader = document.querySelector('.loader');
+//     loader.classList.add('loader--hide');
+
+//     // 完全に透明になったらDOMごと非表示に（任意）
+//     setTimeout(() => {
+//       loader.style.display = 'none';
+//       document.querySelector('.mv').style.display = 'block';
+//     }, 1000); // CSSのtransition時間に合わせる（1秒）
+//   }, 8000); // アニメーション全体終了後のタイミング
+// });

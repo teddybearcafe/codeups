@@ -1,0 +1,131 @@
+@use "global" as *;
+
+.loader {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    background-color: #fff;
+    z-index: 9999;
+    height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.loader--hide {
+    opacity: 0;
+  }
+  
+// .loader__message {
+//     font-size: 2rem;
+//     opacity: 0;
+//     transition: opacity 1s ease, transform 1s ease;
+//     position: absolute;
+//     color: #000;
+// }
+
+// .loader__message--in {
+//     animation: fadeInOut 3s ease forwards;
+//     color: $green;
+// }
+
+.loader__images {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.loader__image {
+    // display: block;
+    position: absolute;
+    bottom: -100vh;
+    // width: 100vw;
+    height: 100vh;
+    // object-fit: cover;
+    object-fit: fill;
+
+    animation: slideUp 1.2s ease forwards;
+    animation-delay: 3s;
+
+    @include mq("md") {
+        display: none;
+    }
+}
+
+.loader__image--left {
+    display: none;
+
+    @include mq("md") {
+        display: block;
+        left: 0;
+        animation: slideUp 1s ease forwards;
+        animation-delay: 3s;
+
+        width: 50vw;
+    }
+}
+
+.loader__image--right {
+    display: none;
+
+    @include mq("md") {
+        display: block;
+        right: 0;
+        animation: slideUp 1s ease forwards;
+        animation-delay: 3.08s;
+
+        width: 50vw;
+    }
+}
+
+.loader__message--final {
+    color: #fff;
+    animation: fadeIn 2s ease forwards;
+    animation-delay: 4.2s;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    to {
+        bottom: 0;
+    }
+}
+
+.mv {
+    display: none;
+}
