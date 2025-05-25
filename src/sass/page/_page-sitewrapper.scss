@@ -1,11 +1,11 @@
 @use "global" as *;
 
-.siteWrapeer {
+.siteWrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-.siteWrapeer__main {
+.siteWrapper__main {
   flex: 1;
 }

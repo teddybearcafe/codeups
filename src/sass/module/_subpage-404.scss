@@ -4,7 +4,7 @@
     background-color: $green;
 }
 
-.siteWrapeer__main {
+.siteWrapper__main {
     margin-top: rem(88);
 
     @include mq("md") {
@@ -38,7 +38,7 @@
     z-index: 2;
 }
 
-.subpage-404__massage {
+.subpage-404__message {
     font-size: rem(80);
     letter-spacing: 0.5em;
     text-indent: 0.5em;

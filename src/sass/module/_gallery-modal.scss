@@ -1,7 +1,7 @@
 @use "global" as *;
 
 
-.modal {
+.gallery-modal {
     display: none;
 
     @include mq("md") {
@@ -11,7 +11,7 @@
     }
 }
 
-.modal__overlay {
+.gallery-modal__overlay {
     display: none;
 
     @include mq("md") {
@@ -28,7 +28,7 @@
     }
 }
 
-.modal__container {
+.gallery-modal__container {
     position: relative;
     max-width: rem(920);
     max-height: 90vh;
@@ -39,14 +39,14 @@
 }
 
 
-.modal__header {
+.gallery-modal__header {
     position: absolute;
     top: rem(-40);
     right: 0;
     z-index: 1001;
 }
 
-.modal__close {
+.gallery-modal__close {
     background: transparent;
     border: 0;
     cursor: pointer;
@@ -55,8 +55,8 @@
     position: relative;
 }
 
-.modal__close::before,
-.modal__close::after {
+.gallery-modal__close::before,
+.gallery-modal__close::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -66,15 +66,15 @@
     background-color: $white;
 }
 
-.modal__close::before {
+.gallery-modal__close::before {
     transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.modal__close::after {
+.gallery-modal__close::after {
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.modal__content {
+.gallery-modal__content {
     width: 100%;
     min-height: 100%;
     display: flex;

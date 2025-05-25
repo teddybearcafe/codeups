@@ -36,35 +36,13 @@
     z-index: 50;
     text-align: center;
     opacity: 0;
+    text-indent: rem(16);
 }
 
 .mv__body--display{
     opacity: 1;
     color: $white;
 }
-
-.mv__body--in {
-    color: $green;
-    animation: fadeInOut 3s ease forwards;
-}
-
-.mv__body--final {
-    color: $white;
-    animation: fadeIn 2s ease forwards;
-    animation-delay: 4.2s; 
-}
-
-@keyframes fadeInOut {
-    0%   { opacity: 0; transform: translate(-50%, -40%); }
-    20%  { opacity: 1; transform: translate(-50%, -50%); }
-    80%  { opacity: 1; }
-    100% { opacity: 0; transform: translate(-50%, -60%); }
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translate(-50%, -40%); }
-    to   { opacity: 1; transform: translate(-50%, -50%); }
-  }
 
 .mv__title {
     font-family: $numbers-font-family;
