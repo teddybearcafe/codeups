@@ -3,6 +3,7 @@
 .breadcrumb__lists {
     display: flex;
     font-size: rem(14);
+    font-weight: $regular;
 }
 
 .breadcrumb__list-item:not(:first-child) {

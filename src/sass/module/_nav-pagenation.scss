@@ -15,33 +15,57 @@
 }
 
 .nav-pagenation__item {
-    font-family: $numbers-font-family;
-    font-weight: $bold;
-    line-height: 1.125;
     height: rem(38);
     width: rem(38);
     border: solid rem(1) $green;
+}
+
+.nav-pagenation__link {
+    font-family: $numbers-font-family;
+    font-weight: $bold;
+    line-height: 1.125;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: $green;
 }
 
-
+.nav-pagenation__link--gt img,
+.nav-pagenation__link--lt img {
+    width: rem(8);
+    height: rem(16);
+}
 
 .nav-pagenation__item+.nav-pagenation__item {
     margin-left: rem(12);
 }
-
 
 .nav-pagenation__item:nth-child(2),
 .nav-pagenation__item:last-child {
     margin-left: rem(40);
 }
 
-.nav-pagenation__item--active {
+// .nav-pagenation__item--active {
+//     color: $white;
+//     background-color: $green;
+// }
+
+.nav-pagenation__link--active {
+    cursor: default;
     color: $white;
     background-color: $green;
+}
+
+@media (any-hover: hover) {
+    .nav-pagenation__link:not(.nav-pagenation__link--active):hover {
+        // background-color: rgba(64, 143, 149, 0.3);
+        // color: rgba(153, 153, 153, 0.81);
+        background-color: $green;
+        color: $white;
+    }
 }
 
 .nav-pagenation__item--md {
@@ -52,26 +76,30 @@
     }
 }
 
-.nav-pagenation__item--gt-single:last-child {
+.nav-pagenation__item--gt:last-child {
     margin-left: rem(80);
 }
 
-.nav-pagenation__item--gt-single:hover,
-.nav-pagenation__item--lt-single:hover {
-    @include mq("md") {
-        color: $white;
-        background-color: $green;
-    }
-}
+@media (any-hover: hover) {
 
-.nav-pagenation__item--gt-single:hover .nav-pagenation__gt-icon {
-    @include mq("md") {
-        stroke: $white;
+    .nav-pagenation__link--gt:hover,
+    .nav-pagenation__link--lt:hover {
+        @include mq("md") {
+            color: $white;
+            background-color: $green;
+            transition: color,background-color 0.3s;
+        }
     }
-}
 
-.nav-pagenation__item--lt-single:hover .nav-pagenation__lt-icon {
-    @include mq("md") {
-        stroke: $white;
+    .nav-pagenation__link--gt:hover .nav-pagenation__gt-icon {
+        @include mq("md") {
+            stroke: $white;
+        }
+    }
+
+    .nav-pagenation__link--lt:hover .nav-pagenation__lt-icon {
+        @include mq("md") {
+            stroke: $white;
+        }
     }
 }

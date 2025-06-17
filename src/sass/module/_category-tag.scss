@@ -21,7 +21,7 @@
     }
 }
 
-.category-tag__inner::after {
+.category-tag__inner::before {
     display: block;
     content: "";
     position: absolute;
@@ -31,6 +31,7 @@
     height: rem(55);
     background-image: url("../images/fish-R.svg");
     background-size: cover;
+    z-index: -1;
 
     @include mq("md") {
         top: rem(-72);

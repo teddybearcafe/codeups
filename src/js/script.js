@@ -58,20 +58,22 @@ const campaignSwiper = new Swiper(".js-campaign", {
   },
   // スライドの表示枚数
   slidesPerView: "auto",
-  breakpoints: {
-    // スライドの表示枚数：768px以上の場合
-    768: {
-      spaceBetween: 40,
-      slidesPerView: "auto",
-    },
-  },
+  // breakpoints: {
+  //   // スライドの表示枚数：768px以上の場合
+  //   768: {
+  //     spaceBetween: 40,
+  //     slidesPerView: "auto",
+  //   },
+  // },
 });
 
 //要素の取得とスピードの設定
 var box = $(".voice-card__figure , .information__image , .price__header-image"),
   speed = 700;
 
-//.colorboxの付いた全ての要素に対して下記の処理を行う
+//--------------------------------
+// .colorboxの付いた全ての要素に対して下記の処理を行う
+//--------------------------------
 box.each(function () {
   $(this).append('<div class="color"></div>');
   var color = $(this).find($(".color")),
@@ -95,6 +97,7 @@ box.each(function () {
   });
 });
 
+//--------------------------------
 // タブ切り替え
 //任意のタブにURLからリンクするための設定
 function GethashID(hashIDName) {
@@ -129,11 +132,11 @@ $(".tab-button a").on("click", function () {
 
 // 上記の動きをページが読み込まれたらすぐに動かす
 $(window).on("load", function () {
-  $(".tab-area li:first-of-type").addClass("tab-button--active"); //最初のliにactiveクラスを追加
+  //$(".tab-area li:first-of-type").addClass("tab-button--active"); //最初のliにactiveクラスを追加
   $(".tab-area li:first-of-type a img").addClass(
     "tab-button__link-icon--active"
   ); //最初のimgにactiveクラスを追加
-  $(".tab-panel:first-of-type").addClass("tab-panel--active"); //最初の.areaにis-activeクラスを追加
+  //$(".tab-panel:first-of-type").addClass("tab-panel--active"); //最初の.areaにis-activeクラスを追加
   var hashName = location.hash; //リンク元の指定されたURLのハッシュタグを取得
   GethashID(hashName); //設定したタブの読み込み
 });
@@ -175,7 +178,7 @@ function PageTopAnime() {
   const wH = window.innerHeight; //画面の高さを取得
   const footerPos = $("#footer").offset().top; //footerの位置を取得
   if (scroll + wH >= footerPos + 10) {
-    const pos = scroll + wH - footerPos + 40; //スクロールの値＋画面の高さからfooterの位置＋40pxを引いた場所を取得し
+    const pos = scroll + wH - footerPos + 20; //スクロールの値＋画面の高さからfooterの位置＋40pxを引いた場所を取得し
     $("#page-top").css("bottom", pos); //#page-topに上記の値をCSSのbottomに直接指定してフッター手前で止まるようにする
   } else {
     //それ以外は
@@ -207,11 +210,13 @@ $("#page-top").click(function () {
   return false; //リンク自体の無効化
 });
 
+//--------------------------------
 // ローディングアニメーション
-window.addEventListener('load', () => {
+//--------------------------------
+window.addEventListener("load", () => {
   setTimeout(() => {
-    document.querySelector('.loader').style.display = 'none';
-    document.querySelector('.mv').style.display = 'block';
+    document.querySelector(".loader").style.display = "none";
+    document.querySelector(".mv").style.display = "block";
   }, 7000); // アニメーション終了タイミングに合わせて調整
 });
 
@@ -227,3 +232,72 @@ window.addEventListener('load', () => {
 //     }, 1000); // CSSのtransition時間に合わせる（1秒）
 //   }, 8000); // アニメーション全体終了後のタイミング
 // });
+
+//--------------------------------
+// campaignページのカテゴリータグの動き
+//--------------------------------
+document.addEventListener("DOMContentLoaded", function () {
+  const categoryLinks = document.querySelectorAll(".category-tag-item__link");
+
+  categoryLinks.forEach((link) => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault(); // リンクのデフォルト動作を防止
+
+      // 全てのリンクから active クラスを削除
+      categoryLinks.forEach((item) => {
+        item.classList.remove("category-tag-item__link--active");
+      });
+
+      // クリックされたリンクに active クラスを追加
+      this.classList.add("category-tag-item__link--active");
+    });
+  });
+});
+
+//--------------------------------
+// FAQ
+//--------------------------------
+// アコーディオン内のすべてのdetails要素に対してイベントリスナーを設定
+document.querySelectorAll('.subpage-faq__item details').forEach(details => {
+  // details要素のtoggleイベント（開閉状態の変更）を監視
+  details.addEventListener('toggle', event => {
+    // 現在のdetails要素内のcontent要素を取得
+    const content = details.querySelector('.faq-accordion__content');
+    
+    if (details.open) {
+      // アコーディオンが開かれた場合
+      const keyframes = [
+        { height: '0px', opacity: 0 },  // 開始状態：高さ0、透明度0
+        { height: `${content.scrollHeight}px`, opacity: 1 }  // 終了状態：実際の高さ、透明度1
+      ];
+      // アニメーションを実行
+      content.animate(keyframes, {
+        duration: 300,  // アニメーション時間：300ミリ秒
+        fill: 'forwards'  // アニメーション終了後も最終フレームを維持
+      }).onfinish = () => {
+        // アニメーション完了後、高さをautoに設定して内容に合わせて調整
+        content.style.height = 'auto';
+      };
+    } else {
+      // アコーディオンが閉じられた場合
+      const keyframes = [
+        { height: `${content.scrollHeight}px`, opacity: 1 },  // 開始状態：実際の高さ、透明度1
+        { height: '0px', opacity: 0 }  // 終了状態：高さ0、透明度0
+      ];
+      // アニメーションを実行
+      content.animate(keyframes, {
+        duration: 300,  // アニメーション時間：300ミリ秒
+        fill: 'forwards'  // アニメーション終了後も最終フレームを維持
+      }).onfinish = () => {
+        // アニメーション完了後、height指定を削除
+        // これにより、ページ内検索時にコンテンツが表示可能になる
+        content.style.height = '';
+      };
+    }
+  });
+});
+
+
+
+
+//--------------------------------

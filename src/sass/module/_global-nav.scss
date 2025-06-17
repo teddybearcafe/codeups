@@ -39,6 +39,7 @@
     font-size: rem(16);
     font-weight: $bold;
     line-height: rem(16);
+    position: relative;
 
     @include mq("md") {
         line-height: 1.125;
@@ -47,8 +48,8 @@
 
 .global-nav__heading:not(:first-child) {
     @include mq(md) {
-         margin-top: rem(40);
-    }    
+        margin-top: rem(40);
+    }
 }
 
 .global-nav__icon {
@@ -56,6 +57,39 @@
     width: rem(19);
     height: rem(19);
     flex-shrink: 0;
+    // position: relative;
+}
+
+@media (any-hover: hover){
+    .global-nav__heading:hover::before {
+        content: '';
+        /*絶対配置で波形の位置を決める*/
+        position: absolute;
+        left: 0;
+        top: 0;
+        /*波形の形状*/
+        border: 1.5px solid $white;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        /*はじめは不透明*/
+        opacity: 1;
+        /*アニメーションの設定*/
+        animation: 1s circleanime2 forwards;
+    }    
+}
+
+
+/*波形が広がるアニメーション*/
+@keyframes circleanime2 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
 }
 
 .global-nav__column {
@@ -85,27 +119,30 @@
     transition: opacity 0.3s;
     position: relative;
     cursor: pointer;
-  }
+}
 
 @media (any-hover: hover) {
-.global-nav__link::after {
-    position: absolute;
-    left: rem(16);
-    bottom: rem(-8);
-    content: '';
-    width: 90%;
-    height: 0.125rem;
-    background: $white;
-    transform: scale(0, 1);     /*アンダーラインの縮尺比率。ホバー前はx方向に0*/
-    transform-origin: center top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の左端*/
-    transition: transform 0.3s;
-}
+    .global-nav__link::after {
+        position: absolute;
+        left: rem(16);
+        bottom: rem(-8);
+        content: '';
+        width: 90%;
+        height: 0.125rem;
+        background: $white;
+        transform: scale(0, 1);
+        /*アンダーラインの縮尺比率。ホバー前はx方向に0*/
+        transform-origin: center top;
+        /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の左端*/
+        transition: transform 0.3s;
+    }
+   
     .global-nav__link:hover::after,
     .global-nav__title:hover::after {
-    transform: scale(1, 1);
-    }    
+        transform: scale(1, 1);
+    }
 }
 
-  .global-nav__block:not(:first-child) {
+.global-nav__block:not(:first-child) {
     margin-top: rem(40);
-  }
+}

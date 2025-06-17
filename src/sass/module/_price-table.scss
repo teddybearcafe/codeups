@@ -46,7 +46,9 @@
 
 .price-table__price-items {
     display: flex;
-    height: rem(60);
+    align-items: stretch;
+    // height: rem(60);
+    // padding: rem(16);
 }
 
 .price-table__price-item {
@@ -60,14 +62,16 @@
     align-items: center;
     @include mq("md") {
         justify-content: flex-start;
-        text-indent: rem(16);
+        // text-indent: rem(16);
+        padding: rem(16);
         width: calc(340 / 500 *100%);
+        text-align: left;
     }
 }
 
 .price-table__price {
     margin-right: rem(16);
-    height: 100%;
+    // height: 100%;
     border-left: solid rem(1) $green;
     width: calc(106 / 345 *100%);
     display: flex;

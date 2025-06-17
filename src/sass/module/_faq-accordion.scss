@@ -2,6 +2,7 @@
 
 .faq-accordion {
     max-width: rem(700);
+    transition: all 0.3s ease;
     // background-color: #f2f2f2;
     // border: solid rem(1) $green;
 }
@@ -15,17 +16,27 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    // padding: 1em 2em;
-    padding: rem(16);
+    padding: rem(16) rem(40) rem(16) rem(16);
     background-color: $green;
     color: #fff;
     cursor: pointer;
     line-height: 1.1875;
+    transition: background-color 0.3s ease;
+
     @include mq("md") {
         font-size: rem(20);
         line-height: 1.2;
-        padding: rem(24) rem(40);
+        padding-top: rem(24);
+        padding-bottom: rem(24);
+        padding-left: rem(40);
+        padding-right: rem(60);
     }
+}
+
+@media (any-hover: hover){
+    .faq-accordion summary:hover {
+        background-color: darken($green, 5%);
+    }    
 }
 
 .faq-accordion summary::-webkit-details-marker {
@@ -34,32 +45,30 @@
 
 .faq-accordion summary::before,
 .faq-accordion summary::after {
-    // width: 3px;
     width: rem(1);
-    // height: .9em;
     height: rem(28);
     border-radius: 5px;
     background-color: #fff;
     content: '';
-}
-
-.faq-accordion summary::before {
+    transition: transform 0.3s ease;
     position: absolute;
-    right: 2em;
-    rotate: 90deg;
-}
+    right: rem(24);
 
-.faq-accordion summary::after {
-    transition: rotate .3s;
-    right: rem(14);
-    position: relative;
     @include mq("md") {
-        right: 0;
+        right: rem(40);
     }
 }
 
+.faq-accordion summary::before {
+    transform: rotate(90deg);
+}
+
+.faq-accordion summary::after {
+    transform: rotate(0);
+}
+
 .faq-accordion[open] summary::after {
-    rotate: 90deg;
+    transform: rotate(90deg);
 }
 
 .faq-accordion p {
@@ -68,10 +77,9 @@
     margin: 0;
     padding: rem(24) rem(16);
     color: #333333;
-    transition: transform .5s, opacity .5s;
-    // line-height: 1.1875;
+    transition: all 0.3s ease;
     border: solid rem(1) $green;
-    // font-family: $base-font-family;
+
     @include mq("md") {
         margin-top: rem(16);
         padding: rem(38);
@@ -79,6 +87,6 @@
 }
 
 .faq-accordion[open] p {
-    transform: none;
+    transform: translateY(0);
     opacity: 1;
 }

@@ -39,7 +39,7 @@
     text-indent: rem(16);
 }
 
-.mv__body--display{
+.mv__body--display {
     opacity: 1;
     color: $white;
 }
@@ -64,4 +64,5 @@
     // color: $white;
     font-size: rem(20);
     line-height: 1.65;
+    text-indent: 0;
 }

@@ -54,11 +54,16 @@
 .single-article__body li {
     list-style-image: url('../images/article-hitode-icon.svg');
     list-style-position: inside;
-    margin-left: rem(8);
+    margin-left: rem(24);
     list-style-size: rem(18);
+    text-indent: rem(-24);
 }
 
 
 .single-article__pagenation {
     margin-top: rem(80);
+}
+
+.single-article__pagenation .nav-pagenation__item:last-child {
+    margin-left: rem(80);
 }

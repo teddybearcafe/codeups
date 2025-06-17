@@ -11,9 +11,17 @@ const initModal = () => {
       awaitCloseAnimation: false,
       onShow: (modal) => {
         document.body.classList.add("is-modal-open");
+        const header = document.querySelector(".js-header");
+        if (header) {
+          header.style.display = "none";
+        }
       },
       onClose: (modal) => {
         document.body.classList.remove("is-modal-open");
+        const header = document.querySelector(".js-header");
+        if (header) {
+          header.style.display = "block";
+        }
       },
     });
   }
