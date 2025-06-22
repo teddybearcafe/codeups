@@ -7,29 +7,48 @@
     transition: opacity 0.3s;
 }
 
-@include mq("md") {
-    .gallery-modal.is-open {
-        display: block;
-        opacity: 1;
-    }
+.gallery-modal.is-open {
+    display: block;
+    opacity: 1;
 }
 
 .gallery-modal__overlay {
-    display: none;
-
-    @include mq("md") {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.6);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 10000;
-    }
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
 }
+
+
+// @include mq("md") {
+//     .gallery-modal.is-open {
+//         display: block;
+//         opacity: 1;
+//     }
+// }
+
+// .gallery-modal__overlay {
+//     display: none;
+
+//     @include mq("md") {
+//         position: fixed;
+//         top: 0;
+//         left: 0;
+//         right: 0;
+//         bottom: 0;
+//         background: rgba(0, 0, 0, 0.6);
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         z-index: 10000;
+//     }
+// }
 
 .gallery-modal__container {
     position: relative;
@@ -108,18 +127,20 @@ body.is-modal-open {
 
 @keyframes mmfadeIn {
     from {
-      opacity: 0;
+        opacity: 0;
     }
+
     to {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  
-  @keyframes mmfadeOut {
+}
+
+@keyframes mmfadeOut {
     from {
-      opacity: 1;
+        opacity: 1;
     }
+
     to {
-      opacity: 0;
+        opacity: 0;
     }
-  }
+}

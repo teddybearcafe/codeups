@@ -60,6 +60,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: rem(8);
     @include mq("md") {
         justify-content: flex-start;
         // text-indent: rem(16);

@@ -28,44 +28,48 @@ jQuery(function ($) {
 });
 
 // mySwiperが2回宣言されているので、変数名を変更
-const mvSwiper = new Swiper(".js-mv", {
-  // Optional parameters
-  loop: true,
-  autoplay: {
-    delay: 5000,
-  },
-  effect: "fade",
-  speed: 600,
-});
+if (document.querySelector(".js-mv")) {
+  const mvSwiper = new Swiper(".js-mv", {
+    // Optional parameters
+    loop: true,
+    autoplay: {
+      delay: 5000,
+    },
+    effect: "fade",
+    speed: 600,
+  });
+}
 
-const campaignSwiper = new Swiper(".js-campaign", {
-  spaceBetween: 24,
-  conteredSlides: true,
+if (document.querySelector(".js-campaign")) {
+  const campaignSwiper = new Swiper(".js-campaign", {
+    spaceBetween: 24,
+    conteredSlides: true,
 
-  // Optional parameters
-  loop: true,
-  loopAdditionalslides: 1,
-  // loopslides: 3,
-  autoplay: {
-    delay: 5000,
-  },
-  // speed: 5000,
+    // Optional parameters
+    loop: true,
+    loopAdditionalslides: 1,
+    // loopslides: 3,
+    autoplay: {
+      delay: 5000,
+    },
+    // speed: 5000,
 
-  // Navigation arrows
-  navigation: {
-    prevEl: ".swiper-button-prev",
-    nextEl: ".swiper-button-next",
-  },
-  // スライドの表示枚数
-  slidesPerView: "auto",
-  // breakpoints: {
-  //   // スライドの表示枚数：768px以上の場合
-  //   768: {
-  //     spaceBetween: 40,
-  //     slidesPerView: "auto",
-  //   },
-  // },
-});
+    // Navigation arrows
+    navigation: {
+      prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-button-next",
+    },
+    // スライドの表示枚数
+    slidesPerView: "auto",
+    // breakpoints: {
+    //   // スライドの表示枚数：768px以上の場合
+    //   768: {
+    //     spaceBetween: 40,
+    //     slidesPerView: "auto",
+    //   },
+    // },
+  });
+}
 
 //要素の取得とスピードの設定
 var box = $(".voice-card__figure , .information__image , .price__header-image"),
@@ -257,47 +261,30 @@ document.addEventListener("DOMContentLoaded", function () {
 //--------------------------------
 // FAQ
 //--------------------------------
-// アコーディオン内のすべてのdetails要素に対してイベントリスナーを設定
-document.querySelectorAll('.subpage-faq__item details').forEach(details => {
-  // details要素のtoggleイベント（開閉状態の変更）を監視
-  details.addEventListener('toggle', event => {
-    // 現在のdetails要素内のcontent要素を取得
-    const content = details.querySelector('.faq-accordion__content');
-    
-    if (details.open) {
-      // アコーディオンが開かれた場合
-      const keyframes = [
-        { height: '0px', opacity: 0 },  // 開始状態：高さ0、透明度0
-        { height: `${content.scrollHeight}px`, opacity: 1 }  // 終了状態：実際の高さ、透明度1
-      ];
-      // アニメーションを実行
-      content.animate(keyframes, {
-        duration: 300,  // アニメーション時間：300ミリ秒
-        fill: 'forwards'  // アニメーション終了後も最終フレームを維持
-      }).onfinish = () => {
-        // アニメーション完了後、高さをautoに設定して内容に合わせて調整
-        content.style.height = 'auto';
-      };
-    } else {
-      // アコーディオンが閉じられた場合
-      const keyframes = [
-        { height: `${content.scrollHeight}px`, opacity: 1 },  // 開始状態：実際の高さ、透明度1
-        { height: '0px', opacity: 0 }  // 終了状態：高さ0、透明度0
-      ];
-      // アニメーションを実行
-      content.animate(keyframes, {
-        duration: 300,  // アニメーション時間：300ミリ秒
-        fill: 'forwards'  // アニメーション終了後も最終フレームを維持
-      }).onfinish = () => {
-        // アニメーション完了後、height指定を削除
-        // これにより、ページ内検索時にコンテンツが表示可能になる
-        content.style.height = '';
-      };
-    }
+document.addEventListener("DOMContentLoaded", function () {
+  const triggers = document.querySelectorAll(".faq-accordion__header");
+  triggers.forEach((trigger) => {
+    trigger.addEventListener("click", (e) => {
+      const target = e.currentTarget;
+      const panel = target.nextElementSibling;
+
+      if (!panel) return;
+
+      const isOpen = target.classList.contains(
+        "faq-accordion__header--is-open"
+      );
+
+      if (isOpen) {
+        // アコーディオンを閉じる
+        target.classList.remove("faq-accordion__header--is-open");
+        panel.classList.add("faq-accordion__panel--is-close");
+        panel.classList.remove("faq-accordion__panel--is-open");
+      } else {
+        // アコーディオンを開く
+        target.classList.add("faq-accordion__header--is-open");
+        panel.classList.remove("faq-accordion__panel--is-close");
+        panel.classList.add("faq-accordion__panel--is-open");
+      }
+    });
   });
 });
-
-
-
-
-//--------------------------------

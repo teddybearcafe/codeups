@@ -295,148 +295,53 @@
         </div>
 
         <div class="subpage-about__gallery-body gallery">
-          <div class="gallery-modal micromodal-slide" id="modal-1" aria-hidden="true">
+          <!-- モーダルは1つだけ用意 -->
+          <div class="gallery-modal micromodal-slide" id="modal-gallery" aria-hidden="true">
             <div class="gallery-modal__overlay" tabindex="-1" data-micromodal-close>
               <div class="gallery-modal__container" role="dialog" aria-modal="true"
-                aria-labelledby="gallery-modal-1-title">
+                aria-labelledby="gallery-modal-title"  data-micromodal-close>
                 <header class="gallery-modal__header">
                   <button class="gallery-modal__close" aria-label="閉じる" data-micromodal-close></button>
                 </header>
                 <div class="gallery-modal__content">
-                  <img class="gallery__image-lg" src="./assets/images/gallery1.jpg" alt="色とりどりのサンゴ礁に群れる無数の赤い熱帯魚"
-                    data-micromodal-close>
+                  <img class="gallery__image-lg" src="" alt="" id="modal-gallery-img" data-micromodal-close>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="gallery-modal micromodal-slide" id="modal-2" aria-hidden="true">
-            <div class="gallery-modal__overlay" tabindex="-1" data-micromodal-close>
-              <div class="gallery-modal__container" role="dialog" aria-modal="true"
-                aria-labelledby="gallery-modal-2-title">
-                <header class="gallery-modal__header">
-                  <button class="gallery-modal__close" aria-label="閉じる" data-micromodal-close></button>
-                </header>
-                <div class="gallery-modal__content">
-                  <img class="gallery__image-lg" src="./assets/images/gallery2.jpg"
-                    alt="透明度の高い海に浮かぶボートと緑豊かな島の風景（沖縄・川平湾を想起）" data-micromodal-close>
-                </div>
-              </div>
+          <div class="gallery__items">
+            <div class="gallery__item">
+              <img src="./assets/images/gallery1.jpg" alt="色とりどりのサンゴ礁に群れる無数の赤い熱帯魚" width="345" height="523"
+                loading="lazy" data-micromodal-trigger="modal-gallery" data-img="./assets/images/gallery1.jpg"
+                data-alt="色とりどりのサンゴ礁に群れる無数の赤い熱帯魚">
+            </div>
+            <div class="gallery__item">
+              <img src="./assets/images/gallery2.jpg" alt="透明度の高い海に浮かぶボートと緑豊かな島の風景（沖縄・川平湾を想起）" width="345" height="219"
+                loading="lazy" data-micromodal-trigger="modal-gallery" data-img="./assets/images/gallery2.jpg"
+                data-alt="透明度の高い海に浮かぶボートと緑豊かな島の風景（沖縄・川平湾を想起）">
+            </div>
+            <div class="gallery__item">
+              <img src="./assets/images/gallery3.jpg" alt="海中を優雅に泳ぐ2匹のクラカケチョウチョウウオ" width="345" height="219"
+                loading="lazy" data-micromodal-trigger="modal-gallery" data-img="./assets/images/gallery3.jpg"
+                data-alt="海中を優雅に泳ぐ2匹のクラカケチョウチョウウオ">
+            </div>
+            <div class="gallery__item">
+              <img src="./assets/images/gallery4.jpg" alt="鮮やかな黄色が特徴のイエローバンド・エンゼルフィッシュの横顔" width="345" height="219"
+                loading="lazy" data-micromodal-trigger="modal-gallery" data-img="./assets/images/gallery4.jpg"
+                data-alt="鮮やかな黄色が特徴のイエローバンド・エンゼルフィッシュの横顔">
+            </div>
+            <div class="gallery__item">
+              <img src="./assets/images/gallery5.jpg" alt="透き通った海を群れで泳ぐカラフルな小魚たち" width="345" height="219"
+                loading="lazy" data-micromodal-trigger="modal-gallery" data-img="./assets/images/gallery5.jpg"
+                data-alt="透き通った海を群れで泳ぐカラフルな小魚たち">
+            </div>
+            <div class="gallery__item">
+              <img src="./assets/images/gallery6.jpg" alt="立体的なサンゴの周りを泳ぐ黄色のチョウチョウウオたち" width="345" height="523"
+                loading="lazy" data-micromodal-trigger="modal-gallery" data-img="./assets/images/gallery6.jpg"
+                data-alt="立体的なサンゴの周りを泳ぐ黄色のチョウチョウウオたち">
             </div>
           </div>
-
-          <div class="gallery-modal micromodal-slide" id="modal-3" aria-hidden="true">
-            <div class="gallery-modal__overlay" tabindex="-1" data-micromodal-close>
-              <div class="gallery-modal__container" role="dialog" aria-modal="true"
-                aria-labelledby="gallery-modal-3-title">
-                <header class="gallery-modal__header">
-                  <button class="gallery-modal__close" aria-label="閉じる" data-micromodal-close></button>
-                </header>
-                <div class="gallery-modal__content">
-                  <img class="gallery__image-lg" src="./assets/images/gallery3.jpg" alt="海中を優雅に泳ぐ2匹のクラカケチョウチョウウオ"
-                    data-micromodal-close>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="gallery-modal micromodal-slide" id="modal-4" aria-hidden="true">
-            <div class="gallery-modal__overlay" tabindex="-1" data-micromodal-close>
-              <div class="gallery-modal__container" role="dialog" aria-modal="true"
-                aria-labelledby="gallery-modal-4-title">
-                <header class="gallery-modal__header">
-                  <button class="gallery-modal__close" aria-label="閉じる" data-micromodal-close></button>
-                </header>
-                <div class="gallery-modal__content">
-                  <img class="gallery__image-lg" src="./assets/images/gallery4.jpg" alt="鮮やかな黄色が特徴のイエローバンド・エンゼルフィッシュの横顔"
-                    data-micromodal-close>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="gallery-modal micromodal-slide" id="modal-5" aria-hidden="true">
-            <div class="gallery-modal__overlay" tabindex="-1" data-micromodal-close>
-              <div class="gallery-modal__container" role="dialog" aria-modal="true"
-                aria-labelledby="gallery-modal-5-title">
-                <header class="gallery-modal__header">
-                  <button class="gallery-modal__close" aria-label="閉じる" data-micromodal-close></button>
-                </header>
-                <div class="gallery-modal__content">
-                  <img class="gallery__image-lg" src="./assets/images/gallery5.jpg" alt="透き通った海を群れで泳ぐカラフルな小魚たち"
-                    data-micromodal-close>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="gallery-modal micromodal-slide" id="modal-6" aria-hidden="true">
-            <div class="gallery-modal__overlay" tabindex="-1" data-micromodal-close>
-              <div class="gallery-modal__container" role="dialog" aria-modal="true"
-                aria-labelledby="gallery-modal-6-title">
-                <header class="gallery-modal__header">
-                  <button class="gallery-modal__close" aria-label="閉じる" data-micromodal-close></button>
-                </header>
-                <div class="gallery-modal__content">
-                  <img class="gallery__image-lg" src="./assets/images/gallery6.jpg" alt="立体的なサンゴの周りを泳ぐ黄色のチョウチョウウオたち"
-                    data-micromodal-close>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <ul class="gallery__items">
-            <li class="gallery__item" data-area="A">
-              <button class="gallery__button md-show" data-micromodal-trigger="modal-1">
-                <img src="./assets/images/gallery1.jpg" alt="色とりどりのサンゴ礁に群れる無数の赤い熱帯魚">
-              </button>
-              <div class="md-none">
-                <img src="./assets/images/gallery1.jpg" alt="色とりどりのサンゴ礁に群れる無数の赤い熱帯魚">
-              </div>
-            </li>
-            <li class="gallery__item" data-area="B">
-              <button class="gallery__button md-show" data-micromodal-trigger="modal-2">
-                <img src="./assets/images/gallery2.jpg" alt="透明度の高い海に浮かぶボートと緑豊かな島の風景（沖縄・川平湾を想起）">
-              </button>
-              <div class="md-none">
-                <img src="./assets/images/gallery2.jpg" alt="透明度の高い海に浮かぶボートと緑豊かな島の風景（沖縄・川平湾を想起）">
-              </div>
-            </li>
-            <li class="gallery__item" data-area="C">
-              <button class="gallery__button md-show" data-micromodal-trigger="modal-3">
-                <img src="./assets/images/gallery3.jpg" alt="海中を優雅に泳ぐ2匹のクラカケチョウチョウウオ">
-              </button>
-              <div class="md-none">
-                <img src="./assets/images/gallery3.jpg" alt="海中を優雅に泳ぐ2匹のクラカケチョウチョウウオ">
-              </div>
-            </li>
-          </ul>
-          <ul class="gallery__items gallery__items--reverse">
-            <li class="gallery__item" data-area="A">
-              <button class="gallery__button md-show" data-micromodal-trigger="modal-4">
-                <img src="./assets/images/gallery4.jpg" alt="鮮やかな黄色が特徴のイエローバンド・エンゼルフィッシュの横顔">
-              </button>
-              <div class="md-none">
-                <img src="./assets/images/gallery4.jpg" alt="鮮やかな黄色が特徴のイエローバンド・エンゼルフィッシュの横顔">
-              </div>
-            </li>
-            <li class="gallery__item" data-area="B">
-              <button class="gallery__button md-show" data-micromodal-trigger="modal-5">
-                <img src="./assets/images/gallery5.jpg" alt="透き通った海を群れで泳ぐカラフルな小魚たち">
-              </button>
-              <div class="md-none">
-                <img src="./assets/images/gallery5.jpg" alt="透き通った海を群れで泳ぐカラフルな小魚たち">
-              </div>
-            </li>
-            <li class="gallery__item" data-area="C">
-              <button class="gallery__button md-show" data-micromodal-trigger="modal-6">
-                <img src="./assets/images/gallery6.jpg" alt="立体的なサンゴの周りを泳ぐ黄色のチョウチョウウオたち">
-              </button>
-              <div class="md-none">
-                <img src="./assets/images/gallery6.jpg" alt="立体的なサンゴの周りを泳ぐ黄色のチョウチョウウオたち">
-              </div>
-            </li>
-          </ul>
         </div>
       </div>
     </section>
