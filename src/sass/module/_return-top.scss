@@ -71,7 +71,13 @@
 
 @media (any-hover: hover) {
     #page-top:hover {
-        background: #bcb9b9;
+        // background: #bcb9b9;
+        background: $green;
+        transition: background 0.3s;
+    }
+
+    #page-top:hover .return-top__image path {
+        stroke: $white;
     }
 }
 

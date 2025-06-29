@@ -65,6 +65,7 @@
         // color: rgba(153, 153, 153, 0.81);
         background-color: $green;
         color: $white;
+        transition: color,background-color 0.3s;
     }
 }
 

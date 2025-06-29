@@ -104,6 +104,8 @@
     font-size: rem(16);
     line-height: 1.1875;
     color: $aqua;
+    font-weight: $normal;
+
 }
 
 .contact-form__input--red {
@@ -145,6 +147,7 @@
     /* チェックボックス分の余白 */
     cursor: pointer;
     line-height: 0.8;
+    font-weight: $normal;
     display: inline-block;
     user-select: none;
 }
@@ -202,6 +205,7 @@
     // padding: 15px;
     padding: rem(8) 0 rem(8) rem(8);
     color: #333;
+    font-weight: normal;
     /*テキストの色*/
     border: 1px solid #5cc0b5;
     /*枠線の太さ・形状・色*/
@@ -385,6 +389,7 @@
 .contact-form__answer {
     font-size: 16px;
     color: #F45F5F;
+    font-weight: $normal;
     // padding-bottom: 10px;
     display: none;
     // margin: 0 auto;

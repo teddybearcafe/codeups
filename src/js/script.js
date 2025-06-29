@@ -137,9 +137,9 @@ $(".tab-button a").on("click", function () {
 // 上記の動きをページが読み込まれたらすぐに動かす
 $(window).on("load", function () {
   //$(".tab-area li:first-of-type").addClass("tab-button--active"); //最初のliにactiveクラスを追加
-  $(".tab-area li:first-of-type a img").addClass(
-    "tab-button__link-icon--active"
-  ); //最初のimgにactiveクラスを追加
+  //$(".tab-area li:first-of-type a img").addClass(
+  //  "tab-button__link-icon--active"
+  //); //最初のimgにactiveクラスを追加
   //$(".tab-panel:first-of-type").addClass("tab-panel--active"); //最初の.areaにis-activeクラスを追加
   var hashName = location.hash; //リンク元の指定されたURLのハッシュタグを取得
   GethashID(hashName); //設定したタブの読み込み
@@ -240,23 +240,23 @@ window.addEventListener("load", () => {
 //--------------------------------
 // campaignページのカテゴリータグの動き
 //--------------------------------
-document.addEventListener("DOMContentLoaded", function () {
-  const categoryLinks = document.querySelectorAll(".category-tag-item__link");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const categoryLinks = document.querySelectorAll(".category-tag-item__link");
 
-  categoryLinks.forEach((link) => {
-    link.addEventListener("click", function (event) {
-      event.preventDefault(); // リンクのデフォルト動作を防止
+//   categoryLinks.forEach((link) => {
+//     link.addEventListener("click", function (event) {
+//       event.preventDefault(); // リンクのデフォルト動作を防止
 
-      // 全てのリンクから active クラスを削除
-      categoryLinks.forEach((item) => {
-        item.classList.remove("category-tag-item__link--active");
-      });
+//       // 全てのリンクから active クラスを削除
+//       categoryLinks.forEach((item) => {
+//         item.classList.remove("category-tag-item__link--active");
+//       });
 
-      // クリックされたリンクに active クラスを追加
-      this.classList.add("category-tag-item__link--active");
-    });
-  });
-});
+//       // クリックされたリンクに active クラスを追加
+//       this.classList.add("category-tag-item__link--active");
+//     });
+//   });
+// });
 
 //--------------------------------
 // FAQ

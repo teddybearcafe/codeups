@@ -36,9 +36,10 @@
 
 @media (any-hover: hover){
     .category-tag-item__link:not(.category-tag-item__link--active):hover {
-        background-color: rgba(64, 143, 149, 0.3);
-        color: rgba(153, 153, 153, 0.81);
-    }    
+        background-color: $green;
+        color: $white;
+        transition: color,background-color 0.3s;
+    }
 }
 
 .category-tag-item__link--active {

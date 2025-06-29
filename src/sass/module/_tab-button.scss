@@ -7,6 +7,7 @@
     background-color: $aqua;
     box-shadow: rem(2) rem(2) rem(4) rem(0) rgba(0, 0, 0, 0.4);
     height: inherit;
+    transition: 0.3s background-color, 0.3s color;
 
     @include mq("md") {
         display: flex;
@@ -17,8 +18,16 @@
 
 @media (any-hover: hover) {
     .tab-button:not(.tab-button--active):hover {
-        background-color: rgba(64, 143, 149, 0.3);
-        color: rgba(153, 153, 153, 0.81);
+        background-color: $green;
+        // background-color: rgba(64, 143, 149, 0.3);
+        color: $white;
+        // color: rgba(153, 153, 153, 0.81);
+        transition: 0.3s background-color, 0.3s color;
+    }
+
+    .tab-button:not(.tab-button--active):hover .tab-button__link-icon {
+        filter: invert(97%) sepia(0%) saturate(7486%) hue-rotate(15deg) brightness(104%) contrast(98%);
+        // transition: 0.3s filter;
     }
 }
 
