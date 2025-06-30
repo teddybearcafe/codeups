@@ -38,7 +38,7 @@
   <script defer src="./assets/js/script.js"></script>
 </head>
 
-<body class="subpage-404__body siteWrapper">
+<body>
   <header id="header" class="header js-header">
     <div class="header__inner">
       <h1 class="header__logo">
@@ -151,13 +151,13 @@
                   </div>
                   <ul class="global-nav__list">
                     <li class="global-nav__list-item">
-                      <a href="./information.html?active-tab=tab-license" class="global-nav__link">ライセンス講習</a>
+                      <a href="#" class="global-nav__link">ライセンス講習</a>
                     </li>
                     <li class="global-nav__list-item">
-                      <a href="./information.html?active-tab=tab-diving" class="global-nav__link">体験ダイビング</a>
+                      <a href="#" class="global-nav__link">体験ダイビング</a>
                     </li>
                     <li class="global-nav__list-item">
-                      <a href="./information.html?active-tab=tab-fundiving" class="global-nav__link">ファンダイビング</a>
+                      <a href="#" class="global-nav__link">ファンダイビング</a>
                     </li>
                   </ul>
                 </div>
@@ -235,46 +235,86 @@
 
   </header>
 
-  <main class="siteWrapper__main">
+  <main>
+    <div class="mv-individual">
+      <picture class="mv-individual__img">
+        <source srcset="./assets/images/information-mv.jpg" media="(min-width: 767px)">
+        <img src="./assets/images/information-mv-sp.jpg" alt="青い海のなか蝶々魚が泳ぐ様子">
+      </picture>
+      <div class="mv-individual__body">
+        <div class="mv-individual__title">information</div>
+      </div>
+    </div>
 
     <!-- breadcrumb -->
-    <div class="subpage-404__breadcrumb breadcrumb breadcrumb--white">
+    <div class="subpage-information__breadcrumb breadcrumb">
       <div class="breadcrumb__inner inner">
         <ul class="breadcrumb__lists">
           <li class="breadcrumb__list-item"><a href="index.html">TOP</a></li>
           <li class="breadcrumb__separator">&gt;</li>
-          <li class="breadcrumb__list-item">404</li>
+          <li class="breadcrumb__list-item">ダイビング情報</li>
         </ul>
       </div>
     </div><!-- breadcrumb -->
 
-    <section class="subpage-404">
-      <div class="subpage-404__inner inner">
-        <img class="subpage-404__image" src="./assets/images/page-404error-bg.svg" alt="背景画像">
-        <div class="subpage-404__contents-wrapper">
-          <div class="subpage-404__message">404</div>
-          <div class="subpage-404__sub-text">
-            申し訳ありません。<br>
-            お探しのページが見つかりません。
-          </div>
-          <div class="subpage-404__button">
-            <a href="./index.html" class="button button--white">
-              <span class="button__front button__front--white">Page TOP</span>
-              <span class="button__arrow button__arrow--white">
-                <svg viewBox="0 0 42 8" fill="none">
-                  <path d="M1 7H41L34 1" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </span>
-            </a>
+    <!-- main contents -->
+    <div class="subpage-information__contents-wrapper">
+      <div class="subpage-information__inner inner">
+        <div class="subpage-information__contents tab-box">
+          <ul class="tab-box__tabs tab-area">
+            <li class="tab-area__item tab-button tab-button--active" data-tab="tab-license">
+              <a href="#tab-license" class="tab-button__link">
+                <img class="tab-button__link-icon tab-button__link-icon--active" src="./assets/images/tab-button-icon-license.svg" alt="">ライセンス<br class="md-none">講習</a>
+              </li>
+            <li class="tab-area__item tab-button" data-tab="tab-fundiving"><a href="#tab-fundiving"
+                class="tab-button__link"><img class="tab-button__link-icon"
+                  src="./assets/images/tab-button-icon-fundiving.svg" alt="">ファン<br class="md-none">ダイビング</a></li>
+            <li class="tab-area__item tab-button" data-tab="tab-diving"><a href="#tab-diving"
+                class="tab-button__link"><img class="tab-button__link-icon"
+                  src="./assets/images/tab-button-icon-diving.svg" alt="">体験<br class="md-none">ダイビング</a></li>
+          </ul>
+          <div class="tab-box__panels panel-area">
+            <div id="tab-license" class="panel-area__item tab-panel tab-panel--active">
+              <div class="tab-panel__body">
+                <h2 class="tab-panel__title">ライセンス講習</h2>
+                <div class="tab-panel__text">
+                  泳げない人も、ちょっと水が苦手な人も、ダイビングを「安全に」楽しんでいただけるよう、スタッフがサポートいたします！スキューバダイビングを楽しむためには最低限の知識とスキルが要求されます。知識やスキルと言ってもそんなに難しい事ではなく、安全に楽しむ事を目的としたものです。プロダイバーの指導のもと知識とスキルを習得しCカードを取得して、ダイバーになろう！
+                </div>
+              </div>
+              <div class="tab-panel__image">
+                <img src="./assets/images/info-license.jpg" alt="ダイビングライセンス講習の様子">
+              </div>
+            </div>
+            <div id="tab-fundiving" class="panel-area__item tab-panel">
+              <div class="tab-panel__body">
+                <h2 class="tab-panel__title">ファンダイビング</h2>
+                <div class="tab-panel__text">
+                  ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！
+                </div>
+              </div>
+              <div class="tab-panel__image">
+                <img src="./assets/images/info-fundiving.jpg" alt="海の中をたくさんの魚が泳ぐ様子">
+              </div>
+            </div>
+            <div id="tab-diving" class="panel-area__item tab-panel">
+              <div class="tab-panel__body">
+                <h2 class="tab-panel__title">体験ダイビング</h2>
+                <div class="tab-panel__text">
+                  ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！
+                </div>
+              </div>
+              <div class="tab-panel__image">
+                <img src="./assets/images/info-diving.jpg" alt="海の中を蝶々ウオが泳ぐ様子">
+              </div>
+            </div>
           </div>
         </div>
-
       </div>
-    </section>
+    </div>
 
 
     <!-- Shop-information Section -->
-    <!-- <div class="shop-info">
+    <div class="shop-info shop-info--subpage-information">
       <div class="shop-info__inner inner">
         <div class="shop-info__container">
           <div class="shop-info__body">
@@ -306,7 +346,7 @@
               <span>ご予約・お問い合わせはコチラ</span>
             </div>
             <div class="shop-info__button">
-              <a href="./contact.html" class=" button">
+              <a href=" ./contact.html" class=" button">
                 <span class="button__front">Contact us</span>
                 <span class="button__arrow">
                   <svg viewBox="0 0 42 8" fill="none">
@@ -318,16 +358,16 @@
           </div>
         </div>
       </div>
-    </div>Shop-information Section -->
-
+    </div><!-- Shop-information Section -->
   </main>
 
-  <footer class="footer subpage-404__footer" id="footer">
+  <footer class="footer" id="footer">
     <!-- Button Return to top -->
     <a class="return-top js-top" href="#" id="page-top">
-      <svg class="return-top__image" width="8" height="42" viewBox="0 0 8 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M7 41L7 1L1 8" stroke="#408F95" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+      <svg class="return-top__image" width="8" height="42" viewBox="0 0 8 42" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 41L7 1L1 8" stroke="#408F95" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
     </a><!-- Button Return to top -->
     <div class="footer__inner inner">
       <!-- ヘッダー部分 -->
@@ -389,13 +429,13 @@
                 </div>
                 <ul class="global-nav__list">
                   <li class="global-nav__list-item">
-                    <a href="./information.html?active-tab=tab-license" class="global-nav__link">ライセンス講習</a>
+                    <a href="#" class="global-nav__link">ライセンス講習</a>
                   </li>
                   <li class="global-nav__list-item">
-                    <a href="./information.html?active-tab=tab-diving" class="global-nav__link">体験ダイビング</a>
+                    <a href="#" class="global-nav__link">体験ダイビング</a>
                   </li>
                   <li class="global-nav__list-item">
-                    <a href="./information.html?active-tab=tab-fundiving" class="global-nav__link">ファンダイビング</a>
+                    <a href="#" class="global-nav__link">ファンダイビング</a>
                   </li>
                 </ul>
               </div>

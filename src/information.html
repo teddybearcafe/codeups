@@ -151,13 +151,13 @@
                   </div>
                   <ul class="global-nav__list">
                     <li class="global-nav__list-item">
-                      <a href="#" class="global-nav__link">ライセンス講習</a>
+                      <a href="./information.html?active-tab=tab-license" class="global-nav__link">ライセンス講習</a>
                     </li>
                     <li class="global-nav__list-item">
-                      <a href="#" class="global-nav__link">体験ダイビング</a>
+                      <a href="./information.html?active-tab=tab-diving" class="global-nav__link">体験ダイビング</a>
                     </li>
                     <li class="global-nav__list-item">
-                      <a href="#" class="global-nav__link">ファンダイビング</a>
+                      <a href="./information.html?active-tab=tab-fundiving" class="global-nav__link">ファンダイビング</a>
                     </li>
                   </ul>
                 </div>
@@ -262,18 +262,27 @@
       <div class="subpage-information__inner inner">
         <div class="subpage-information__contents tab-box">
           <ul class="tab-box__tabs tab-area">
-            <li class="tab-area__item tab-button tab-button--active"><a href="#license" class="tab-button__link"><img
-                  class="tab-button__link-icon tab-button__link-icon--active" src="./assets/images/tab-button-icon-license.svg" alt="">ライセンス<br
-                  class="md-none">講習</a></li>
-            <li class="tab-area__item tab-button"><a href="#fundiving" class="tab-button__link"><img
-                  class="tab-button__link-icon" src="./assets/images/tab-button-icon-fundiving.svg" alt="">ファン<br
-                  class="md-none">ダイビング</a></li>
-            <li class="tab-area__item tab-button"><a href="#diving" class="tab-button__link"><img
-                  class="tab-button__link-icon" src="./assets/images/tab-button-icon-diving.svg" alt="">体験<br
-                  class="md-none">ダイビング</a></li>
+            <li class="tab-area__item tab-button tab-button--active" data-tab="tab-license">
+              <div class="tab-button__link">
+                <img class="tab-button__link-icon tab-button__link-icon--active"
+                  src="./assets/images/tab-button-icon-license.svg" alt="">ライセンス<br class="md-none">講習
+              </div>
+            </li>
+            <li class="tab-area__item tab-button" data-tab="tab-fundiving">
+              <div class="tab-button__link">
+                <img class="tab-button__link-icon" src="./assets/images/tab-button-icon-fundiving.svg" alt="">ファン<br
+                  class="md-none">ダイビング
+              </div>
+            </li>
+            <li class="tab-area__item tab-button" data-tab="tab-diving">
+              <div class="tab-button__link">
+                <img class="tab-button__link-icon" src="./assets/images/tab-button-icon-diving.svg" alt="">体験<br
+                  class="md-none">ダイビング
+              </div>
+            </li>
           </ul>
           <div class="tab-box__panels panel-area">
-            <div id="license" class="panel-area__item tab-panel tab-panel--active">
+            <div data-tab="tab-license" class="panel-area__item tab-panel tab-panel--active">
               <div class="tab-panel__body">
                 <h2 class="tab-panel__title">ライセンス講習</h2>
                 <div class="tab-panel__text">
@@ -284,7 +293,7 @@
                 <img src="./assets/images/info-license.jpg" alt="ダイビングライセンス講習の様子">
               </div>
             </div>
-            <div id="fundiving" class="panel-area__item tab-panel">
+            <div data-tab="tab-fundiving" class="panel-area__item tab-panel">
               <div class="tab-panel__body">
                 <h2 class="tab-panel__title">ファンダイビング</h2>
                 <div class="tab-panel__text">
@@ -295,7 +304,7 @@
                 <img src="./assets/images/info-fundiving.jpg" alt="海の中をたくさんの魚が泳ぐ様子">
               </div>
             </div>
-            <div id="diving" class="panel-area__item tab-panel">
+            <div data-tab="tab-diving" class="panel-area__item tab-panel">
               <div class="tab-panel__body">
                 <h2 class="tab-panel__title">体験ダイビング</h2>
                 <div class="tab-panel__text">
@@ -363,9 +372,10 @@
   <footer class="footer" id="footer">
     <!-- Button Return to top -->
     <a class="return-top js-top" href="#" id="page-top">
-      <svg class="return-top__image" width="8" height="42" viewBox="0 0 8 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M7 41L7 1L1 8" stroke="#408F95" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+      <svg class="return-top__image" width="8" height="42" viewBox="0 0 8 42" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 41L7 1L1 8" stroke="#408F95" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
     </a><!-- Button Return to top -->
     <div class="footer__inner inner">
       <!-- ヘッダー部分 -->
@@ -427,13 +437,13 @@
                 </div>
                 <ul class="global-nav__list">
                   <li class="global-nav__list-item">
-                    <a href="#" class="global-nav__link">ライセンス講習</a>
+                    <a href="./information.html?active-tab=tab-license" class="global-nav__link">ライセンス講習</a>
                   </li>
                   <li class="global-nav__list-item">
-                    <a href="#" class="global-nav__link">体験ダイビング</a>
+                    <a href="./information.html?active-tab=tab-diving" class="global-nav__link">体験ダイビング</a>
                   </li>
                   <li class="global-nav__list-item">
-                    <a href="#" class="global-nav__link">ファンダイビング</a>
+                    <a href="./information.html?active-tab=tab-fundiving" class="global-nav__link">ファンダイビング</a>
                   </li>
                 </ul>
               </div>
