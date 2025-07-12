@@ -8,6 +8,48 @@
     margin-top: rem(36);
 }
 
-.subpage-campaign__pagenation {
+.subpage-campaign__contents {
+    margin-top: rem(36);
+}
+
+.subpage-campaign__pagination {
     margin-top: rem(80);
+}
+
+.subpage-campaign__category-tag {
+    margin-top: rem(52);
+
+    @include mq("md") {
+        margin-top: rem(150);
+    }
+}
+
+// ページ固有の装飾要素（魚のアイコン）はページレベルで管理
+.subpage-campaign__category-tag-inner {
+    position: relative;
+}
+
+.subpage-campaign__category-tag-inner:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: rem(-24);
+    left: calc(50% - min(45vw, rem(624)));
+    width: rem(120);
+    height: rem(55);
+    background-image: url("../images/fish-R.svg");
+    background-size: cover;
+    z-index: -1;
+
+    @include mq("md") {
+        top: rem(-72);
+        left: calc(50% - min(48vw, rem(624)));
+        width: rem(301);
+        height: rem(138);
+    }
+}
+
+.subpage-campaign__pagination-inner {
+    display: flex;
+    justify-content: center;
 }

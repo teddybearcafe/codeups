@@ -9,7 +9,7 @@
     background-color: $aqua;
 
     @include mq("md") {
-        padding-top: rem(100);
+        padding-top: rem(144);
         padding-bottom: rem(104);
     }
 }

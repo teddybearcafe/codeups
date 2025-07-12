@@ -247,36 +247,44 @@
     </div>
 
     <!-- breadcrumb -->
-    <div class="subpage-campaign__breadcrumb breadcrumb">
-      <div class="breadcrumb__inner inner">
-        <ul class="breadcrumb__lists">
-          <li class="breadcrumb__list-item"><a href="index.html">TOP</a></li>
-          <li class="breadcrumb__separator">&gt;</li>
-          <li class="breadcrumb__list-item">キャンペーン</li>
-        </ul>
+    <div class="subpage-campaign__breadcrumb">
+      <div class="subpage-campaign__breadcrumb-inner inner">
+        <div class="breadcrumb">
+          <ul class="breadcrumb__lists">
+            <li class="breadcrumb__list-item"><a href="index.html">TOP</a></li>
+            <li class="breadcrumb__separator">&gt;</li>
+            <li class="breadcrumb__list-item">キャンペーン</li>
+          </ul>
+        </div>
       </div>
-    </div><!-- breadcrumb -->
+    </div>
 
     <!-- category-tag -->
-    <div class="category-tag">
-      <div class="category-tag__inner inner">
-        <ul class="category-tag__lists">
-          <li class="category-tag__list-item category-tag-item"><a
-              class="category-tag-item__link category-tag-item__link--active" href="#">ALL</a></li>
-          <li class="category-tag__list-item category-tag-item"><a class="category-tag-item__link" href="#">ライセンス講習</a>
-          </li>
-          <li class="category-tag__list-item category-tag-item"><a class="category-tag-item__link" href="#">ファンダイビング</a>
-          </li>
-          <li class="category-tag__list-item category-tag-item"><a class="category-tag-item__link" href="#">体験ダイビング</a>
-          </li>
-        </ul>
+    <div class="subpage-campaign__category-tag">
+      <div class="subpage-campaign__category-tag-inner inner">
+        <div class="category-tag">
+          <ul class="category-tag__lists">
+            <li class="category-tag__list-item category-tag-item"><a
+                class="category-tag-item__link category-tag-item__link--active" href="#">ALL</a></li>
+            <li class="category-tag__list-item category-tag-item"><a class="category-tag-item__link"
+                href="#">ライセンス講習</a>
+            </li>
+            <li class="category-tag__list-item category-tag-item"><a class="category-tag-item__link"
+                href="#">ファンダイビング</a>
+            </li>
+            <li class="category-tag__list-item category-tag-item"><a class="category-tag-item__link"
+                href="#">体験ダイビング</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div><!-- category-tag -->
 
-    <section class="subpage-campaign__contents-wrapper subpage-campaign-contents">
-      <div class="subpage-campaign-contents__inner inner">
-        <ul class="subpage-campaign-contents-cards">
-          <li class="subpage-campaign-contents-cards__item">
+
+    <section class="subpage-campaign__contents">
+      <div class="subpage-campaign__contents-inner inner">
+        <ul class="subpage-campaign__contents-cards">
+          <li class="subpage-campaign__contents-cards-item">
             <div class="campaign-card">
               <figure class="campaign-card__figure campaign-card__figure--large">
                 <img src="./assets/images/campaign1.jpg" alt="青い海のなかで様々な熱帯魚が泳ぐ様子">
@@ -325,7 +333,7 @@
               </div>
             </div>
           </li>
-          <li class="subpage-campaign-contents-cards__item">
+          <li class="subpage-campaign__contents-cards-item">
             <div class="campaign-card">
               <figure class="campaign-card__figure campaign-card__figure--large">
                 <img src="./assets/images/campaign2.jpg" alt="プライベートビーチを彷彿とさせる白い砂浜とエメラルドグリーンの海に浮かぶダイビングボート">
@@ -374,7 +382,7 @@
               </div>
             </div>
           </li>
-          <li class="subpage-campaign-contents-cards__item">
+          <li class="subpage-campaign__contents-cards-item">
             <div class="campaign-card">
               <figure class="campaign-card__figure campaign-card__figure--large">
                 <img src="./assets/images/campaign3.jpg" alt="夜の海を泳ぐクラゲの様子">
@@ -423,7 +431,7 @@
               </div>
             </div>
           </li>
-          <li class="subpage-campaign-contents-cards__item">
+          <li class="subpage-campaign__contents-cards-item">
             <div class="campaign-card">
               <figure class="campaign-card__figure campaign-card__figure--large">
                 <img src="./assets/images/campaign4.jpg" alt="複数のダイバーが水面に顔を出して浮かぶ様子">
@@ -457,7 +465,7 @@
                       <p class="campaign-card__contact-text">ご予約・お問い合わせはコチラ</p>
                     </div>
                     <div class="campaign-card__contact-button">
-                      <a href="./contact.html" class=" button">
+                      <a href="./contact.html" class="button">
                         <span class="button__front">Contact us</span>
                         <span class="button__arrow">
                           <svg viewBox="0 0 42 8" fill="none">
@@ -472,37 +480,39 @@
               </div>
             </div>
           </li>
-        </ul>
 
+        </ul>
       </div>
     </section>
 
-    <!-- pagenation -->
-    <div class="subpage-campaign__pagenation nav-pagenation">
-      <div class="nav-pagenation__inner inner">
-        <ul class="nav-pagenation__items">
-          <li class="nav-pagenation__item"><a class="nav-pagenation__link nav-pagenation__link--lt" href="#">
-              <svg class="nav-pagenation__lt-icon" width="10" height="18" viewBox="0 0 10 18" fill="none"
-                xmlns="http://www.w3.org/2000/svg" stroke="#408F95" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M9 1L1 9L9 17" />
-              </svg>
-            </a></li>
-          <li class="nav-pagenation__item"><a class="nav-pagenation__link nav-pagenation__link--active" href="#">1</a>
-          </li>
-          <li class="nav-pagenation__item"><a class="nav-pagenation__link" href="#">2</a></li>
-          <li class="nav-pagenation__item"><a class="nav-pagenation__link" href="#">3</a></li>
-          <li class="nav-pagenation__item"><a class="nav-pagenation__link" href="#">4</a></li>
-          <li class="nav-pagenation__item nav-pagenation__item--md"><a class="nav-pagenation__link" href="#">5</a></li>
-          <li class="nav-pagenation__item nav-pagenation__item--md"><a class="nav-pagenation__link" href="#">6</a></li>
-          <li class="nav-pagenation__item"><a class="nav-pagenation__link nav-pagenation__link--gt" href="#">
-              <svg class="nav-pagenation__gt-icon" width="10" height="18" viewBox="0 0 10 18"
-                xmlns="http://www.w3.org/2000/svg" stroke="#408F95" stroke-linecap="round" stroke-linejoin="round"
-                fill="none">
-                <path d="M1 1L9 9L1 17" />
-              </svg> </a></li>
-        </ul>
+    <!-- pagination -->
+    <nav class="subpage-campaign__pagination">
+      <div class="subpage-campaign__pagination-inner inner">
+        <div class="nav-pagination">
+          <ul class="nav-pagination__items">
+            <li class="nav-pagination__item"><a class="nav-pagination__link nav-pagination__link--prev" href="#">
+                <svg class="nav-pagination__prev-icon" width="10" height="18" viewBox="0 0 10 18" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" stroke="#408F95" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 1L1 9L9 17" />
+                </svg>
+              </a></li>
+            <li class="nav-pagination__item"><a class="nav-pagination__link nav-pagination__link--active" href="#">1</a>
+            </li>
+            <li class="nav-pagination__item"><a class="nav-pagination__link" href="#">2</a></li>
+            <li class="nav-pagination__item"><a class="nav-pagination__link" href="#">3</a></li>
+            <li class="nav-pagination__item"><a class="nav-pagination__link" href="#">4</a></li>
+            <li class="nav-pagination__item nav-pagination__item--md"><a class="nav-pagination__link" href="#">5</a></li>
+            <li class="nav-pagination__item nav-pagination__item--md"><a class="nav-pagination__link" href="#">6</a></li>
+            <li class="nav-pagination__item"><a class="nav-pagination__link nav-pagination__link--next" href="#">
+                <svg class="nav-pagination__next-icon" width="10" height="18" viewBox="0 0 10 18"
+                  xmlns="http://www.w3.org/2000/svg" stroke="#408F95" stroke-linecap="round" stroke-linejoin="round"
+                  fill="none">
+                  <path d="M1 1L9 9L1 17" />
+                </svg> </a></li>
+          </ul>
+        </div>
       </div>
-    </div><!-- pagenation -->
+    </nav><!-- pagination -->
 
 
     <!-- Shop-information Section -->
@@ -556,9 +566,10 @@
   <footer class="footer" id="footer">
     <!-- Button Return to top -->
     <a class="return-top js-top" href="#" id="page-top">
-      <svg class="return-top__image" width="8" height="42" viewBox="0 0 8 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M7 41L7 1L1 8" stroke="#408F95" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+      <svg class="return-top__image" width="8" height="42" viewBox="0 0 8 42" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 41L7 1L1 8" stroke="#408F95" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
     </a><!-- Button Return to top -->
     <div class="footer__inner inner">
       <!-- ヘッダー部分 -->

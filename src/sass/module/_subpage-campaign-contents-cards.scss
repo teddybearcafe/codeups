@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.subpage-campaign-contents-cards {
+.subpage-campaign__contents-cards {
   display: grid;
   // grid-template-columns: repeat(auto-fill, minmax(333px, 1fr));
   justify-items: center;
@@ -13,7 +13,7 @@
   }
 }
 
-.subpage-campaign-contents-cards__item {
+.subpage-campaign__contents-cards-item {
   max-width: rem(600);
   height: 100%;
 
