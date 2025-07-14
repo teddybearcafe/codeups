@@ -3,3 +3,43 @@
 .subpage-privacy__breadcrumb {
     margin-top: rem(8);
 }
+
+.subpage-privacy__body {
+    margin-top: rem(44);
+
+    @include mq("md") {
+        margin-top: rem(136);
+    }
+}
+
+.subpage-privacy__contents {
+    display: flex;
+    justify-content: center;
+}
+
+.subpage-privacy__contents-inner {
+    position: relative;
+
+    @include mq("md") {
+        max-width: rem(800);
+    }
+}
+
+.subpage-privacy__contents-inner::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: rem(-16);
+    left: calc(50% - min(45vw, rem(624)));
+    width: rem(120);
+    height: rem(55);
+    background-image: url("../images/fish-R.svg");
+    background-size: cover;
+
+    @include mq("md") {
+        top: rem(-58);
+        left: calc(50% - min(48vw, rem(624)));
+        width: rem(301);
+        height: rem(138);
+    }
+}

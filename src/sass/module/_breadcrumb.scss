@@ -17,3 +17,29 @@
 .breadcrumb--white {
     color: $white;
 }
+
+.breadcrumb__list-item a{
+    position: relative;
+}
+
+.breadcrumb__list-item a::before {
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: rem(1);
+    background: $font-color;
+    bottom: 0;
+    /*アンダーラインがaタグの下端から現れる*/
+    transform: scale(0, 1);
+    /*アンダーラインの縮尺比率。ホバー前はx方向に0*/
+    transform-origin: center top;
+    /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の左端*/
+    transition: transform 0.3s;
+}
+
+@media (any-hover: hover){
+.breadcrumb__list-item a:hover::before {
+    transform: scale(1, 1);
+}
+}

@@ -62,7 +62,7 @@
     flex-direction: column;
     /* 画像間の余白 */
     gap: rem(8);
-    margin-top: rem(40);
+    // margin-top: rem(40);
 
     @include mq("md") {
         /* 以下gridレイアウト用 */

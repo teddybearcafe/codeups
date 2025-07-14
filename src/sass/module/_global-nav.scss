@@ -146,3 +146,7 @@
 .global-nav__block:not(:first-child) {
     margin-top: rem(40);
 }
+
+.global-nav--sbpage-sitemap{
+    color: $black;
+}

@@ -1,24 +1,17 @@
 @use "global" as *;
 
-
-.contact__content-inner {
-    @include mq("md") {
-        max-width: rem(850);
-    }
-}
-
 .contact__content {
     line-height: 2.0;
     position: relative;
     font-weight: $regular;
-    max-width: rem(600);
-    margin: 0 auto;
+    // max-width: rem(600);
+    // margin: 0 auto;
 
-    @include mq("md") {
-        margin-right: auto;
-        margin-left: auto;
-        max-width: rem(700);
-    }
+    // @include mq("md") {
+    //     margin-right: auto;
+    //     margin-left: auto;
+    //     max-width: rem(700);
+    // }
 }
 
 .contact__content::after {

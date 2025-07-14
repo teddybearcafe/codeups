@@ -1,54 +1,23 @@
 @use "global" as *;
 
-.privacy__content-inner {
-    @include mq("md"){
-        max-width: rem(850);
-    }
-}
 
-
-
-.privacy__content {
+.privacy-content {
     line-height: 2.0;
-    position: relative;
-    font-weight: $regular;
-    margin-top: rem(44);
-    @include mq("md"){
-        margin-top: rem(136);
-    }
+    font-weight: $normal;
 }
 
-.privacy__content-h2 {
-    @include mq("md"){
+.privacy-content__header {
+    @include mq("md") {
         font-size: rem(32);
         // font-weight: $midum;
     }
 }
 
-.privacy__lists {
-    padding-left: rem(20);
+.privacy-content__list {
+    padding-left: rem(24);
 }
 
-.privacy-list {
+.privacy-content__list-item {
     list-style-type: decimal;
-    font-weight: $regular;
-}
-
-.privacy__content::after {
-    display: block;
-    content: "";
-    position: absolute;
-    top: rem(-16);
-    left: calc( 50% - min( 45vw, rem(624)));
-    width: rem(120);
-    height: rem(55);   
-    background-image: url("../images/fish-R.svg");
-    background-size: cover;
-
-    @include mq("md") {
-        top: rem(-58);
-        left: calc( 50% - min( 48vw, rem(624)));
-        width: rem(301);
-        height: rem(138);   
-    }
+    font-weight: $normal;
 }

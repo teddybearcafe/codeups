@@ -10,15 +10,17 @@
     }
 }
 
+.about__contents-wrapper {
+    margin-top: rem(56);
+    @include mq("md") {
+        margin-top: rem(120);
+    }
+}
+
 .about__images {
     position: relative;
     display: flex;
     justify-content: flex-end;
-    margin-top: rem(56);
-
-    @include mq("md") {
-        margin-top: rem(120);
-    }
 }
 
 .about__image-left {

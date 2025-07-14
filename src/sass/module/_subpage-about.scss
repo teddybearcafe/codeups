@@ -5,7 +5,8 @@
 }
 
 .subpage-about__header {
-    margin-top: rem(36);
+    position: relative;
+    margin-top: rem(52);
 
     @include mq("md") {
         margin-top: rem(230);
@@ -30,11 +31,11 @@
     position: relative;
     display: flex;
     justify-content: flex-end;
-    margin-top: rem(52);
+    // margin-top: rem(52);
 
-    @include mq("md") {
-        margin-top: rem(120);
-    }
+    // @include mq("md") {
+    //     margin-top: rem(120);
+    // }
 }
 
 .subpage-about__header-image-left {
@@ -94,6 +95,7 @@
     position: absolute;
     top: rem(20);
     left: rem(40);
+    z-index: 10;
 
     @include mq("md") {
         position: static;

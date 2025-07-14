@@ -5,10 +5,13 @@
 /* 投稿記事タイトル部
 --------------------------*/
 .single-article__header {
-    @include mq("md") {
-        border-bottom: solid rem(1) $green;
-        padding-bottom: rem(8);
-    }
+    border-bottom: solid rem(1) $green;
+    padding-bottom: rem(8);
+
+    // @include mq("md") {
+    //     border-bottom: solid rem(1) $green;
+    //     padding-bottom: rem(8);
+    // }
 }
 
 .single-article__header-time {
@@ -29,41 +32,61 @@
 
 /*
 -----------------------*/
-.single-article__body {
+// .single-article__body {
+//     margin-top: rem(24);
+
+//     @include mq("md") {
+//         margin-top: rem(40);
+//     }
+// }
+
+.single-article__body p {
+    margin-top: rem(24);
+
+    @include mq("md") {
+        margin-top: rem(40);
+        line-height: 1.5;
+        font-size: rem(16);
+    }
+}
+
+.single-article__body picture {
+    display: block;
+    margin-top: rem(24);
+
     @include mq("md") {
         margin-top: rem(40);
     }
 }
 
-.single-article__body p {
-    margin-top: rem(40);
-    line-height: 1.5;
-    font-size: rem(16);
-}
-
-.single-article__body picture {
-    display: block;
-    margin-top: rem(40);
-}
-
 .single-article__body ul {
-    // display: block;
-    margin-top: rem(40);
+    margin-top: rem(24);
+
+    @include mq("md") {
+        margin-top: rem(40);
+    }
 }
 
 .single-article__body li {
     list-style-image: url('../images/article-hitode-icon.svg');
     list-style-position: inside;
     margin-left: rem(24);
-    list-style-size: rem(18);
     text-indent: rem(-24);
 }
 
 
 .single-article__pagination {
-    margin-top: rem(80);
+    margin-top: rem(40);
+    @include mq("md") {
+        margin-top: rem(80);
+    }
 }
 
 .single-article__pagination .nav-pagination__item:last-child {
-    margin-left: rem(80);
+    margin-left: rem(82);
+}
+
+.single-article__pagination-inner {
+    display: flex;
+    justify-content: center;
 }

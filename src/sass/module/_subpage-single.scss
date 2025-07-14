@@ -4,13 +4,19 @@
 -------------------------*/
 .subpage-single__contents-inner {
     position: relative;
+
+    @include mq("md") {
+        display: flex;
+        justify-content: space-between;
+        gap: rem(80);
+    }
 }
 
 .subpage-single__contents-inner::after {
     display: block;
     content: "";
     position: absolute;
-    top: rem(-92);
+    top: rem(-24);
     left: calc(50% - min(45vw, rem(624)));
     width: rem(120);
     height: rem(55);
@@ -31,23 +37,14 @@
 }
 
 .subpage-single__contents-wrapper {
-    margin-top: rem(36);
+    margin-top: rem(52);
 
     @include mq("md") {
         margin-top: rem(150);
     }
 }
 
-.subpage-single__contents-inner {
-    margin-top: rem(40);
 
-    @include mq("md") {
-        margin-top: rem(38);
-        display: flex;
-        justify-content: space-between;
-        gap: rem(80);
-    }
-}
 
 .subpage-single__article {
     @include mq("md") {
@@ -62,5 +59,3 @@
         width: rem(294);
     }
 }
-
-

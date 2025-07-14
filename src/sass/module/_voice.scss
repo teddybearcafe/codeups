@@ -1,23 +1,6 @@
 @use "global" as *;
 
-.voice__inner {
-    position: relative;
-}
 
-.voice__inner::after {
-    @include mq("md") {
-        display: block;
-        content: "";
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        transform: translate(-40%, 45%);
-        width: rem(71);
-        height: rem(162);
-        background-image: url("../images/tatsu.svg");
-        background-size: cover;
-    }
-}
 
 .voice__body {
     margin-top: rem(40);
@@ -38,3 +21,22 @@
         margin-top: rem(80);
     }
 }
+
+.voice__inner {
+    position: relative;
+  }
+  
+  .voice__inner::after {
+    @include mq("md") {
+        display: block;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translate(-40%, 45%);
+        width: rem(71);
+        height: rem(162);
+        background-image: url("../images/tatsu.svg");
+        background-size: cover;
+    }
+  }

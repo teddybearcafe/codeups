@@ -30,3 +30,11 @@
 .subpage-thanks__breadcrumb {
     margin-top: rem(8);
 }
+
+
+.footer--thanks {
+    margin-top: rem(168);
+    @include mq("md") {
+      margin-top: rem(128);
+    }
+  }

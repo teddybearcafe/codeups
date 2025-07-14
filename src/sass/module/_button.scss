@@ -5,7 +5,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: rem(16) rem(40);
+  padding: rem(16) rem(32);
   max-width: rem(200);
   width: 100%;
   background-color: $green;
@@ -41,6 +41,7 @@
   position: relative;
   display: block;
   transform: translateY(rem(-5));
+  margin-left: rem(8);
 }
 
 .button__arrow svg {
@@ -118,7 +119,7 @@
 }
 
 @media (any-hover: hover) {
-  .button:hover .button__arrow svg path {
+  .button--white:hover .button__arrow svg path {
     stroke: $white;
   }
 
