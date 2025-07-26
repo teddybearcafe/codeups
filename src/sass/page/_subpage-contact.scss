@@ -1,15 +1,15 @@
 @use "global" as *;
 
+.contact-breadcrumb {
+    margin-top: rem(8);
+}
+
 .subpage-contact__body {
     margin-top: rem(52);
 
     @include mq("md") {
         margin-top: rem(132);
     }
-}
-
-.subpage-contact__breadcrumb {
-    margin-top: rem(8);
 }
 
 .subpage-contact__contact-form-inner {
