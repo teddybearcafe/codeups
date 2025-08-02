@@ -1,6 +1,7 @@
 @use "global" as *;
 
-.blog-card__link {
+.blog-card__link,
+.blog-card {
     padding: rem(20);
     box-shadow: 0 0 1rem 0.1rem rgba($black, 0.2);
     width: 100%;
