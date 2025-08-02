@@ -71,7 +71,7 @@
 }
 
 .price-table__price {
-    margin-right: rem(16);
+    padding-right: rem(16);
     // height: 100%;
     border-left: solid rem(1) $green;
     width: calc(106 / 345 *100%);

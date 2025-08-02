@@ -3,27 +3,27 @@
 
 /* 共通タイトル
 -------------------*/
+.aside__section:not(:first-child) {
+    margin-top: rem(80);
+}
+
 .aside__contents-title:not(:first-child) {
     margin-top: rem(80);
 }
 
 /* 人気記事
 -------------------*/
-.aside__articles {
+.aside__article-list {
     margin-top: rem(24);
 }
 
-.aside__articles-item {
-    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
-}
-
-.aside__articles-item:not(:first-child) {
+.aside__article-item:not(:first-child) {
     margin-top: rem(24);
 }
 
 /* 口コミ
 -------------------*/
-.aside__voice-contents {
+.aside__voice {
     margin-top: rem(24);
 }
 
@@ -56,11 +56,11 @@
 
 /* キャンペーン
 ---------------------*/
-.aside__campaigns {
+.aside__campaign-list {
     margin-top: rem(24);
 }
 
-.aside__campaigns-item:not(:first-child) {
+.aside__campaign-item:not(:first-child) {
     margin-top: rem(40);
 }
 
@@ -76,6 +76,6 @@
 
 /* アーカイブ
 ---------------------*/
-.aside__article-archive {
+.aside__archive {
     margin-top: rem(24);
 }

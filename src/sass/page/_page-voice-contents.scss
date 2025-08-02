@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.page-voice-contents__wrapper {
+  margin-top: rem(40);
+
+  @include mq("md") {
+    margin-top: rem(38);
+  }
+}
+
+.page-voice-contents__inner {
+  position: relative;
+}
+

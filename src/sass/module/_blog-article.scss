@@ -1,0 +1,28 @@
+@use "global" as *;
+
+.blog-article {
+    @include mq("md") {
+        width: rem(706);
+    }
+}
+
+/* メインコンテンツ部分
+-----------------------*/
+/* Gridに関連するプロパティのみ抜粋 */
+.blog-article__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(40);
+
+    @include mq("md") {
+        // grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(333px, 1fr));
+        gap: rem(80) rem(40);
+    }
+
+}
+
+.blog-article__list-item {
+    max-width: rem(600);
+    margin: 0 auto;
+}

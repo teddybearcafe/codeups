@@ -1,40 +1,41 @@
 @use "global" as *;
 
-.thanks {
+.faq__wrapper {
     margin-top: rem(52);
-    position: relative;
+
     @include mq("md") {
         margin-top: rem(150);
     }
 }
 
-.thanks::after {
+.faq__wrapper .faq__inner {
+    position: relative;
+    max-width: rem(750);
+}
+
+.faq__inner::after {
     display: block;
     content: "";
     position: absolute;
     top: rem(-24);
-    left: calc( 50% - min( 45vw, rem(624)));
+    left: calc(50% - min(45vw, rem(624)));
     width: rem(120);
-    height: rem(55);   
+    height: rem(55);
     background-image: url("../images/fish-R.svg");
     background-size: cover;
 
     @include mq("md") {
         top: rem(-72);
-        left: calc( 50% - min( 48vw, rem(624)));
+        left: calc(50% - min(48vw, rem(624)));
         width: rem(301);
-        height: rem(138);   
+        height: rem(138);
     }
 }
 
-.thanks-breadcrumb {
-    margin-top: rem(8);
-}
-
-
-.footer--thanks {
-    margin-top: rem(168);
+.faq__item:not(:first-child) {
+    margin-top: rem(40);
+  
     @include mq("md") {
-      margin-top: rem(128);
+        margin-top: rem(56);
     }
   }

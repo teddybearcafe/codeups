@@ -261,10 +261,10 @@
       </div>
     </div><!-- breadcrumb -->
 
-    <div class="subpage-single__contents-wrapper">
-      <div class="subpage-single__contents-inner inner">
+    <div class="blog-body blog-body--single-page">
+      <div class="blog-body__inner inner">
         <!-- メイン部分 -->
-        <div class="subpage-single__article single-article">
+        <div class="single-article">
           <div class="single-article__header">
             <time datetime="2023-01-17" class="single-article__header-time">2023.11/17</time>
             <h2 class="single-article__header-title">ライセンス取得</h2>
@@ -308,8 +308,8 @@
                   </li>
                   <li class="nav-pagination__item"><a class="nav-pagination__link nav-pagination__link--gt" href="#">
                       <svg class="nav-pagination__gt-icon" width="10" height="18" viewBox="0 0 10 18"
-                        xmlns="http://www.w3.org/2000/svg" stroke="#408F95" stroke-linecap="round" stroke-linejoin="round"
-                        fill="none">
+                        xmlns="http://www.w3.org/2000/svg" stroke="#408F95" stroke-linecap="round"
+                        stroke-linejoin="round" fill="none">
                         <path d="M1 1L9 9L1 17" />
                       </svg>
                     </a>
@@ -322,57 +322,137 @@
         </div><!-- メイン部分 -->
 
         <!-- サイドコンテンツ -->
-        <aside class="subpage-blog__aside aside">
+        <aside class="blog-aside aside">
           <!-- 人気記事 -->
-          <div class="aside__contents-title aside-title">
-            <img src="./assets/images/aside-title-icon01.svg" alt="人気記事" class="aside-title__icon">
-            <h2 class="aside-title__title">人気記事</h2>
-          </div>
+          <section class="aside__section">
+            <div class="aside__section-header aside-title">
+              <img src="./assets/images/aside-title-icon01.svg" alt="人気記事" class="aside-title__icon">
+              <h2 class="aside-title__title">人気記事</h2>
+            </div>
 
-          <ul class="aside__articles">
-            <li class="aside__articles-item aside-article">
-              <a href="#" class="aside-article__link">
-                <img src="./assets/images/aside-article-01.jpg" alt="ライセンス取得" class="aside-article__image">
-                <div class="aside-article__body">
-                  <time datetime="2023-11-17" class="aside-article__date">2023.11/17</time>
-                  <h3 class="aside-article__title">ライセンス取得</h3>
-                </div>
-              </a>
-            </li>
-            <li class="aside__articles-item aside-article">
-              <a href="#" class="aside-article__link">
-                <img src="./assets/images/aside-article-02.jpg" alt="ウミガメ" class="aside-article__image">
-                <div class="aside-article__body">
-                  <time datetime="2023-11-17" class="aside-article__date">2023.11/17</time>
-                  <h3 class="aside-article__title">ウミガメと泳ぐ</h3>
-                </div>
-              </a>
-            </li>
-            <li class="aside__articles-item aside-article">
-              <a href="#" class="aside-article__link">
-                <img src="./assets/images/aside-article-03.jpg" alt="カクレクマノミ" class="aside-article__image">
-                <div class="aside-article__body">
-                  <time datetime="2023-11-17" class="aside-article__date">2023.11/17</time>
-                  <h3 class="aside-article__title">カクレクマノミ</h3>
-                </div>
-              </a>
-            </li>
-          </ul>
+            <ul class="aside__article-list">
+              <li class="aside__article-item">
+                <a href="#" class="aside-article">
+                  <img src="./assets/images/aside-article-01.jpg" alt="ライセンス取得" class="aside-article__image">
+                  <div class="aside-article__body">
+                    <time datetime="2023-11-17" class="aside-article__date">2023.11/17</time>
+                    <h3 class="aside-article__title">ライセンス取得</h3>
+                  </div>
+                </a>
+              </li>
+              <li class="aside__article-item">
+                <a href="#" class="aside-article">
+                  <img src="./assets/images/aside-article-02.jpg" alt="ウミガメ" class="aside-article__image">
+                  <div class="aside-article__body">
+                    <time datetime="2023-11-17" class="aside-article__date">2023.11/17</time>
+                    <h3 class="aside-article__title">ウミガメと泳ぐ</h3>
+                  </div>
+                </a>
+              </li>
+              <li class="aside__article-item">
+                <a href="#" class="aside-article">
+                  <img src="./assets/images/aside-article-03.jpg" alt="カクレクマノミ" class="aside-article__image">
+                  <div class="aside-article__body">
+                    <time datetime="2023-11-17" class="aside-article__date">2023.11/17</time>
+                    <h3 class="aside-article__title">カクレクマノミ</h3>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </section>
 
           <!-- 口コミ -->
-          <div class="aside__contents-title aside-title">
-            <img src="./assets/images/aside-title-icon01.svg" alt="口コミ" class="aside-title__icon">
-            <h2 class="aside-title__title">口コミ</h2>
-          </div>
-
-          <div class="aside__voice-contents">
-            <img src="./assets/images/aside-voice-img.jpg" alt="口コミを寄せてくれた男女のカップル" class="aside__voice-image">
-            <div class="aside__voice-body">
-              <div class="aside__voice-caption">30代(カップル)</div>
-              <div class="aside__voice-title">ここにタイトルが入ります。ここにタイトル</div>
+          <section class="aside__section">
+            <div class="aside__section-header aside-title">
+              <img src="./assets/images/aside-title-icon01.svg" alt="口コミ" class="aside-title__icon">
+              <h2 class="aside-title__title">口コミ</h2>
             </div>
-            <div class="aside__voice-button">
-              <a href="./voice.html" class="button button--aside-voice">
+
+            <div class="aside__voice">
+              <img src="./assets/images/aside-voice-img.jpg" alt="口コミを寄せてくれた男女のカップル" class="aside__voice-image">
+              <div class="aside__voice-body">
+                <div class="aside__voice-caption">30代(カップル)</div>
+                <div class="aside__voice-title">ここにタイトルが入ります。ここにタイトル</div>
+              </div>
+              <div class="aside__voice-button">
+                <a href="./voice.html" class="button button--aside-voice">
+                  <span class="button__front">View more</span>
+                  <span class="button__arrow">
+                    <svg viewBox="0 0 42 8" fill="none">
+                      <path d="M1 7H41L34 1" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- キャンペーン -->
+          <section class="aside__section">
+            <div class="aside__section-header aside-title">
+              <img src="./assets/images/aside-title-icon01.svg" alt="キャンペーン" class="aside-title__icon">
+              <h2 class="aside-title__title">キャンペーン</h2>
+            </div>
+
+            <ul class="aside__campaign-list">
+              <li class="aside__campaign-item">
+                <a href="./campaign.html" class="aside__campaign-link">
+                  <div class="campaign-card campaign-card--aside">
+                    <figure class="campaign-card__figure campaign-card__figure--aside">
+                      <img src="./assets/images/campaign1.jpg" alt="青い海のなかで様々な熱帯魚が泳ぐ様子">
+                    </figure>
+                    <div class="campaign-card__body campaign-card__body--aside">
+                      <div class="campaign-card__header">
+                        <div class="campaign-card__title campaign-card__title--aside">
+                          <span>ライセンス講習</span>
+                        </div>
+                      </div>
+                      <div class="campaign-card__price campaign-card__price--aside">
+                        <div class="campaign-card__price-description campaign-card__price-description--aside">
+                          全部コミコミ(お一人様)
+                        </div>
+                        <div class="campaign-card__prices">
+                          <div class="campaign-card__cancell-price campaign-card__cancell-price--aside">&yen;56,000
+                          </div>
+                          <div class="campaign-card__selling-price campaign-card__selling-price--aside">&yen;46,000
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="aside__campaign-item">
+                <a href="./campaign.html" class="aside__campaign-link">
+                  <div class="campaign-card campaign-card--aside">
+                    <figure class="campaign-card__figure campaign-card__figure--aside">
+                      <img src="./assets/images/campaign2.jpg" alt="プライベートビーチを彷彿とさせる白い砂浜とエメラルドグリーンの海に浮かぶダイビングボート">
+                    </figure>
+                    <div class="campaign-card__body campaign-card__body--aside">
+                      <div class="campaign-card__header">
+                        <div class="campaign-card__title campaign-card__title--aside">
+                          <span>貸切体験ダイビング</span>
+                        </div>
+                      </div>
+                      <div class="campaign-card__price campaign-card__price--aside">
+                        <div class="campaign-card__price-description campaign-card__price-description--aside">
+                          全部コミコミ(お一人様)
+                        </div>
+                        <div class="campaign-card__prices">
+                          <div class="campaign-card__cancell-price campaign-card__cancell-price--aside">&yen;24,000
+                          </div>
+                          <div class="campaign-card__selling-price campaign-card__selling-price--aside">&yen;18,000
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+
+            <div class="aside__campaign-button">
+              <a href="./campaign.html" class="button button--aside-campaign">
                 <span class="button__front">View more</span>
                 <span class="button__arrow">
                   <svg viewBox="0 0 42 8" fill="none">
@@ -381,115 +461,40 @@
                 </span>
               </a>
             </div>
-          </div>
-
-          <!-- キャンペーン -->
-          <div class="aside__contents-title aside-title">
-            <img src="./assets/images/aside-title-icon01.svg" alt="キャンペーン" class="aside-title__icon">
-            <h2 class="aside-title__title">キャンペーン</h2>
-          </div>
-
-          <ul class="aside__campaigns">
-            <li class="aside__campaigns-item">
-              <a href="./campaign.html" class="aside__campaigns-link">
-                <div class="campaign-card">
-                  <figure class="campaign-card__figure">
-                    <img src="./assets/images/campaign1.jpg" alt="青い海のなかで様々な熱帯魚が泳ぐ様子">
-                  </figure>
-                  <div class="campaign-card__body campaign-card__body--aside">
-                    <div class="campaign-card__header">
-                      <div class="campaign-card__title campaign-card__title--aside">
-                        <span>ライセンス講習</span>
-                      </div>
-                    </div>
-                    <div class="campaign-card__price campaign-card__price--aside">
-                      <div class="campaign-card__price-description campaign-card__price-description--aside">
-                        全部コミコミ(お一人様)
-                      </div>
-                      <div class="campaign-card__prices">
-                        <div class="campaign-card__cancell-price">&yen;56,000</div>
-                        <div class="campaign-card__selling-price campaign-card__selling-price--aside">&yen;46,000
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="aside__campaigns-item">
-              <a href="./campaign.html" class="aside-campaigns__link">
-                <div class="campaign-card">
-                  <figure class="campaign-card__figure campaign-card__figure--aside">
-                    <img src="./assets/images/campaign2.jpg" alt="プライベートビーチを彷彿とさせる白い砂浜とエメラルドグリーンの海に浮かぶダイビングボート">
-                  </figure>
-                  <div class="campaign-card__body campaign-card__body--aside">
-                    <div class="campaign-card__header">
-                      <div class="campaign-card__title campaign-card__title--aside">
-                        <span>貸切体験ダイビング</span>
-                      </div>
-                    </div>
-                    <div class="campaign-card__price campaign-card__price--aside">
-                      <div class="campaign-card__price-description campaign-card__price-description--aside">
-                        全部コミコミ(お一人様)
-                      </div>
-                      <div class="campaign-card__prices">
-                        <div class="campaign-card__cancell-price">&yen;24,000</div>
-                        <div class="campaign-card__selling-price campaign-card__selling-price--aside">&yen;18,000
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </li>
-          </ul>
-
-          <div class="aside__campaign-button">
-            <a href="./campaign.html" class="button button--aside-campaign">
-              <span class="button__front">View more</span>
-              <span class="button__arrow">
-                <svg viewBox="0 0 42 8" fill="none">
-                  <path d="M1 7H41L34 1" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </span>
-            </a>
-          </div>
-
+          </section>
 
           <!-- アーカイブ -->
-          <div class="aside__contents-title aside-title">
-            <img src="./assets/images/aside-title-icon01.svg" alt="アーカイブ" class="aside-title__icon">
-            <h2 class="aside-title__title">アーカイブ</h2>
-          </div>
-
-
-          <nav class="aside__article-archive article-archive">
-            <div class="article-archive__item">
-              <div class="article-archive__item-btn">
-                <span class="article-archive__toggle-icon"></span>
-                2023
-              </div>
-              <ul class="article-archive__list">
-                <li class="article-archive__list-item"><a href="" class="article-archive__link">3月</a></li>
-                <li class="article-archive__list-item"><a href="" class="article-archive__link">2月</a></li>
-                <li class="article-archive__list-item"><a href="" class="article-archive__link">1月</a></li>
-              </ul>
+          <section class="aside__section">
+            <div class="aside__section-header aside-title">
+              <img src="./assets/images/aside-title-icon01.svg" alt="アーカイブ" class="aside-title__icon">
+              <h2 class="aside-title__title">アーカイブ</h2>
             </div>
 
-            <div class="article-archive__item">
-              <div class="article-archive__item-btn">
-                <span class="article-archive__toggle-icon"></span>2022
+            <nav class="aside__archive article-archive">
+              <div class="article-archive__item">
+                <div class="article-archive__item-btn">
+                  <span class="article-archive__toggle-icon"></span>
+                  2023
+                </div>
+                <ul class="article-archive__list">
+                  <li class="article-archive__list-item"><a href="" class="article-archive__link">3月</a></li>
+                  <li class="article-archive__list-item"><a href="" class="article-archive__link">2月</a></li>
+                  <li class="article-archive__list-item"><a href="" class="article-archive__link">1月</a></li>
+                </ul>
               </div>
-              <ul class="article-archive__list">
-                <li class="article-archive__list-item"><a href="" class="article-archive__link">12月</a></li>
-                <li class="article-archive__list-item"><a href="" class="article-archive__link">11月</a></li>
-                <li class="article-archive__list-item"><a href="" class="article-archive__link">10月</a></li>
-              </ul>
-            </div>
-          </nav>
 
-          <div class="aside__contents">
-          </div>
+              <div class="article-archive__item">
+                <div class="article-archive__item-btn">
+                  <span class="article-archive__toggle-icon"></span>2022
+                </div>
+                <ul class="article-archive__list">
+                  <li class="article-archive__list-item"><a href="" class="article-archive__link">12月</a></li>
+                  <li class="article-archive__list-item"><a href="" class="article-archive__link">11月</a></li>
+                  <li class="article-archive__list-item"><a href="" class="article-archive__link">10月</a></li>
+                </ul>
+              </div>
+            </nav>
+          </section>
 
         </aside>
       </div>

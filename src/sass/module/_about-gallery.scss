@@ -1,0 +1,43 @@
+@use "global" as *;
+
+
+.about-gallery {
+    margin-top: rem(60);
+
+    @include mq("md") {
+        margin-top: rem(120);
+    }
+}
+
+.about-gallery__inner {
+    position: relative;
+}
+
+.about-gallery__inner::after {
+    display: none;
+
+    @include mq("md") {
+        display: block;
+        position: absolute;
+        content: "";
+        max-width: rem(301);
+        width: rem(301);
+        height: rem(138);
+        aspect-ratio: 109 / 50;
+        transform: translateY(-50%);
+        z-index: -1;
+        background-image: url("../images/fish-L-green.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: rem(-16);
+        right: calc(rem(-72) + (rem(1440) - 100vw) / 3);
+    }
+}
+
+.about-gallery__body {
+    margin-top: rem(40);
+
+    @include mq("md") {
+        margin-top: rem(80);
+    }
+}

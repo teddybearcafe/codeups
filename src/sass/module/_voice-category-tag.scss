@@ -1,10 +1,6 @@
 @use "global" as *;
 
-.voice-breadcrumb {
-  margin-top: rem(8);
-}
-
-.subpage-voice__category-tag {
+.voice-category-tag {
   margin-top: rem(52);
 
   @include mq("md") {
@@ -12,11 +8,11 @@
   }
 }
 
-.subpage-voice__category-tag-inner {
+.voice-category-tag__inner {
   position: relative;
 }
 
-.subpage-voice__category-tag-inner:before {
+.voice-category-tag__inner:before {
   display: block;
   content: "";
   position: absolute;
@@ -34,25 +30,4 @@
     width: rem(301);
     height: rem(138);
   }
-}
-
-.subpage-voice__contents-wrapper {
-  margin-top: rem(40);
-
-  @include mq("md") {
-    margin-top: rem(38);
-  }
-}
-
-.subpage-voice__pagination {
-  margin-top: rem(80);
-}
-
-.subpage-voice__contents-inner {
-  position: relative;
-}
-
-.subpage-voice__pagination-inner {
-  display: flex;
-  justify-content: center;
 }

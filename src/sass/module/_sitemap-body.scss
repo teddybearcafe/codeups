@@ -1,10 +1,7 @@
 @use "global" as *;
 
-.sitemap-breadcrumb {
-    margin-top: rem(8);
-}
 
-.subpage-sitemap__body {
+.sitemap-body {
     margin-top: rem(52);
 
     @include mq("md") {
@@ -12,11 +9,11 @@
     }
 }
 
-.subpage-sitemap__contents-inner {
+.sitemap-body__inner {
     position: relative;
 }
 
-.subpage-sitemap__contents-inner::after {
+.sitemap-body__inner::after {
     display: block;
     content: "";
     position: absolute;

@@ -1,10 +1,6 @@
 @use "global" as *;
 
-.terms-breadcrumb {
-  margin-top: rem(8);
-}
-
-.subpage-terms__body {
+.privacy-body {
   margin-top: rem(44);
 
   @include mq("md") {
@@ -12,20 +8,15 @@
   }
 }
 
-.subpage-terms__contents {
-  display: flex;
-  justify-content: center;
-}
-
-.subpage-terms__contents-inner {
+.privacy-body__inner {
   position: relative;
 
   @include mq("md") {
-    max-width: rem(800);
+    max-width: rem(850);
   }
 }
 
-.subpage-terms__contents-inner::after {
+.privacy-body__inner::after {
   display: block;
   content: "";
   position: absolute;

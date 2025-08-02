@@ -1,25 +1,23 @@
 @use "global" as *;
 
-.information-breadcrumb {
-    margin-top: rem(8);
-}
+.campaign-category-tag {
+    margin-top: rem(52);
 
-.subpage-information__contents-wrapper {
-    margin-top: rem(120);
     @include mq("md") {
-        margin-top: rem(144);
+        margin-top: rem(150);
     }
 }
 
-.subpage-information__inner{
+// ページ固有の装飾要素（魚のアイコン）はページレベルで管理
+.campaign-category-tag__inner {
     position: relative;
 }
 
-.subpage-information__inner::after {
+.campaign-category-tag__inner:before {
     display: block;
     content: "";
     position: absolute;
-    top: rem(-92);
+    top: rem(-24);
     left: calc(50% - min(45vw, rem(624)));
     width: rem(120);
     height: rem(55);
@@ -32,13 +30,5 @@
         left: calc(50% - min(48vw, rem(624)));
         width: rem(301);
         height: rem(138);
-    }
-}
-
-.subpage-information__contents {
-    margin: 0 auto;
-    max-width: rem(700);
-    @include mq("md") {
-        max-width: 100%;
     }
 }

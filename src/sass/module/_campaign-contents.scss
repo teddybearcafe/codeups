@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.campaign-contents__wrapper {
+    margin-top: rem(36);
+}
+
+.campaign-contents {
+    margin-top: rem(36);
+}
+
+.campaign-contents__card-list {
+    display: grid;
+    // grid-template-columns: repeat(auto-fill, minmax(333px, 1fr));
+    justify-items: center;
+    gap: rem(36);
+  
+    @include mq("md") {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: rem(40);
+      row-gap: rem(80);
+    }
+  }
+  
+  .campaign-contents__card-item {
+    max-width: rem(600);
+    height: 100%;
+  
+    @include mq("md") {
+      max-width: calc(($inner - 3rem) / 2);
+    }
+  }

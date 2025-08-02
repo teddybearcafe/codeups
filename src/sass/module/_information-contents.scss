@@ -1,45 +1,40 @@
 @use "global" as *;
 
-.privacy-breadcrumb {
-    margin-top: rem(8);
-}
-
-.subpage-privacy__body {
-    margin-top: rem(44);
-
+.information-contents__wrapper {
+    margin-top: rem(120);
     @include mq("md") {
-        margin-top: rem(136);
+        margin-top: rem(144);
     }
 }
 
-.subpage-privacy__contents {
-    display: flex;
-    justify-content: center;
-}
-
-.subpage-privacy__contents-inner {
+.information-contents__inner{
     position: relative;
-
-    @include mq("md") {
-        max-width: rem(800);
-    }
 }
 
-.subpage-privacy__contents-inner::after {
+.information-contents__inner::after {
     display: block;
     content: "";
     position: absolute;
-    top: rem(-16);
+    top: rem(-92);
     left: calc(50% - min(45vw, rem(624)));
     width: rem(120);
     height: rem(55);
     background-image: url("../images/fish-R.svg");
     background-size: cover;
+    z-index: -1;
 
     @include mq("md") {
-        top: rem(-58);
+        top: rem(-72);
         left: calc(50% - min(48vw, rem(624)));
         width: rem(301);
         height: rem(138);
+    }
+}
+
+.information-contents__tab-box {
+    margin: 0 auto;
+    max-width: rem(700);
+    @include mq("md") {
+        max-width: 100%;
     }
 }

@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.campaign-pagination {
+  margin-top: rem(80);
+}
+
+.campaign-pagination__inner {
+  display: flex;
+  justify-content: center;
+}
