@@ -2,9 +2,10 @@
 
 .blog-aside {
     width: 85%;
-    margin: 0 auto;
+    margin: rem(80) auto;
 
     @include mq("md") {
         width: rem(294);
+        margin: 0;
     }
 }

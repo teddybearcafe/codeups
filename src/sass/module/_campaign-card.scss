@@ -27,7 +27,7 @@
     }
 }
 
-.campaign-card__body--aside {
+.campaign-card__body .campaign-card__body--aside {
     height: calc(144/ 332 *100%);
 
     @include mq("md") {

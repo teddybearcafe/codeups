@@ -2,7 +2,7 @@
 
 
 .blog-body {
-    margin-top: rem(36);
+    margin-top: rem(40);
 
     @include mq("md") {
         margin-top: rem(150);
@@ -28,7 +28,7 @@
     display: block;
     content: "";
     position: absolute;
-    top: rem(-92);
+    top: rem(-24);
     left: calc(50% - min(45vw, rem(624)));
     width: rem(120);
     height: rem(55);
