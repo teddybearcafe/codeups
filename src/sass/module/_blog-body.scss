@@ -43,3 +43,13 @@
         height: rem(138);
     }
 }
+
+.blog-body__aside {
+    width: 85%;
+    margin: rem(80) auto;
+
+    @include mq("md") {
+        width: rem(294);
+        margin: 0;
+    }
+}

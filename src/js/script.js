@@ -27,27 +27,51 @@ jQuery(function ($) {
   // });
 });
 
-// mySwiperが2回宣言されているので、変数名を変更
+//--------------------------------
+// メインビューSlider/ローディングアニメーションが終わってから表示させる
+//--------------------------------
+let mvSwiper;
 if (document.querySelector(".js-mv")) {
-  const mvSwiper = new Swiper(".js-mv", {
-    // Optional parameters
-    loop: true,
-    autoplay: {
-      delay: 5000,
-    },
+  mvSwiper = new Swiper(".js-mv", {
+    init: false, // ← いったん初期化しない
     effect: "fade",
+    fadeEffect: { crossFade: true },
+    loop: true,
+    slidesPerView: 1,
     speed: 600,
+    autoplay: { delay: 5000, disableOnInteraction: false },
+    observer: true,
+    observeParents: true,
   });
 }
 
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    const loader = document.querySelector(".loader");
+    if (loader) loader.style.display = "none";
+    const mv = document.querySelector(".mv");
+    if (mv) mv.style.display = "block";
+
+    // 表示されたタイミングで初期化
+    if (mvSwiper && !mvSwiper.initialized) {
+      mvSwiper.init();
+      // 念のため再計測
+      mvSwiper.update();
+    }
+  }, 6000); // 長すぎる待ち時間は不具合の温床。まずは短く検証を
+});
+
+//--------------------------------
+// トップページ：キャンペーンSlider
+//--------------------------------
 if (document.querySelector(".js-campaign")) {
   const campaignSwiper = new Swiper(".js-campaign", {
     spaceBetween: 24,
-    conteredSlides: true,
+    centeredSlides: true,
 
     // Optional parameters
     loop: true,
-    loopAdditionalslides: 1,
+    loopAdditionalSlides: 1,
     // loopslides: 3,
     autoplay: {
       delay: 5000,
@@ -64,8 +88,8 @@ if (document.querySelector(".js-campaign")) {
     // breakpoints: {
     //   // スライドの表示枚数：768px以上の場合
     //   768: {
-    //     spaceBetween: 40,
-    //     slidesPerView: "auto",
+    //     // spaceBetween: 40,
+    //     slidesPerView: "1",
     //   },
     // },
   });
@@ -146,8 +170,6 @@ $(function () {
   });
 });
 
-
-
 // 最初のアーカイブアイテムを開いた状態にする
 $(document).ready(function () {
   $(".article-archive__item:first-child").addClass(
@@ -216,29 +238,6 @@ $("#page-top").click(function () {
   ); //ページトップスクロールの速さ。数字が大きいほど遅くなる
   return false; //リンク自体の無効化
 });
-
-//--------------------------------
-// ローディングアニメーション
-//--------------------------------
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    document.querySelector(".loader").style.display = "none";
-    document.querySelector(".mv").style.display = "block";
-  }, 7000); // アニメーション終了タイミングに合わせて調整
-});
-
-// window.addEventListener('load', () => {
-//   setTimeout(() => {
-//     const loader = document.querySelector('.loader');
-//     loader.classList.add('loader--hide');
-
-//     // 完全に透明になったらDOMごと非表示に（任意）
-//     setTimeout(() => {
-//       loader.style.display = 'none';
-//       document.querySelector('.mv').style.display = 'block';
-//     }, 1000); // CSSのtransition時間に合わせる（1秒）
-//   }, 8000); // アニメーション全体終了後のタイミング
-// });
 
 //--------------------------------
 // campaignページのカテゴリータグの動き
